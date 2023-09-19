@@ -1,0 +1,72 @@
+[read_more]
+other = "עוד"
+
+[copyright]
+other = "Copyright"
+
+[all_rights]
+other = "כל הזכויות שמורות"
+
+[share_on]
+other = "שתפו"
+
+[featured_posts]
+other = "Featured Posts"
+
+[recent_posts]
+other = "פוסטים אחרונים"
+
+[404_title]
+other = "אבוד"
+
+[could_not_find]
+other = "We couldn't find the page you're looking for"
+
+[go_back]
+other = "חזרה"
+
+[translations]
+other = "תרגומים"
+
+[categories]
+other = "קטגוריות"
+
+[tags]
+other = "תגיות"
+
+[series]
+other = "סדרות"
+
+[all_categories]
+other = "All Categories"
+
+[all_tags]
+other = "All Tags"
+
+[all_series]
+other = "All Series"
+
+[overview]
+other = "Overview"
+
+[reading_time]
+other = "{{ .ReadingTime }} min read"
+
+[series_posts]
+other = "Posts in this series"
+
+# search
+[quick_links]
+  other = "תוצאות"
+[no_matches]
+  other = "אין תוצאות"
+[search_field_placeholder]
+  other = "Search the knowledge base"
+[blog_search_field_placeholder]
+  other = "חיפוש..."
+[search_results_label]
+  other = "תוצאות חיפוש"
+[short_search_query]
+  other = "Query is too short"
+[type_to_search]
+  other = "הקישו לחיפוש"

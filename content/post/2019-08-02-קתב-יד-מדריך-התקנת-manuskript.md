@@ -4,7 +4,7 @@ author: נמרוד איזנברג
 type: post
 date: 2019-08-02T06:49:51+00:00
 url: /2019/08/02/קתב-יד-מדריך-התקנת-manuskript/
-featured_image: /wp-content/uploads/2018/01/logo_manuskript1-1-150x150.png
+featureImage: /images/2018/01/logo_manuskript1-1.png
 timeline_notification:
   - 1564728592
 publicize_tumblr_url:
