@@ -1,25 +1,20 @@
 +++
-title = "About"
-description = "Hugo, the world's fastest framework for building websites"
+title = "אודות"
+description = "אודות נמרוד איזנברג"
 date = "2019-02-28"
-aliases = ["about-us", "about-hugo", "contact"]
-author = "Hugo Authors"
 +++
 
-Written in Go, Hugo is an open source static site generator available under the [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+אז ככה: שמי נמרוד איזנברג, מהנדס תוכנה בעברי ומנהל רכש בהווה. קורא ספרות ספקולטיבית מאז ומתמיד.
 
-Hugo makes use of a variety of open source projects including:
+אני בוגר סדנאות הכתיבה של [רוני גלבפיש](https://gelbfish.com/) (הידועה גם כ"המנחה הקשוחה עד מאוד") ומאז מנסה כוחי בכתיבת סיפורים קצרים המתפרסמים בבמות שונות מאז 2015.  
 
-* https://github.com/yuin/goldmark
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
+סיפור הביכורים שלי, **["משותקת"](https://aizenimr.com/2015/09/07/%d7%9e%d7%a9%d7%95%d7%aa%d7%a7%d7%aa-%d7%a1%d7%99%d7%a4%d7%95%d7%a8/)** התפרסם במהדורת 2015 של ["היה יהיה"](http://annual.sf-f.org.il/), אסופת הסיפורים השנתית של [האגודה הישראלית למדע בדיוני ופנטסיה](http://www.sf-f.org.il/).  
+סיפור נוסף, **["בן כלאיים"](https://aizenimr.com/2015/12/02/%d7%91%d7%9f-%d7%9b%d7%9c%d7%90%d7%99%d7%99%d7%9d-%d7%a1%d7%99%d7%a4%d7%95%d7%a8/)**, התפרסם בפרויקט ["מאורות 2015"](https://meorot.sf-f.org.il/2015/index-9.html), ומאז ישנם [עוד כמה](https://aizenimr.com/%d7%a1%d7%99%d7%a4%d7%95%d7%a8%d7%99%d7%9d/). אחד מהם, **["עלייתו של ישראמן"](https://aizenimr.com/2019/08/08/%d7%a2%d7%9c%d7%99%d7%99%d7%aa%d7%95-%d7%a9%d7%9c-%d7%99%d7%a9%d7%a8%d7%90%d7%9e%d7%9f-%d7%a1%d7%99%d7%a4%d7%95%d7%a8/)**, היה [מועמד לפרס גפן בשנת 2019](http://geffen.sf-f.org.il/?p=1761).  
 
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
+נשוי למלכת יופי ואב לגמד וגמדה מרושעים. שלושתם יותר חכמים ממני.
 
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
+הגמדון המקסים מאובחן על הרצף האוטיסטי, ויש לי [כמה](https://aizenimr.com/2015/08/15/%d7%aa%d7%95%d7%9d-%d7%a1%d7%99%d7%a4%d7%95%d7%a8-2/) [וכמה](https://aizenimr.com/2015/08/20/%d7%9e%d7%99%d7%9c%d7%95%d7%9f-%d7%94%d7%a1%d7%a4%d7%a7%d7%98%d7%a8%d7%95%d7%9d-%d7%94%d7%92%d7%93%d7%95%d7%9c/) [דברים](https://aizenimr.com/2016/10/11/%d7%99%d7%a9%d7%a8%d7%90-%d7%a1%d7%a4%d7%a7%d7%98%d7%a8%d7%95%d7%9d/) [לומר](https://aizenimr.com/2015/09/25/%d7%9e%d7%94-%d7%92%d7%95%d7%a8%d7%9d-%d7%9c%d7%96%d7%94/) בנושא. בין היתר, העברתי [הרצאה](https://aizenimr.com/2018/03/10/%d7%a2%d7%9c-%d7%9b%d7%a0%d7%a1%d7%99%d7%9d-%d7%95%d7%93%d7%91%d7%a8%d7%99%d7%9d-%d7%a9%d7%91%d7%95%d7%a8%d7%99%d7%9d/) בכנס ["עולמות 2018"](https://aizenimr.com/2018/04/07/%d7%a8%d7%a1%d7%99%d7%a1%d7%99%d7%9d-%d7%9e%d7%a2%d7%95%d7%9c%d7%9e%d7%95%d7%aa-2018/) אשר עסקה באנשים עם צרכים מיוחדים ביצירות ז'אנר ידועות, וחלק נכבד ממנה הוקדש לאוטיזם. אפשר לצפות בה [כאן](http://www.scifi.org.il/vod/video/%d7%a0%d7%9b%d7%99%d7%9d-%d7%9e%d7%95%d7%96%d7%a8%d7%99%d7%9d-%d7%95%d7%93%d7%91%d7%a8%d7%99%d7%9d-%d7%a9%d7%91%d7%95%d7%a8%d7%99%d7%9d/).  
 
-Websites built with Hugo are extremelly fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
+מתחזק גם כלב מקסים, מסוג סטר אירי, בשם אנג'ל. נקרא כך מכיוון שמלכת היופי לא הרשתה לי לקרוא לו ספייק – אל תשאלו. הוא אמור להיות יותר חכם ממני, אבל איכשהו זה לא מתבטא.
 
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+הבלוג הזה הוא הרפתקה עבורי. אני מקווה שתהנו ממנה לפחות כמוני. בינתיים, אתם מוזמנים לכתוב לי [במייל](mailto:aizenimr@gmail.com) או לעקוב אחרי ברשתות החברתיות. אני כותב בעיקר ב[תותים](https://tooot.im/@aizenimr) (שרת [מסטודון](https://joinmastodon.org/) ישראלי), ולעיתים רחוקות [בפייס](http://facebook.com/aizenimr) [ובטוויטר](http://twitter.com/aizenimr). אפשר גם להירשם לעדכוני [רסס](https://aizenimr.com/?feed=rss2) ולעדכונים במייל.
