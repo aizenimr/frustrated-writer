@@ -20,7 +20,7 @@ other = "פוסטים אחרונים"
 other = "אבוד"
 
 [could_not_find]
-other = "We couldn't find the page you're looking for"
+other = "לא נמצאו תוצאות"
 
 [go_back]
 other = "חזרה"
@@ -38,10 +38,10 @@ other = "תגיות"
 other = "סדרות"
 
 [all_categories]
-other = "All Categories"
+other = "כל הקטגוריות"
 
 [all_tags]
-other = "All Tags"
+other = "כל התגיות"
 
 [all_series]
 other = "All Series"
@@ -67,6 +67,6 @@ other = "Posts in this series"
 [search_results_label]
   other = "תוצאות חיפוש"
 [short_search_query]
-  other = "Query is too short"
+  other = "שאילתא קצרה מדי"
 [type_to_search]
   other = "הקישו לחיפוש"

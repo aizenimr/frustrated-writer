@@ -1,29 +1,29 @@
 [[main]]
-  name = "Home"
+  name = "בית"
   url = ""
   weight = -110
 
 [[main]]
-  name = "Archives"
+  name = "ארכיון"
   url = "post/rich-content/"
   weight = -109
 
 # Submenus are done this way: parent -> identifier
 [[main]]
-  name = "Links"
-  identifier = "Links"
+  name = "קישורים"
+  identifier = "קישורים"
   weight = -108
 [[main]]
-  parent = "Links"
+  parent = "קישורים"
   name = "LinkedIn"
   url = "https://www.linkedin.com/"
 [[main]]
-  parent = "Links"
+  parent = "קישורים"
   name = "Twitter"
   url = "https://twitter.com/"
 
 [[main]]
-  name = "About"
+  name = "אודות"
   url = "about/"
   weight = -107
 
