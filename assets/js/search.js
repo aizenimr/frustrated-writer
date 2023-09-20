@@ -43,12 +43,12 @@ function initializeSearch(index) {
       if(passive) {
         resultsTitle.innerText = searchResultsLabel;
       }
-      if(!searchPageElement) {
+/*       if(!searchPageElement) {
         results = results.slice(0,8);
       } else {
         resultsFragment.appendChild(goBackButton);
         results = results.slice(0,12);
-      }
+      } */
       resultsFragment.appendChild(resultsTitle);
 
       results.forEach(function(result){
