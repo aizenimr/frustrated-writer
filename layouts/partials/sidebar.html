@@ -46,10 +46,10 @@
         {{- $onPageTags := $.Page.Params.tags }}
         {{- $slicedTags := ($value.ByCount | first $tagsLimit) }}
         {{- range $slicedTags }}
+        {{- $c := math.Max 15 (mul (math.Sqrt .Count) 5)  }}
         <a href='{{ absLangURL $key }}/{{ (replace .Name "#" "%23") | urlize }}/'
-          class="post_tag button button_translucent" title="{{ .Name }}">
+          class="post_tag button button_translucent" title="{{ .Name }}" style="font-size: {{$c}}px;">
           {{ upper .Name }}
-          <span class="button_tally">{{ .Count }}</span>
         </a>
         {{ end }}
         {{ if gt (len $value.ByCount) $tagsLimit }}
@@ -60,10 +60,10 @@
           <div class="tags_list">
             {{- range $value.Alphabetical }}
             {{ $tagsInfo.Add "tagsInfo" (slice .Name .Count)}}
+            {{- $c := math.Max 15 (mul (math.Sqrt .Count) 5)  }}
             <a href='{{ absLangURL $key }}/{{ (replace .Name "#" "%23") | urlize }}/'
-              class=" post_tag button button_translucent" data-position={{ .Count }} title="{{ .Name }}">
+              class=" post_tag button button_translucent" data-position={{ .Count }} title="{{ .Name }}" style="font-size: {{$c}}px;">
               {{- upper .Name -}}
-              <span class="button_tally">{{ .Count }}</span>
             </a>
             {{ end }}
             <div class="tags_sort"><span title="sort alphabetically">[A~Z]</span><span
