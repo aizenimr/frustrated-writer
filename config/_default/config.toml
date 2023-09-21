@@ -16,6 +16,8 @@ DefaultContentLanguage = "he"
 [taxonomies]
 category = "categories"
 tag = "tags"
+month = "month"
+
 # series = "series"
 
 [outputs]

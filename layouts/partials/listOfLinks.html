@@ -1,0 +1,11 @@
+<div>
+    <ul>
+        {{ with .links }}
+            {{ range $pair := . }}
+                {{ range $key, $value := . }}
+                    <li><a href="{{ $key }}">{{ $value }}</a></li>
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    </ul>
+</div>

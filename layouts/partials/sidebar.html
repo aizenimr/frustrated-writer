@@ -87,5 +87,30 @@
         </div>
       </div>
     </div>
+    <div class="widget">
+      <h2>אחרי מי אני עוקב</h2>
+      <div class="list-links">
+        {{ $sliceLinks := slice (dict "https://gelbfish.com/" "רוני גלבפיש – בית מלאכה לכתיבה")
+        (dict "http://www.blipanika.co.il" "בלי פאניקה")
+        (dict "https://www.sf-f.org.il/" "האגודה הישראלית למדע בדיוני ולפנטסיה")
+        (dict "https://vandersister.wordpress.com/" "ואן דר גראף אחותך")
+        (dict "https://www.realitybugs.me/" "סוף העולם – מבט מהיציע")
+        (dict "https://rotemwrites.com/" "פתקיות ליד המיטה")
+        (dict "https://www.yaelfurman.co.il/" "והכל אמת לאמיתה")
+        (dict "https://my2centssf.blogspot.com/" "Three Laws, Ten Dimensions")
+        (dict "https://www.fisheye.co.il/" "עין הדג")
+        (dict "https://www.the7eye.org.il/" "העין השביעית")
+        (dict "https://www.neiman.co.il/" "ניימן")
+        (dict "https://internet-israel.com/" "רן בר זיק – אינטרנט ישראל")
+        (dict "https://davidson.weizmann.ac.il/" "מכון דוידסון")
+        (dict "https://lbscience.org/" "מדע גדול, בקטנה")
+        (dict "https://xkcd.com/" "XKCD")
+        (dict "https://www.smbc-comics.com/" "SMBC")
+        (dict "https://irrelevant.org.il/" "לא רלוונטי")
+        (dict "https://elcomics.tumblr.com" "EL Comics")
+        (dict "https://algoritmim.co.il" "מאיה כותבת אלגוריתמים") }}
+        {{ partial "listOfLinks" (dict "context" . "links" $sliceLinks) }}
+      </div>
+    </div>
   </section>
 </aside>
