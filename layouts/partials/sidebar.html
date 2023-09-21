@@ -10,15 +10,15 @@
       {{- with .Params.introDescription }}
       {{- $introDescription = . }}
       {{- end }}
-        {{- if $introDescription }}
-          {{- $author := $s.Author }}
-          {{- $showAuthorPhoto := false }}
-          {{- $fullAuthor := reflect.IsMap $author }}
-          {{- if $fullAuthor }}
-            {{- if $author.photo }}
-              {{- $showAuthorPhoto = true }}
-           {{- end }}
-          {{- end }}
+      {{- if $introDescription }}
+      {{- $author := $s.Author }}
+      {{- $showAuthorPhoto := false }}
+      {{- $fullAuthor := reflect.IsMap $author }}
+      {{- if $fullAuthor }}
+      {{- if $author.photo }}
+      {{- $showAuthorPhoto = true }}
+      {{- end }}
+      {{- end }}
       {{- if $showAuthorPhoto }}
       <h2>{{ "מי אני?" }}</h2>
       <div class="author_header">
@@ -46,7 +46,7 @@
         {{- $onPageTags := $.Page.Params.tags }}
         {{- $slicedTags := ($value.ByCount | first $tagsLimit) }}
         {{- range $slicedTags }}
-        {{- $c := math.Max 15 (mul (math.Sqrt .Count) 5)  }}
+        {{- $c := math.Max 15 (mul (math.Sqrt .Count) 5) }}
         <a href='{{ absLangURL $key }}/{{ (replace .Name "#" "%23") | urlize }}/'
           class="post_tag button button_translucent" title="{{ .Name }}" style="font-size: {{$c}}px;">
           {{ upper .Name }}
@@ -60,9 +60,10 @@
           <div class="tags_list">
             {{- range $value.Alphabetical }}
             {{ $tagsInfo.Add "tagsInfo" (slice .Name .Count)}}
-            {{- $c := math.Max 15 (mul (math.Sqrt .Count) 5)  }}
+            {{- $c := math.Max 15 (mul (math.Sqrt .Count) 5) }}
             <a href='{{ absLangURL $key }}/{{ (replace .Name "#" "%23") | urlize }}/'
-              class=" post_tag button button_translucent" data-position={{ .Count }} title="{{ .Name }}" style="font-size: {{$c}}px;">
+              class=" post_tag button button_translucent" data-position={{ .Count }} title="{{ .Name }}"
+              style="font-size: {{$c}}px;">
               {{- upper .Name -}}
             </a>
             {{ end }}
@@ -79,5 +80,12 @@
     </div>
     {{- end }}
     {{- end }}
+    <div class="widget">
+      <h2>פיד מסטודון</h2>
+      <div id="mt-timeline" class="mt-timeline">
+        <div id="mt-body" class="mt-body">
+        </div>
+      </div>
+    </div>
   </section>
 </aside>
