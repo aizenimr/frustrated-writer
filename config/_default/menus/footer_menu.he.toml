@@ -1,0 +1,14 @@
+[[main]]
+  name = "בית"
+  url = ""
+  weight = 1
+
+[[main]]
+  name = "סיפורים"
+  url = "/סיפורים"
+  weight = 1
+
+[[main]]
+  name = "אודות"
+  url = "about/"
+  weight = 1

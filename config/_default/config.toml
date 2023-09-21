@@ -2,13 +2,23 @@
 # if you set it to "/" share icons won't work properly on production
 baseurl = "https://example.com/"  # Include trailing slash
 title = "הכותב המתוסכל"  # Edit directly from config/_default/languages.toml # alternatively, uncomment this and remove `title` entry from the aforemention file.
-copyright = "Copyright © 2023 נמרוד איזנברג"
+copyright = "נמרוד איזנברג"
 # canonifyurls = true
-paginate = 5
+paginate = 10
 theme = "hugo-clarity"
 disqusShortname = ""
 
 DefaultContentLanguage = "he"
+# defaultContentLanguageInSubdir = true
+languageCode = 'he-IL'
+[languages]
+  [languages.he]
+    disabled = false
+    languageDirection = 'rtl'
+    languageName = 'Hebrew'
+    weight = 1
+    title = 'הכותב המתוסכל'
+
 
 # [menus]
 # config/_default/menus/menu.xx.toml
