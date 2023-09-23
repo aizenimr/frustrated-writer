@@ -1,0 +1,80 @@
+# set `baseurl` to your root domain
+# if you set it to "/" share icons won't work properly on production
+baseurl = "https://example.com/"  # Include trailing slash
+title = "הכותב המתוסכל"  # Edit directly from config/_default/languages.toml # alternatively, uncomment this and remove `title` entry from the aforemention file.
+copyright = "נמרוד איזנברג"
+# canonifyurls = true
+paginate = 10
+theme = "hugo-clarity"
+disqusShortname = ""
+
+DefaultContentLanguage = "he"
+# defaultContentLanguageInSubdir = true
+languageCode = 'he-IL'
+[languages]
+  [languages.he]
+    [languages.he.params]
+      disabled = false
+      languageDirection = 'rtl'
+      languageName = 'Hebrew'
+      weight = 1
+      title = 'הכותב המתוסכל'
+  [languages.en]
+    [languages.en.params]
+      disabled = true
+
+
+#[menus]
+#config/_default/menus/*.toml
+[menu]
+  [[menu.main]]
+    name = "בית"
+    url = ""
+    weight = -110
+  # Submenus are done this way: parent -> identifier
+  [[main]]
+    name = "קישורים"
+    identifier = "קישורים"
+    weight = -108
+  [[menu.main]]
+    parent = "קישורים"
+    name = "LinkedIn"
+    url = "https://www.linkedin.com/"
+  [[menu.main]]
+    parent = "קישורים"
+    name = "Twitter"
+    url = "https://twitter.com/"
+  [[menu.main]]
+    name = "אודות"
+    url = "about/"
+    weight = -107
+  [[menu.main]]
+    name = "סיפורים"
+    url = "סיפורים/"
+    weight = -107
+  
+  [[menu.footer]]
+    name = "עמודים"
+    identifier = "עמודים"
+    weight = 1
+  [[menu.footer]]
+    parent = "עמודים"
+    name = "סיפורים"
+    url = "/סיפורים"
+    weight = 1
+  [[menu.footer]]
+    parent = "עמודים"
+    name = "אודות"
+    url = "about/"
+    weight = 1
+
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+month = "month"
+
+# series = "series"
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]

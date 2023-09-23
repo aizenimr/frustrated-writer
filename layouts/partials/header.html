@@ -1,0 +1,23 @@
+{{- $params := .Site.Params }}
+{{- $centerLogo := $params.centerLogo }}
+{{ $logo := $params.logo }}
+<header class="nav_header" >
+  <nav class="nav">
+    <div class="blog_title">
+      <h1>{{ .Site.Title }}</h1>
+      <div class="blog_subtitle">
+        עכשיו גם בהוגו
+      </div>
+    </div>
+    <div class='nav_body nav_body_{{ default "left" $params.mobileNavigation }}'></div>
+    <div class="nav_parent">
+      {{ $context := . }}
+      {{ $menuData := .Site.Data.menu }}
+      {{ with $menuData }}
+        {{ partial "nav" (dict "context" $context "menu" $menuData) }}
+      {{- else }}
+        {{ partial "nav" (dict "context" . "menu" .Site.Menus.main) }}
+      {{- end }}
+    </div>
+  </nav>
+</header>

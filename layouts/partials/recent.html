@@ -1,0 +1,3 @@
+{{ range ( last 5 (where (where .Site.Pages "Type" "post") ".Title" "!=" "Posts").ByDate ) }}
+        <li class="spaced_item"><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+{{ end }}

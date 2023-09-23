@@ -1,0 +1,9 @@
+<ul>
+    {{ range where .Site.Pages "Section" "" }}
+      {{ if ne .Title "Search" }}
+        <li class="spaced_item">
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </li>
+      {{ end }}
+    {{ end }}
+</ul>
