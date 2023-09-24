@@ -6,7 +6,7 @@ if or .Params.enableMathNotation $s.enableMathNotation }} {{ partialCached
   <nav class="nav">
     <div class='nav_body nav_body_{{ default "left" $s.mobileNavigation }}'>
       <div class="nav_parent">
-        <div class="nav_item">
+        <div class="nav_item" style="width: 20rem">
           <div class="nav_item_title">עמודים</div>
           {{ partial "pages" . }}
         </div>
@@ -15,6 +15,12 @@ if or .Params.enableMathNotation $s.enableMathNotation }} {{ partialCached
         <div class="nav_item">
           <div class="nav_item_title">פוסטים אחרונים</div>
           {{ partial "recent" . }}
+        </div>
+      </div>
+      <div class="nav_parent">
+        <div class="nav_item">
+          <div class="nav_item_title">פוסט אקראי</div>
+          {{ partial "randomPost" . }}
         </div>
       </div>
     </div>

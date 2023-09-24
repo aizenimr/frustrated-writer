@@ -1,0 +1,3 @@
+{{ range first 1 (shuffle ( (where (where .Site.Pages "Type" "post") ".Title" "!=" "Posts"))) }}
+        <li class="spaced_item"><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+{{ end }}
