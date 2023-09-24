@@ -1,23 +1,30 @@
-{{- $params := .Site.Params }}
-{{- $centerLogo := $params.centerLogo }}
-{{ $logo := $params.logo }}
-<header class="nav_header" >
+{{- $params := .Site.Params }} {{- $centerLogo := $params.centerLogo }} {{ $logo
+:= $params.logo }}
+<header class="nav_header">
   <nav class="nav">
     <div class="blog_title">
       <h1>{{ .Site.Title }}</h1>
-      <div class="blog_subtitle">
-        עכשיו גם בהוגו
+      <div id="blog_status" class="blog_subtitle">
+        <script type="text/javascript">
+          fetch("/status_list.json")
+            .then((response) => response.json())
+            .then((json) => json.statuses)
+            .then(
+              (list) =>
+                (document.getElementById("blog_status").innerHTML =
+                  list[Math.floor(Math.random() * list.length)])
+            );
+        </script>
       </div>
     </div>
-    <div class='nav_body nav_body_{{ default "left" $params.mobileNavigation }}'></div>
+    <div
+      class='nav_body nav_body_{{ default "left" $params.mobileNavigation }}'
+    ></div>
     <div class="nav_parent">
-      {{ $context := . }}
-      {{ $menuData := .Site.Data.menu }}
-      {{ with $menuData }}
-        {{ partial "nav" (dict "context" $context "menu" $menuData) }}
-      {{- else }}
-        {{ partial "nav" (dict "context" . "menu" .Site.Menus.main) }}
-      {{- end }}
+      {{ $context := . }} {{ $menuData := .Site.Data.menu }} {{ with $menuData
+      }} {{ partial "nav" (dict "context" $context "menu" $menuData) }} {{- else
+      }} {{ partial "nav" (dict "context" . "menu" .Site.Menus.main) }} {{- end
+      }}
     </div>
   </nav>
 </header>
