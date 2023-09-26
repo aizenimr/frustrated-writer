@@ -6,14 +6,16 @@
       <h1>{{ .Site.Title }}</h1>
       {{ partial "subtitle" . }}
     </div>
-    <div
-      class='nav_body nav_body_{{ default "left" $params.mobileNavigation }}'
-    ></div>
     <div class="nav_parent">
-      {{ $context := . }} {{ $menuData := .Site.Data.menu }} {{ with $menuData
-      }} {{ partial "nav" (dict "context" $context "menu" $menuData) }} {{- else
-      }} {{ partial "nav" (dict "context" . "menu" .Site.Menus.main) }} {{- end
-      }}
+      <div class='nav_body nav_body_{{ default "left" $params.mobileNavigation }}'>
+        {{ $context := . }}
+        {{ $menuData := .Site.Data.menu }}
+        {{ with $menuData }}
+          {{ partial "nav" (dict "context" $context "menu" $menuData) }}
+        {{- else }}
+          {{ partial "nav" (dict "context" . "menu" .Site.Menus.main) }}
+          {{- end }}
+      </div>
     </div>
   </nav>
 </header>

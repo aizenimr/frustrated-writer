@@ -51,9 +51,22 @@ footer.nav_footer div.nav_parent
   z-index: 99
   left: 0px
 
-.nav_item
-    display: block
+.nav_parent:hover
+    .nav_sub
+        display: block
+        background: white
+        height: auto
+        color: transparent
+        width: max-content
+        right: 0
+        transition: all 0.3s ease-in-out
+    .nav_child
+        color: black
+        transition: all 0.3s ease-in-out
 
+.nav_item
+    display: unset
+    
 .nav_item_title
     font-weight: bold
     font-family: 'Roboto Slab'
