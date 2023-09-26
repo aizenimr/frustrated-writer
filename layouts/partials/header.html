@@ -2,10 +2,11 @@
 := $params.logo }}
 <header class="nav_header">
   <nav class="nav">
-    <div class="blog_title">
-      <h1>{{ .Site.Title }}</h1>
-      {{ partial "subtitle" . }}
-    </div>
+    {{- if $centerLogo }}
+    {{- partialCached "logo" (dict "logo" $logo "class" "nav_hide") }}
+  {{- else }}
+    {{- partialCached "logo" (dict "logo" $logo) }}
+  {{- end }}
     <div class="nav_parent">
       <div class='nav_body nav_body_{{ default "left" $params.mobileNavigation }}'>
         {{ $context := . }}

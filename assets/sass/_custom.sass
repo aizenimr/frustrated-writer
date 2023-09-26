@@ -1,3 +1,15 @@
+@media screen and (max-width: $mobile-menu-breakpoint)
+    .sidebar
+        width: 100%
+        float: none !important
+        margin-left: auto
+        margin-right: auto
+        overflow: hidden
+    .nav_close svg:first-child
+        margin-right: 100%
+    .nav_close svg.isopen + svg
+        margin-right: 100%
+
 body
     direction: rtl
     background: #eee
@@ -13,7 +25,7 @@ div.blog_title h1
     margin-bottom: 0px
 
 div.blog_subtitle
-    color: #a8a8a8 !important;
+    color: #a8a8a8 !important
     font-family: 'Alef',sans-serif !important
     font-style: normal !important
     font-weight: 400 !important
@@ -27,6 +39,9 @@ img.author_header
 
 .nav_header
     position: unset
+
+.nav_parent
+    align-items: baseline
 
 .content
     padding-top: 1rem
@@ -45,11 +60,11 @@ footer.nav_footer div.nav_parent
     display: flex
 
 .nav_footer
-  background-color: #002538
-  padding: 0 15% 0 0%;
-  width: 100%
-  z-index: 99
-  left: 0px
+    background-color: #002538
+    padding: 0 15% 0 0%
+    width: 100%
+    z-index: 99
+    left: 0px
 
 .nav_parent:hover
     .nav_sub
@@ -66,7 +81,7 @@ footer.nav_footer div.nav_parent
 
 .nav_item
     display: unset
-    
+
 .nav_item_title
     font-weight: bold
     font-family: 'Roboto Slab'

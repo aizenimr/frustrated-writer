@@ -3,28 +3,6 @@ if or .Params.enableMathNotation $s.enableMathNotation }} {{ partialCached
 "math" . }} {{- end }} {{- $iconsDir := default "icons/" .Site.Params.iconsDir
 }} {{- $defaultFooterLogo := printf "%s%s" $iconsDir "apple-touch-icon.png"}}
 <footer class="nav_footer">
-  <nav class="nav">
-    <div class='nav_body nav_body_{{ default "left" $s.mobileNavigation }}'>
-      <div class="nav_parent">
-        <div class="nav_item" style="width: 20rem">
-          <div class="nav_item_title">עמודים</div>
-          {{ partial "pages" . }}
-        </div>
-      </div>
-      <div class="nav_parent">
-        <div class="nav_item">
-          <div class="nav_item_title">פוסטים אחרונים</div>
-          {{ partial "recent" . }}
-        </div>
-      </div>
-      <div class="nav_parent">
-        <div class="nav_item">
-          <div class="nav_item_title">פוסט אקראי</div>
-          {{ partial "randomPost" . }}
-        </div>
-      </div>
-    </div>
-  </nav>
   <div class="footer_inner wrap pale">
     <img
       src="{{ absURL (default $defaultFooterLogo $s.footerLogo) }}"
