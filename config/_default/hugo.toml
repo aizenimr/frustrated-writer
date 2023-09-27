@@ -64,21 +64,42 @@ languageCode = 'he-IL'
       name = "אודות"
       url = "about/"
       weight = -100
-    
-    [[menu.footer]]
-      name = "עמודים"
-      identifier = "עמודים"
+
+    [[menu.social]]
+      name = "mail"
       weight = 1
-    [[menu.footer]]
-      parent = "עמודים"
-      name = "סיפורים"
-      url = "/סיפורים"
-      weight = 1
-    [[menu.footer]]
-      parent = "עמודים"
-      name = "אודות"
-      url = "about/"
-      weight = 1
+      url = "mailto:aizenimr[at]gmail.com"
+    [[menu.social]]
+      name = "rss"
+      weight = 2
+      url = "index.xml"
+    [[menu.social]]
+      name = "mastodon"
+      type = "social"
+      weight = 3
+      url = "https://tooot.im/@aizenimr"
+    [[menu.social]]
+      name = "keyoxide"
+      weight = 4
+      url = "https://keyoxide.org/hkp/EB4E96CC42EDEB88CAB60B499F99753323E0A2D9"
+    [[menu.social]]
+      name = "bluesky"
+      weight = 5
+      url = "https://bsky.app/profile/aizenimr.bsky.social"
+
+# other supported social links
+# name = "youtube"
+# url = "https://www.youtube.com/#"
+# name = "facebook"
+# url = "https://facebook.com/#"
+# name = "instagram"
+# url = "https://instagram.com/#"
+# name = "stackoverflow"
+# url = "https://stackoverflow.com/#"
+# name = "gitlab"
+# url = "https://gitlab.com/#"
+# name = "discord"
+# url = "https://discord.gg/#"
 
 
 [taxonomies]
