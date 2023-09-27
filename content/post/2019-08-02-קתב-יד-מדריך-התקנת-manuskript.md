@@ -49,7 +49,7 @@ tags:
 
 קודם כל: יש להיכנס [לכאן][9] ולהוריד את הקבצים `he_IL.aff`, `he_IL.dic`. הקפידו להוריד את גרסת ה-Plain שלהם!<figure id="attachment_2574" aria-describedby="caption-attachment-2574" style="width: 822px" class="wp-caption aligncenter">
 
-[<img decoding="async" loading="lazy" class="wp-image-2574 size-full" src="https://aizenimr.com/wp-content/uploads/2019/08/manuskript-dict-screen-shot-1.png" alt="" width="822" height="321" />][10]<figcaption id="caption-attachment-2574" class="wp-caption-text">יש להוריד את גירסת ה-Plain בלבד</figcaption></figure> 
+[<img decoding="async" loading="lazy" class="wp-image-2574 size-full" src="/images/2019/08/manuskript-dict-screen-shot-1.png" alt="" width="822" height="321" />][10]<figcaption id="caption-attachment-2574" class="wp-caption-text">יש להוריד את גירסת ה-Plain בלבד</figcaption></figure> 
 
 את הקבצים שהורדתם שימו בתוך ספריית `manuskript/enchant/share/enchant/myspell` הנמצאת בתוך ספריית התוכנה שפתחתם מה-ZIP בהתחלה.
 
@@ -78,4 +78,4 @@ tags:
  [7]: https://github.com/olivierkes/manuskript/wiki/Adding-a-Spellcheck-Language-Dictionary-to-Manuskript
  [8]: /2017/07/23/%d7%90%d7%a8%d7%92%d7%96-%d7%94%d7%9b%d7%9c%d7%99%d7%9d-%d7%9c%d7%9b%d7%95%d7%aa%d7%91-%d7%94%d7%9e%d7%aa%d7%97%d7%99%d7%9c/#comment-246
  [9]: https://cgit.freedesktop.org/libreoffice/dictionaries/tree/he_IL
- [10]: https://aizenimr.com/wp-content/uploads/2019/08/manuskript-dict-screen-shot-1.png
+ [10]: /images/2019/08/manuskript-dict-screen-shot-1.png
