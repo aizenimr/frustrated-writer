@@ -81,9 +81,10 @@ languageCode = 'he-IL'
     [[menu.social]]
       name = "keyoxide"
       weight = 4
-      url = "https://keyoxide.org/hkp/EB4E96CC42EDEB88CAB60B499F99753323E0A2D9"
+      url = "https://keyoxide.org/hkp/aizenimr@gmail.com"
     [[menu.social]]
       name = "bluesky"
+      type = "social"
       weight = 5
       url = "https://bsky.app/profile/aizenimr.bsky.social"
 
