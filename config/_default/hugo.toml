@@ -3,7 +3,8 @@
 baseurl = "https://example.com/"  # Include trailing slash
 title = "הכותב המתוסכל"  # Edit directly from config/_default/languages.toml # alternatively, uncomment this and remove `title` entry from the aforemention file.
 copyright = "נמרוד איזנברג"
-# canonifyurls = true
+canonifyurls = true
+RelativeURLs=true
 paginate = 10
 theme = "hugo-clarity"
 disqusShortname = ""
@@ -26,10 +27,6 @@ languageCode = 'he-IL'
 
 [menus]
   #config/_default/menus/*.toml
-    [[menu.main]]
-      name = "בית"
-      url = ""
-      weight = -110
     # Submenus are done this way: parent -> identifier
     [[menu.main]]
       name = "כתיבה"
