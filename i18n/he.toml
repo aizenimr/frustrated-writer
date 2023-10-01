@@ -2,7 +2,7 @@
 other = "עוד"
 
 [copyright]
-other = "Copyright"
+other = "כל הזכויות שמורות"
 
 [all_rights]
 other = "כל הזכויות שמורות"
@@ -50,7 +50,7 @@ other = "All Series"
 other = "Overview"
 
 [reading_time]
-other = "{{ .ReadingTime }} min read"
+other = "{{ .ReadingTime }} זמן קריאה"
 
 [series_posts]
 other = "Posts in this series"
