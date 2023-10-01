@@ -18,6 +18,7 @@
     <span class="post_time"></span>
     {{- $scratch.Set "writeSeparator" true }}
   {{- end }}
+  {{ $.Site.BaseURL }}
   {{- with .Params.tags -}}
     <span>
       {{- if ($scratch.Get "writeSeparator") }}&nbsp;· {{ end }}
