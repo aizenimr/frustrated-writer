@@ -50,7 +50,7 @@ other = "All Series"
 other = "Overview"
 
 [reading_time]
-other = "{{ .ReadingTime }} זמן קריאה"
+other = "זמן קריאה: {{ .ReadingTime }}"
 
 [series_posts]
 other = "Posts in this series"
