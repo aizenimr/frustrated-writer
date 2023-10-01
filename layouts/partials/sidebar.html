@@ -18,7 +18,7 @@
       {{- if $showAuthorPhoto }}
       <h2>{{ "מי אני?" }}</h2>
       <div class="author_header">
-        <img src="{{ absURL $author.photo }}" alt="{{ $author.name }} photo">
+        <img src="{{ $.Site.BaseURL }}{{ $author.photo }}" alt="{{ $author.name }} photo">
       </div>
       {{- else }}
       <h2>{{ if $fullAuthor }}{{ $author.name }}{{ else }}{{ $author }}{{ end }}</h2>
