@@ -1,7 +1,7 @@
 {{- $showShare := ne (.Param "showshare") false }}
 {{- $showDate := ne (.Param "showdate") false }}
 {{- $showReadTime := ne (.Param "showreadtime") false }}
-{{- $showPostMeta := or ($showShare) ($showDate) ($showReadTime) (isset .Params "tags") }}
+{{- $showPostMeta := or ($showShare) ($showDate) ($showReadTime) (isset .Params "tags") (isset .Params "categories") }}
 {{- $scratch := newScratch }}
 {{- $scratch.Set "writeSeparator" false }}
 {{- if $showPostMeta }}
@@ -18,6 +18,18 @@
     <span class="post_time"></span>
     {{- $scratch.Set "writeSeparator" true }}
   {{- end }}
+  {{- with .Params.categories -}}
+  <span>
+    {{- if ($scratch.Get "writeSeparator") }}&nbsp;· {{ end }}
+    {{- range . }}
+      {{- $category := urlize . -}}
+      <strong><a href='{{ absLangURL (printf "categories/%s/" $category) }}' title="{{ . }}" class="post_category button button_translucent">
+        {{- . }}
+      </a></strong>
+    {{- end }}
+  </span>
+  {{- $scratch.Set "writeSeparator" true }}
+{{- end }}
   {{- with .Params.tags -}}
     <span>
       {{- if ($scratch.Get "writeSeparator") }}&nbsp;· {{ end }}
