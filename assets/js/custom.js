@@ -1,4 +1,4 @@
-// Mastodon embed timeline
+/* // Mastodon embed timeline
 // Forked from: https://github.com/AzetJP/mastodon-timeline-widget
 
 // Account settings
@@ -308,7 +308,7 @@ function removeSpinner(element) {
   if (spinnerContainer) {
     spinnerContainer.classList.remove(spinnerCSS);
   }
-}
+} */
 
 function writeStatus() {
   let status = getRandomStatus();
