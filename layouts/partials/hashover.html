@@ -1,2 +1,11 @@
 <div id="hashover"></div>
-<script type="text/javascript" src="https://comments.aizenimr.com/hashover.php"></script>
+
+<!-- load asynchronous -->
+<script type="text/javascript">
+    (function() {
+        var s = document.createElement('script'),
+        t = document.getElementsByTagName('script')[0];
+        s.type = 'text/javascript'; s.async = true;
+        s.src = "http://comments.aizenimr.com/hashover.php";
+        t.parentNode.insertBefore(s, t); })();
+    </script>
