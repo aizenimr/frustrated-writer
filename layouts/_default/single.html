@@ -11,12 +11,6 @@
 {{- $bg := absLangURL (path.Join "images" $image) }}
 <div class="{{ if ne $p.singleColumn true }}grid-inverse {{ end }}wrap content">
   <article class="post_content">
-    <script>
-      var remark_config = {
-        host: 'https://remark42.aizenimr.com',
-        site_id: 'remark',
-      }
-    </script>
     {{- $t := .Title }}
     <h1 class="post_title">{{ $t | markdownify }}</h1>
     {{- partial "post-meta" . }}

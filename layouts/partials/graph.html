@@ -1,18 +1,21 @@
 <div id="graphcomment"></div>
-{{- $c := window.location.href }}
-{{- with .Param "graphcommentid" }}
-  {{- $c := . }}
-{{- end }}
+{{ $c := "" }}
+{{ if isset page.Params "graphcommentid" }}
+  {{ $c = .Param "graphcommentid" }}
+{{ else }}
+  {{ $c = .Permalink }}
+{{ end }}
 <script type="text/javascript">
 
   /* - - - CONFIGURATION VARIABLES - - - */
 
+  var graphuid = {{ $c }};
   var __semio__params = {
     graphcommentId: "Frustrated-Writer", // make sure the id is yours
 
     behaviour: {
       // HIGHLY RECOMMENDED
-      uid: {{ $c }}
+      uid: graphuid
     }
     // configure your variables here
   }
