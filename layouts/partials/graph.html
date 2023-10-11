@@ -1,4 +1,8 @@
 <div id="graphcomment"></div>
+{{- $c := "window.location.href" }}
+{{- with .Param "graphcommentid" }}
+  {{- $c := . }}
+{{- end }}
 <script type="text/javascript">
 
   /* - - - CONFIGURATION VARIABLES - - - */
@@ -8,11 +12,9 @@
 
     behaviour: {
       // HIGHLY RECOMMENDED
-      // uid: window.location.href
+      uid: {{ $c }}
     }
-
     // configure your variables here
-
   }
 
   /* - - - DON'T EDIT BELOW THIS LINE - - - */
@@ -22,11 +24,11 @@
   }
 
 
-  (function() {
+  (function () {
     var gc = document.createElement('script'); gc.type = 'text/javascript'; gc.async = true;
     gc.onload = __semio__onload; gc.defer = true; gc.src = 'https://integration.graphcomment.com/gc_graphlogin.js?' + Date.now();
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gc);
   })();
-  
+
 
 </script>
