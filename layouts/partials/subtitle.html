@@ -1,6 +1,6 @@
 <div id="blog_status" class="blog_subtitle">
     <script type="text/javascript">
-      fetch('{{ absURL "" }}/status_list.json')
+      fetch('{{ absURL "/status_list.json" }}')
         .then((response) => response.json())
         .then((json) => json.statuses)
         .then(
