@@ -9,13 +9,12 @@
 
   /* - - - CONFIGURATION VARIABLES - - - */
 
-  var graphuid = {{ $c }};
-  var __semio__params = {
+    var __semio__params = {
     graphcommentId: "Frustrated-Writer", // make sure the id is yours
 
     behaviour: {
       // HIGHLY RECOMMENDED
-      uid: graphuid
+      uid: "{{ $c }}"
     }
     // configure your variables here
   }
