@@ -1,22 +1,18 @@
 <div id="graphcomment"></div>
-{{ $c := "" }}
-{{ if isset page.Params "graphcommentid" }}
-  {{ $c = .Param "graphcommentid" }}
-{{ else }}
-  {{ $c = .Permalink }}
-{{ end }}
 <script type="text/javascript">
 
   /* - - - CONFIGURATION VARIABLES - - - */
 
-    var __semio__params = {
+  var __semio__params = {
     graphcommentId: "Frustrated-Writer", // make sure the id is yours
 
     behaviour: {
       // HIGHLY RECOMMENDED
       //  uid: "...", // uniq identifer for the comments thread on your page (ex: your page id)
     }
+
     // configure your variables here
+
   }
 
   /* - - - DON'T EDIT BELOW THIS LINE - - - */
@@ -26,11 +22,11 @@
   }
 
 
-  (function () {
+  (function() {
     var gc = document.createElement('script'); gc.type = 'text/javascript'; gc.async = true;
     gc.onload = __semio__onload; gc.defer = true; gc.src = 'https://integration.graphcomment.com/gc_graphlogin.js?' + Date.now();
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gc);
   })();
-
+  
 
 </script>
