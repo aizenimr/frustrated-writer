@@ -43,5 +43,12 @@
   {{- end }}
 {{- end }}
 <link rel="stylesheet" id="fonts-css" href="/fonts/fonts.css" type="text/css" media="all">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YZF0GDK8SQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-{{- partial "scripts/google/tag-manager" (dict "noscript" false) }}
+  gtag('config', 'G-YZF0GDK8SQ');
+</script>
