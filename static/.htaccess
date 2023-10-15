@@ -81,7 +81,7 @@ RewriteCond %{HTTP_USER_AGENT} ^Zeus
 RewriteRule ^.* - [F,L]
 
 # 301 Redirect RSS feed
-RedirectMatch 301 /feed$ /index.xml
+RewriteRule ^feed/? /index.xml [R=301,L]
 
 # Prevent directory listings
 Options All -Indexes
