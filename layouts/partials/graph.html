@@ -1,32 +1,51 @@
 <div id="graphcomment"></div>
 <script type="text/javascript">
+  (function () {
+    var __semio__token;
+    var __semio__callback;
 
-  /* - - - CONFIGURATION VARIABLES - - - */
+    var __semio__params = {
+      graphcommentId: "Frustrated-Writer",
+      
+      wordpress: {
+        guid: "{{ .Params.guid }}",
+      },
+    };
 
-  var __semio__params = {
-    graphcommentId: "Frustrated-Writer", // make sure the id is yours
+    var lib = "gc_graphlogin";
 
-    behaviour: {
-      // HIGHLY RECOMMENDED
-      uid: "{{ .Params.guid }}",
-    },
+    function __semio__onload() {
+      window["__semio__" + lib](__semio__params);
+    }
 
-    // configure your variables here
+    (function () {
+      var gc = document.createElement("script");
+      gc.type = "text/javascript";
+      gc.async = true;
+      gc.onload = __semio__onload;
+      gc.defer = true;
+      gc.src = "https://integration.graphcomment.com/" + lib + ".js";
+      (
+        document.getElementsByTagName("head")[0] ||
+        document.getElementsByTagName("body")[0]
+      ).appendChild(gc);
+    })();
 
-  }
+    function __semio__onload__counter() {
+      __semio__helpers_counter("Frustrated-Writer");
+    }
 
-  /* - - - DON'T EDIT BELOW THIS LINE - - - */
-
-  function __semio__onload() {
-    __semio__gc_graphlogin(__semio__params)
-  }
-
-
-  (function() {
-    var gc = document.createElement('script'); gc.type = 'text/javascript'; gc.async = true;
-    gc.onload = __semio__onload; gc.defer = true; gc.src = 'https://integration.graphcomment.com/gc_graphlogin.js?' + Date.now();
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gc);
+    (function () {
+      var gc = document.createElement("script");
+      gc.type = "text/javascript";
+      gc.async = true;
+      gc.onload = __semio__onload__counter;
+      gc.defer = true;
+      gc.src = "https://integration.graphcomment.com/helpers_counter.js";
+      (
+        document.getElementsByTagName("head")[0] ||
+        document.getElementsByTagName("body")[0]
+      ).appendChild(gc);
+    })();
   })();
-  
-
 </script>
