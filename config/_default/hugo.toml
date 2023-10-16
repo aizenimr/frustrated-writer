@@ -10,7 +10,7 @@ theme = "hugo-clarity"
 disqusShortname = ""
 
 DefaultContentLanguage = "he"
-# defaultContentLanguageInSubdir = true
+defaultContentLanguageInSubdir = false
 languageCode = 'he-IL'
 [languages]
   [languages.he]
@@ -23,7 +23,6 @@ languageCode = 'he-IL'
   [languages.en]
     [languages.en.params]
       disabled = true
-
 
 [menus]
   #config/_default/menus/*.toml
@@ -62,11 +61,16 @@ languageCode = 'he-IL'
 
 
 [taxonomies]
-category = "categories"
-tag = "tags"
-month = "month"
+  category = "categories"
+  tag = "tags"
+  month = "month"
 
 # series = "series"
 
 [outputs]
-home = ["HTML", "RSS", "JSON"]
+  home = ["HTML", "RSS", "JSON"]
+
+[sitemap]
+  changeFreq = ''
+  filename = 'sitemap.xml'
+  priority = -1
