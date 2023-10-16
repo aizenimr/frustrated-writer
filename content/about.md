@@ -21,4 +21,4 @@ classic-editor-remember:
 
 מתחזק גם כלב מקסים, מסוג סטר אירי, בשם אנג'ל. נקרא כך מכיוון שמלכת היופי לא הרשתה לי לקרוא לו ספייק – אל תשאלו. הוא אמור להיות יותר חכם ממני, אבל איכשהו זה לא מתבטא.
 
-הבלוג הזה הוא הרפתקה עבורי. אני מקווה שתהנו ממנה לפחות כמוני. בינתיים, אתם מוזמנים לכתוב לי [במייל](mailto:aizenimr@gmail.com) או לעקוב אחרי [בפייס](http://facebook.com/aizenimr) [ובטוויטר](http://twitter.com/aizenimr). אפשר גם להירשם לעדכוני [רסס](https://aizenimr.com/index.xml).
+הבלוג הזה הוא הרפתקה עבורי. אני מקווה שתהנו ממנה לפחות כמוני. בינתיים, אתם מוזמנים לכתוב לי [במייל](mailto:aizenimr@gmail.com) או לעקוב אחרי [בפייס](http://facebook.com/aizenimr) [ובבלוסקיי](https://bsky.app/profile/aizenimr.bsky.social) (כי טוויטר זה איכס). אפשר גם להירשם לעדכוני [רסס](https://aizenimr.com/index.xml).
