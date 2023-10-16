@@ -1,0 +1,22 @@
+{{ with resources.GetRemote "https://bluestream.deno.dev/aizenimr.bsky.social?repost=include" | transform.Unmarshal }}
+{{ range first 10 .channel.item }}
+<div class="bskypost">
+    {{ $link := .link | plainify | htmlUnescape }}
+    <div class="bskypost_title">
+        <strong>{{ .title | plainify | htmlUnescape }}</strong><br />
+    </div>
+    <a href="{{ $link }}">{{ .description | plainify | htmlUnescape }}
+        {{ $img := index .enclosure "-url" }}
+        {{ if $img }}
+        <img src="{{ $img }}" />
+        {{ end}}<br />
+        <div class="bskypost_time">
+            {{ $t := .pubDate }}
+            {{ $t = time.AsTime $t }}
+            {{ $t.Format "02-01-2006 15:04" }}
+        </div>
+    </a>
+    <hr>
+</div>
+{{ end }}
+{{ end }}
