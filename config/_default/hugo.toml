@@ -58,7 +58,7 @@ languageCode = 'he-IL'
       name = "bluesky"
       type = "social"
       weight = 6
-      url = "https://bsky.app/profile/aizenimr.bsky.social"
+      url = "https://bsky.app/profile/aizenimr.com"
 
 
 [taxonomies]
