@@ -352,7 +352,7 @@ function getBskyFeed() {
   let RSS_URL =
     "https://corsproxy.io/?" +
     encodeURIComponent(
-      "https://bluestream.deno.dev/aizenimr.bsky.social?repost=include"
+      "https://bluestream.deno.dev/aizenimr.com?repost=include"
     );
   fetch(RSS_URL)
     .then((response) => response.text())
