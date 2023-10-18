@@ -1,18 +1,1 @@
 <div id="bskyfeed"></div>
-<script>
-    async function getBskyFeed() {
-        let headersList = {
-            "Accept": "*/*"
-        }
-
-        let response = await fetch("https://bluestream.deno.dev/aizenimr.bsky.social?repost=include", {
-            method: "GET",
-            headers: headersList
-        });
-
-        let data = await response.text();
-        document.getElementById("bskyfeed").innerHTML = data;
-    }
-
-    getBskyFeed();
-</script>
