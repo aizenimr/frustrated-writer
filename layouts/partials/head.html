@@ -20,7 +20,19 @@
 {{- end }}
 {{- partial "opengraph" . }}
 {{- partialCached "favicon" . }}
-<link rel="canonical" href="{{ .Permalink }}">
+{{- if isset .Params "canonical" -}}
+  <link rel="canonical" href="{{ .Params.canonical }}" />
+{{- else -}}
+  <link rel="canonical" href="{{ .Permalink }}" />
+{{- end }}
+{{- if .Paginator -}}
+ {{- if .Paginator.HasPrev -}}
+   <link rel="prev" href="{{ .Paginator.Prev.URL | absURL }}" />
+ {{- end -}}
+ {{- if .Paginator.HasNext -}}
+   <link rel="next" href="{{ .Paginator.Next.URL | absURL }}" />
+ {{- end -}}
+{{- end }}
 <!-- RSS and atom feeds -->
 {{ range .AlternativeOutputFormats -}}
   {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}

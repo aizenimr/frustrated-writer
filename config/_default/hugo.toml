@@ -9,6 +9,7 @@ relativeurls=true
 paginate = 10
 theme = "hugo-clarity"
 disqusShortname = ""
+enableRobotsTXT = true
 
 DefaultContentLanguage = "he"
 defaultContentLanguageInSubdir = false

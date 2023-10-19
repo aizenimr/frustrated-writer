@@ -30,6 +30,8 @@
       {{- .Content }}
     </div>
 
+    {{ partial "nextprev" . }}
+
     {{- $showRelatedInArticle := true }}
     {{- if eq $s.showRelatedInArticle false }}
     {{- $showRelatedInArticle = false }}
