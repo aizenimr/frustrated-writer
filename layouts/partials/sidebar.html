@@ -2,6 +2,10 @@
 <aside class="sidebar">
   <section class="sidebar_inner">
     <div class="widget">
+      <h2>חיפוש</h2>
+      {{ partial "search/widget" . }}
+    </div>
+    <div class="widget">
       {{- $introDescription := $s.introDescription }}
       {{- with .Params.introDescription }}
       {{- $introDescription = . }}
@@ -36,10 +40,6 @@
     <div class="widget">
       <h2>עקבו אחריי</h2>
       {{ partial "follow" . }}
-    </div>
-    <div class="widget">
-      <h2>חיפוש</h2>
-      {{ partial "search/widget" . }}
     </div>
     {{- $tagsLimit := (default 100 $s.numberOfTagsShown) }}
     {{- range $key, $value := .Site.Taxonomies }}
