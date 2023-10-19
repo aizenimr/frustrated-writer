@@ -45,7 +45,7 @@
 [[social]]
   name = "rss"
   weight = 4
-  url = "index.xml"
+  url = "rss.xml"
 
 # other supported social links
 # name = "youtube"

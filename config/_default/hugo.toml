@@ -44,7 +44,7 @@ languageCode = 'he-IL'
     [[menu.social]]
       name = "rss"
       weight = 2
-      url = "index.xml"
+      url = "/rss.xml"
     [[menu.social]]
       name = "facebook"
       type = "social"
@@ -70,6 +70,14 @@ languageCode = 'he-IL'
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+
+[outputFormats.RSS]
+    mediaType              = "application/rss+xml"
+    baseName               = "rss"
+    rel                    = "alternate"
+    isPlainText            = false
+    isHTML                 = false
+    noUgly                 = true
 
 [sitemap]
   changeFreq = ''
