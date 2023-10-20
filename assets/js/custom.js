@@ -63,6 +63,7 @@ function getBskyFeed() {
       </a>
       </div>`;
       }
+      document.getElementById('spinner').style.display = 'none';
       document.getElementById("bskyfeed").innerHTML = html;
     });
 }
