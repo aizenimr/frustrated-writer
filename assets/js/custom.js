@@ -37,6 +37,7 @@ function getBskyElementTitle(titleElement) {
 }
 
 function getBskyFeed() {
+  document.getElementById('spinner').style.display = 'block';
   let RSS_URL =
     "https://corsproxy.io/?" +
     encodeURIComponent(
