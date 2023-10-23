@@ -60,7 +60,7 @@ function getBskyFeed() {
           }" target="_blank" rel="noopener">
             ${title}
         <div class="bskypost_description">
-          ${el.querySelector("description").textContent.replace(/<br>\[quote\]<br>((.|\n)+)<\/p>/,"<div class=\"bskypost_quote\">$1<\/div>")}<hr>
+          ${el.querySelector("description").textContent.replace(/<br>\[quote\]<br>((.|\n)+)<\/p>/,"<div class=\"bskypost_quote\">$1<\/div>")}
         </div>
       </a>
       </div>`;
