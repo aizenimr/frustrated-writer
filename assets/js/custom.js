@@ -62,6 +62,9 @@ function getBskyFeed() {
         <div class="bskypost_description">
           ${el.querySelector("description").textContent.replace(/<br>\[quote\]<br>((.|\n)+)<\/p>/,"<div class=\"bskypost_quote\">$1<\/div>")}
         </div>
+        <div class="bskypost_time">
+          ${new Date(el.querySelector("pubDate").textContent).toLocaleString("he-IL")}
+        </div>
       </a>
       </div>`;
       }
