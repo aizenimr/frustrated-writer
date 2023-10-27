@@ -1,0 +1,16 @@
+{{ $related := .Site.RegularPages.Related . | first 3 }}
+{{ with $related }}
+<h3>פוסטים קשורים</h3>
+<div class="relatedContainer">
+	{{ range . }}
+	<div class="relatedPost">
+		<div class="relatedPostThumbnail">
+			<a href="{{ .Permalink }}" class="nav-link"><img src="{{ .Params.featureImage }}"></a>
+		</div>
+		<div class="relatedPostTitle">
+			<a href="{{ .Permalink }}" class="nav-link" title="{{ .Title }}">{{ .Title }}</a>
+		</div>
+	</div>
+	{{ end }}
+</div>
+{{ end }}

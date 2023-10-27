@@ -29,9 +29,7 @@
     <div class="post_body">
       {{- .Content }}
     </div>
-
     {{ partial "nextprev" . }}
-
     {{- $showRelatedInArticle := true }}
     {{- if eq $s.showRelatedInArticle false }}
     {{- $showRelatedInArticle = false }}
@@ -41,7 +39,7 @@
     {{- if ne $showRelatedInArticle false }}
     {{- partial "related" . }}
     {{- end }}
-
+    
     {{- $showComments := true }}
     {{- if eq $s.comments false }}
     {{- $showComments = false }}
