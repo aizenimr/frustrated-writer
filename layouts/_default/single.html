@@ -29,16 +29,18 @@
     <div class="post_body">
       {{- .Content }}
     </div>
-    {{ partial "nextprev" . }}
-    {{- $showRelatedInArticle := true }}
-    {{- if eq $s.showRelatedInArticle false }}
-    {{- $showRelatedInArticle = false }}
-    {{- else if eq $p.showRelatedInArticle false }}
-    {{- $showRelatedInArticle = false }}
-    {{- end }}
-    {{- if ne $showRelatedInArticle false }}
-    {{- partial "related" . }}
-    {{- end }}
+    {{ if eq .Params.type "post" }}
+      {{ partial "nextprev" . }}
+      {{- $showRelatedInArticle := true }}
+      {{- if eq $s.showRelatedInArticle false }}
+      {{- $showRelatedInArticle = false }}
+      {{- else if eq $p.showRelatedInArticle false }}
+      {{- $showRelatedInArticle = false }}
+      {{- end }}
+      {{- if ne $showRelatedInArticle false }}
+      {{- partial "related" . }}
+      {{- end }}
+    {{ end }}
     
     {{- $showComments := true }}
     {{- if eq $s.comments false }}
