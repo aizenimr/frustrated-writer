@@ -62,8 +62,8 @@ languageCode = 'he-IL'
       url = "https://bsky.app/profile/aizenimr.com"
 
 [taxonomies]
-  category = "categories"
-  tag = "tags"
+  category = "category"
+  tag = "tag"
 
 [permalinks]
   categories = "/category/:slug/"

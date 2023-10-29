@@ -10,9 +10,9 @@ timeline_notification:
   - 1564728592
 publicize_tumblr_url:
   - http://.tumblr.com/post/186717616808
-categories:
+category:
   - כללי
-tags:
+tag:
   - גיקיאדה
   - טכנולוגיה
   - כתיבה

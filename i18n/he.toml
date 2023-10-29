@@ -28,10 +28,10 @@ other = "חזרה"
 [translations]
 other = "תרגומים"
 
-[categories]
+[category]
 other = "קטגוריות"
 
-[tags]
+[tag]
 other = "תגיות"
 
 [series]
@@ -40,7 +40,13 @@ other = "סדרות"
 [all_categories]
 other = "כל הקטגוריות"
 
+[all_category]
+other = "כל הקטגוריות"
+
 [all_tags]
+other = "כל התגיות"
+
+[all_tag]
 other = "כל התגיות"
 
 [all_series]
