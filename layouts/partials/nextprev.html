@@ -1,12 +1,12 @@
 <div class="nextprev">
         <div class="prevpost">
             {{ if .Prev }}
-            <a href="{{ .Prev.Permalink }}" title="{{ .Prev.Title }}">פוסט קודם >></a>
+            <a href="{{ .Prev.Permalink }}">{{ .Prev.Title }} >></a>
             {{ end }}
         </div>
         <div class="nextpost">
             {{ if .Next }}
-            <a href="{{ .Next.Permalink }}" title="{{ .Next.Title }}"><< פוסט הבא</a>
+            <a href="{{ .Next.Permalink }}"><< {{ .Next.Title }}</a>
                 {{ end }}
         </div>
 </div>
