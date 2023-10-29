@@ -61,13 +61,13 @@ languageCode = 'he-IL'
       weight = 6
       url = "https://bsky.app/profile/aizenimr.com"
 
-
 [taxonomies]
   category = "categories"
   tag = "tags"
-  month = "month"
 
-# series = "series"
+[permalinks]
+  categories = "/category/:slug/"
+  tags = "/tag/:slug/"
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
