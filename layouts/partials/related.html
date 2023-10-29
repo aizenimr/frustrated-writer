@@ -4,12 +4,14 @@
 <div class="relatedContainer">
 	{{ range . }}
 	<div class="relatedPost">
-		<div class="relatedPostThumbnail">
-			<a href="{{ .Permalink }}" class="nav-link"><img src="{{ .Params.featureImage }}"></a>
-		</div>
-		<div class="relatedPostTitle">
-			<a href="{{ .Permalink }}" class="nav-link" title="{{ .Title }}">{{ .Title }}</a>
-		</div>
+		<a href="{{ .Permalink }}" class="nav-link">
+			<div class="relatedPostThumbnail">
+				<img src="{{ .Params.featureImage }}">
+			</div>
+			<div class="relatedPostTitle">
+				{{ .Title }}
+			</div>
+		</a>
 	</div>
 	{{ end }}
 </div>
