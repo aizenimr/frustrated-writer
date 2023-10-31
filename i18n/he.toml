@@ -53,7 +53,7 @@ other = "כל התגיות"
 other = "All Series"
 
 [overview]
-other = "Overview"
+other = "תוכן"
 
 [reading_time]
 other = "זמן קריאה: {{ .ReadingTime }}"
