@@ -16,7 +16,7 @@ featureImage: 'https://images.unsplash.com/photo-1447069387593-a5de0862481e?ixli
 
 category:
   - syntax
-tag:
+tags:
   - Hugo
 series:
   - Themes Guide

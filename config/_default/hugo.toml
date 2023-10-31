@@ -63,7 +63,7 @@ languageCode = 'he-IL'
 
 [taxonomies]
   category = "category"
-  tag = "tag"
+  tag = "tags"
 
 [permalinks]
   categories = "/category/:slug/"

@@ -12,7 +12,7 @@ publicize_tumblr_url:
   - http://.tumblr.com/post/186717616808
 category:
   - כללי
-tag:
+tags:
   - גיקיאדה
   - טכנולוגיה
   - כתיבה

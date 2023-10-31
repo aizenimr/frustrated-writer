@@ -55,7 +55,11 @@
         {{- $slicedTags := ($value.ByCount | first $tagsLimit) }}
         {{- range $slicedTags }}
         {{- $c := math.Max 15 (mul (math.Sqrt .Count) 5) }}
-        <a href='{{ absLangURL $key }}/{{ (replace .Name "#" "%23") | urlize }}/'
+        {{ $k := $key }}
+        {{ if eq $key "tags" }}
+          {{ $k = "tag" }}
+        {{ end }}
+        <a href='{{ absLangURL $k }}/{{ (replace .Name "#" "%23") | urlize }}/'
           class="post_tag button button_translucent" title="{{ .Name }}" style="font-size: {{$c}}px;">
           {{ upper .Name }}
         </a>
@@ -69,7 +73,11 @@
             {{- range $value.Alphabetical }}
             {{ $tagsInfo.Add "tagsInfo" (slice .Name .Count)}}
             {{- $c := math.Max 15 (mul (math.Sqrt .Count) 5) }}
-            <a href='{{ absLangURL $key }}/{{ (replace .Name "#" "%23") | urlize }}/'
+            {{ $k := $key }}
+            {{ if eq $key "tags" }}
+              {{ $k = "tag" }}
+            {{ end }}
+            <a href='{{ absLangURL $k }}/{{ (replace .Name "#" "%23") | urlize }}/'
               class=" post_tag button button_translucent" data-position={{ .Count }} title="{{ .Name }}"
               style="font-size: {{$c}}px;">
               {{- upper .Name -}}

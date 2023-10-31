@@ -18,7 +18,7 @@ figurePositionShow: true # Override global value for showing the figure label.
 showRelatedInArticle: false # Override global value for showing related posts in this series at the end of the content.
 category:
   - Technology
-tag:
+tags:
   - Tag_name1
   - Tag_name2
 ---
