@@ -54,6 +54,7 @@ function getBskyFeed() {
       for (let i = 0; i < size; i++) {
         let el = items[i];
         let title = getBskyElementTitle(el.querySelector("title").innerHTML);
+        let pubDate = new Date(el.querySelector("pubDate").textContent);
         html += `
         <div class="bskypost">
           <a href="${el.querySelector("link").innerHTML
@@ -63,7 +64,7 @@ function getBskyFeed() {
           ${el.querySelector("description").textContent.replace(/<br>\[quote\]<br>((.|\n)+)<\/p>/,"<div class=\"bskypost_quote\">$1<\/div>")}
         </div>
         <div class="bskypost_time">
-          ${new Date(el.querySelector("pubDate").textContent).toLocaleString("he-IL")}
+          ${pubDate.toLocaleDateString() + " " + pubDate.toLocaleTimeString()}
         </div>
       </a>
       </div>`;
