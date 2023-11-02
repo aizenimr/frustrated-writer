@@ -53,10 +53,14 @@
 <meta name="description" content="{{ $summary }}" />
 <meta name="twitter:card" content="{{ if $s.largeTwitterCard }}summary_large_image{{ else }}summary{{ end }}" />
 <meta name="twitter:creator" content="{{ $s.twitter }}">
-<meta name="twitter:title" content="{{ .Title }}" />
+{{ $ogTitle := $site }}
+{{ if ne $title "" }}
+  {{ $ogTitle = print $ogTitle " | " $title }}
+{{ end }}
+<meta name="twitter:title" content="{{ $ogTitle }}" />
 <meta name="twitter:image" content="{{ $image }}"/>
 <meta property="og:url" content="{{ $permalink }}" />
-<meta property="og:title" content="{{ $title }}" />
+<meta property="og:title" content="{{ $ogTitle }}" />
 <meta property="og:description" content="{{ $summary }}" />
 <meta property="og:image" content="{{ $image }}" />
 {{- $keywords := "" }}
