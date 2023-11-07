@@ -71,9 +71,13 @@
 {{- with $s.keywords }}
   {{- $keywords = delimit $s.keywords "," }}
 {{- end }}
-{{- with $p.keywords }}
-  {{- $keywords = delimit . "," }}
-{{- end }}
+{{ if eq $p.type "post" }}
+  {{ if isset $p "keywords" }}
+    {{ $keywords = delimit $p.keywords "," }}
+  {{ else }}
+    {{ $keywords = delimit $p.tags "," }}
+  {{ end }}
+{{ end }}
 {{- with $keywords }}
   <meta name="keywords" content="{{ $keywords }}" />
 {{- end }}
