@@ -45,7 +45,7 @@ languageCode = 'he-IL'
     [[menu.social]]
       name = "rss"
       weight = 2
-      url = "/rss.xml"
+      url = "/feed/"
     [[menu.social]]
       name = "facebook"
       type = "social"
