@@ -35,7 +35,11 @@
 {{- end }}
 <!-- RSS and atom feeds -->
 {{ range .AlternativeOutputFormats -}}
-  {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ if eq .MediaType.Type "application/rss+xml" }}
+    {{ printf `<link rel="%s" type="%s" href="%sfeed/" title="%s" />` .Rel .MediaType.Type $.Site.BaseURL $.Site.Title | safeHTML }}
+  {{ else }}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ end }}
 {{ end -}}
 
 <!-- preload assets declaration -->
