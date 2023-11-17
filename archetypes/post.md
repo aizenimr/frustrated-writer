@@ -4,8 +4,8 @@ date: {{ .Date }}
 description: "תיאור הפוסט למנועי חיפוש"
 author: נמרוד איזנברג
 type: post
-url: /YYYY/MM/DD/פוסט-חדש/
-featureImage: /images/YYYY/MM/XXXXX.png
+url: {{ $t := time.AsTime .Date }}/{{ $t.Year }}/{{ $t.Month | int }}/{{ $t.Day }}/{{ .Name }}/
+featureImage: /images/{{ $t.Year }}/{{ $t.Month | int }}/XXXXX.png
 featureImageAlt: תיאור של התמונה
 category:
   - כללי
