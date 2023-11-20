@@ -23,4 +23,4 @@ classic-editor-remember:
 
 הבלוג החל [כאן](https://aizenimr.wordpress.com), עבר לאחר כמה שנים לוורדפרס באיחסון עצמאי, ובספטמבר 2023 נטשתי סופית את וורדפרס הנאמנה אך מסורבלת לטובת [הוגו](https://gohugo.io), מחולל אתרים סטטי (בדומה ל[ג'קיל](https://jekyllrb.com)).
 
-הבלוג הזה הוא הרפתקה עבורי. אני מקווה שתהנו ממנה לפחות כמוני. בינתיים, אתם מוזמנים לכתוב לי [במייל](mailto:aizenimr@gmail.com) או לעקוב אחרי [בפייס](http://facebook.com/aizenimr) [ובבלוסקיי](https://bsky.app/profile/aizenimr.com) (כי טוויטר זה איכס). אפשר גם להירשם לעדכוני [רסס](/rss.xml).
+הבלוג הזה הוא הרפתקה עבורי. אני מקווה שתהנו ממנה לפחות כמוני. בינתיים, אתם מוזמנים לכתוב לי [במייל](mailto:aizenimr@gmail.com) או לעקוב אחרי [בפייס](http://facebook.com/aizenimr) [ובבלוסקיי](https://bsky.app/profile/aizenimr.com) (כי טוויטר זה איכס). אפשר גם להירשם לעדכוני [רסס](/feed).
