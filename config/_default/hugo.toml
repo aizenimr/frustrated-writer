@@ -80,6 +80,10 @@ languageCode = 'he-IL'
     isHTML                 = false
     noUgly                 = true
 
+[services]
+  [services.rss]
+    limit = 20
+
 [sitemap]
   changeFreq = ''
   filename = 'sitemap.xml'
