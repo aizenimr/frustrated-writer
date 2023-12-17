@@ -24,21 +24,13 @@
 </div>
 
 <script type="text/javascript">
-  (function () {
-    var __semio__token;
-    var __semio__callback;
+  function __semio__onload__counter() {
+    __semio__helpers_counter('Frustrated-Writer')
+  }
 
-    (function () {
-      var gc = document.createElement("script");
-      gc.type = "text/javascript";
-      gc.async = true;
-      gc.onload = __semio__onload;
-      gc.defer = true;
-      gc.src = "https://integration.graphcomment.com/" + lib + ".js";
-      (
-        document.getElementsByTagName("head")[0] ||
-        document.getElementsByTagName("body")[0]
-      ).appendChild(gc);
-    })();
+  (function() {
+    var gc = document.createElement('script'); gc.type = 'text/javascript'; gc.async = true;
+    gc.onload = __semio__onload__counter; gc.defer = true; gc.src = 'https://integration.graphcomment.com/helpers_counter.js?' + Date.now();
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gc);
   })();
 </script>
