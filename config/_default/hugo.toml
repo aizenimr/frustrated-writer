@@ -44,7 +44,7 @@ languageCode = 'he-IL'
       url = "mailto:aizenimr[at]gmail.com"
     [[menu.social]]
       name = "rss"
-      weight = 2
+      weight = 6
       url = "/feed/"
     [[menu.social]]
       name = "facebook"
@@ -58,7 +58,7 @@ languageCode = 'he-IL'
     [[menu.social]]
       name = "bluesky"
       type = "social"
-      weight = 6
+      weight = 2
       url = "https://bsky.app/profile/aizenimr.com"
 
 [taxonomies]
