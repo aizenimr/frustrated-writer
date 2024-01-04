@@ -60,6 +60,11 @@ languageCode = 'he-IL'
       type = "social"
       weight = 2
       url = "https://bsky.app/profile/aizenimr.com"
+    [[menu.social]]
+      name = "github"
+      type = "social"
+      weight = 4
+      url = "https://github.com/aizenimr"
 
 [taxonomies]
   category = "category"
