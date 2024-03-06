@@ -88,3 +88,9 @@ languageCode = 'he-IL'
   changeFreq = ''
   filename = 'sitemap.xml'
   priority = -1
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderHooks]
+      [markup.goldmark.renderHooks.link]
+        enableDefault = true
