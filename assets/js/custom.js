@@ -3,19 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(getBskyFeed, 300000);
 });
 
-function writeStatus() {
-  let status = getRandomStatus();
-  console.log(status);
-}
-
-function getRandomStatus() {
-  fetch("/status_list.json")
-    .then((response) => response.json())
-    .then(
-      (json) => json.statuses[Math.floor(Math.random() * json.statuses.length)]
-    );
-}
-
 function getBskyFeed() {
   document.getElementById("bskyfeed").innerHTML = "";
   document.getElementById("spinner").style.display = "block";
