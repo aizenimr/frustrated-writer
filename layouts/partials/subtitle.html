@@ -3,10 +3,8 @@
     async function getRandomStatus() {
       let response = await fetch("/status_list.json");
       let obj = await response.json();
-      let indexA = Math.floor(Math.random() * obj.statuses.length);
-      let indexB = Math.floor(Math.random() * obj.statuses.length);
-      let result =
-        obj.statuses[Math.floor((indexA + indexB) / 2)];
+      let index = Math.floor(Math.random() * obj.statuses.length);
+      let result = obj.statuses[index];
       return result;
     }
     let subtitle = document.getElementById("blog_status");
