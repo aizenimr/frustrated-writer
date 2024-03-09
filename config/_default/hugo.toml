@@ -54,7 +54,7 @@ languageCode = 'he-IL'
     [[menu.social]]
       name = "keyoxide"
       weight = 5
-      url = "https://keyoxide.org/hkp/aizenimr@gmail.com"
+      url = "https://keyoxide.org/aizenimr@gmail.com"
     [[menu.social]]
       name = "bluesky"
       type = "social"
