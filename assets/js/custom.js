@@ -7,7 +7,7 @@ function getBskyFeed() {
   document.getElementById("bskyfeed").innerHTML = "";
   document.getElementById("spinner").style.display = "block";
   let RSS_URL =
-    "https://corsproxy.org/?" +
+    "https://corsproxy.io/?" +
     encodeURIComponent(
       "https://bsky.app/profile/did:plc:ijqsv7gidnh5qvnqe45g4ovt/rss"
     );
