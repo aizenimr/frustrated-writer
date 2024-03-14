@@ -6,11 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
 function getBskyFeed() {
   document.getElementById("bskyfeed").innerHTML = "";
   document.getElementById("spinner").style.display = "block";
-  let RSS_URL =
-    "https://corsproxy.io/?" +
-    encodeURIComponent(
-      "https://bsky.app/profile/did:plc:ijqsv7gidnh5qvnqe45g4ovt/rss"
-    );
+
+  let RSS_URL = "https://fetchbsky.aizenimr.workers.dev/";
+
   fetch(RSS_URL)
     .then((response) => response.text())
     .then((str) => new window.DOMParser().parseFromString(str, "text/xml"))
@@ -33,7 +31,14 @@ function getBskyFeed() {
           <a href="${link}" target="_blank" rel="noopener">
           <div class="bskypost_author">@aizenimr</div>
           <div class="bskypost_time">
-            ${pubDate.toLocaleDateString() + " " + pubDate.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}
+            ${
+              pubDate.toLocaleDateString() +
+              " " +
+              pubDate.toLocaleTimeString([], {
+                hour: "2-digit",
+                minute: "2-digit",
+              })
+            }
           </div>
         <div class="bskypost_description">
           ${description}
