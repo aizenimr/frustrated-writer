@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
   getBskyFeed();
-  setInterval(getBskyFeed, 300000);
 });
 
 function getBskyFeed() {
