@@ -41,9 +41,6 @@
       <h2>עקבו אחריי</h2>
       {{ partial "follow" . }}
     </div>
-    <div class="widget">
-      {{ partial "blueskyfeed" . }}
-    </div>
     {{- $tagsLimit := (default 100 $s.numberOfTagsShown) }}
     {{- range $key, $value := .Site.Taxonomies }}
     {{- if gt $value 0 }}
