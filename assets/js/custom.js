@@ -1,6 +1,6 @@
-document.addEventListener("DOMContentLoaded", () => {
-  getBskyFeed();
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//   getBskyFeed();
+// });
 
 function getBskyFeed() {
   document.getElementById("bskyfeed").innerHTML = "";
