@@ -1,0 +1,73 @@
+backend:
+  repo: aizenimr/frustrated-writer
+  name: github
+  branch: main # Branch to update (optional; defaults to master)
+  api_root: https://api.github.com
+  site_domain: aizenimr.com
+media_folder: "/static/images/{{year}}/"
+public_folder: /public
+logo_url: "/logos/logo.png"
+locale: "he"
+collections:
+  - name: "פוסט"
+    label: "פוסטים"
+    label_singular: "פוסט"
+    folder: "content/post"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    filter: {field: "type", value: "post"}
+    view_filters:
+      - label: Drafts
+        field: draft
+        pattern: true
+    view_groups:
+      - label: Year
+        field: date
+        pattern: \d{4}
+      - label: Drafts
+        field: draft
+    editor:
+      preview: false
+    fields:
+      - { label: "כותרת", name: "title", widget: "string" }
+      - { label: "תאריך פרסום", name: "date", widget: "datetime" }
+      - { label: "תיאור", name: "description", widget: "string" }
+      - { label: "תגיות", name: "tags", widget: "list" }
+      - { label: "קטגוריות", name: "category", widget: "list" }
+      - { label: "מילות מפתח", name: "keywords", widget: "list" }
+      - { label: "כתובת", name: "url", widget: "string" }
+      - { label: "תמונה", name: "featureImage", widget: "image" }
+      - { label: "טקסט לתמונה", name: "featureImageAlt", widget: "string" }
+      - { label: "טיוטה", name: "draft", widget: "boolean", default: true }
+      - { label: "טקסט", name: "body", widget: "markdown" }
+  - name: "עמוד"
+    label: "עמודים"
+    label_singular: "עמוד"
+    folder: "content"
+    slug: "{{slug}}"
+    create: true
+    filter: {field: "type", value: "page"}
+    view_filters:
+        - label: Drafts
+          field: draft
+          pattern: true
+    view_groups:
+      - label: Year
+        field: date
+        pattern: \d{4}
+      - label: Drafts
+        field: draft
+    editor:
+      preview: false
+    fields:
+      - { label: "כותרת", name: "title", widget: "string" }
+      - { label: "תאריך פרסום", name: "date", widget: "datetime" }
+      - { label: "תיאור", name: "description", widget: "string" }
+      - { label: "תגיות", name: "tags", widget: "list" }
+      - { label: "קטגוריות", name: "category", widget: "list" }
+      - { label: "מילות מפתח", name: "keywords", widget: "list" }
+      - { label: "כתובת", name: "url", widget: "string" }
+      - { label: "תמונה", name: "featureImage", widget: "image" }
+      - { label: "טקסט לתמונה", name: "featureImageAlt", widget: "string" }
+      - { label: "טיוטה", name: "draft", widget: "boolean", default: true }
+      - { label: "טקסט", name: "body", widget: "markdown" }
