@@ -3,7 +3,7 @@ backend:
   name: github
   branch: main # Branch to update (optional; defaults to master)
   api_root: https://api.github.com
-  site_domain: aizenimr.com
+  # site_domain: aizenimr.com
 media_folder: "/static/images/{{year}}/"
 public_folder: /public
 logo_url: "/logos/logo.png"
