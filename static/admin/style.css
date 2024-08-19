@@ -1,12 +1,12 @@
-.CollectionContainer {
-    display: flex;
-    flex-direction: row-reverse; /* For RTL layout */
-  }
-  
-  aside {
-    flex-shrink: 0; /* Prevents the sidebar from shrinking */
-  }
-  
-  .main {
-    flex-grow: 1; /* Allows the main content to grow and fill available space */
-  }
+[class*="CollectionContainer"] {
+  display: flex;
+  flex-direction: row-reverse; /* For RTL layout */
+}
+
+[class*="SidebarContainer-card"] {
+  flex-shrink: 0; /* Prevents the sidebar from shrinking */
+}
+
+[class*="CollectionMain"] {
+  flex-grow: 1; /* Allows the main content to grow and fill available space */
+}
