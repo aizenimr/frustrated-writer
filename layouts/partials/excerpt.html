@@ -9,12 +9,12 @@
     {{- with .Params }}
     <div class="excerpt_footer partition">
       <figure>
-        <picture>
           <a href="{{ .url }}" title="{{ .Title }}">
+            <picture>
               <img loading="lazy" decoding="async" alt=""
-              class="image_figure image_featured image_internal image_unprocessed image_featured" src="{{ .featureImage }}">
-          </a>
-        </picture>
+              class="image_figure image_featured image_internal image_unprocessed image_featured" src="{{ .featureImage }}">  
+            </picture>
+        </a>
       </figure>
       <div class="excerpt_footer">
         {{- end }}
