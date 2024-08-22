@@ -12,9 +12,7 @@
 <div class="grid-inverse wrap content">
   <ul class="posts" id="posts">
     {{- range (.Paginate $pages).Pages }}
-    <div class="widget">
       {{ partial "excerpt" . }}
-    </div>
     {{- end }}
     <li>
       {{- template "_internal/pagination.html" . }}
