@@ -17,4 +17,4 @@ toc: false
 comment: true
 ---
 
-**Insert Lead paragraph here.**
+**כתבו כאן את הפוסט**
