@@ -1,0 +1,202 @@
+{
+  "main": {
+    "id": "ad0b576ef2254265",
+    "type": "split",
+    "children": [
+      {
+        "id": "d423a614a84e1f10",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "aa813d0297a14838",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e29c4b42f4debf45",
+    "type": "split",
+    "children": [
+      {
+        "id": "c295522109ef712b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7e5d189f69f5bafc",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "3c77f3612e110499",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "9d07ddfde347a819",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 345.5
+  },
+  "right": {
+    "id": "ff5acf93da957eb4",
+    "type": "split",
+    "children": [
+      {
+        "id": "2da973084c5e8333",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e773514e8bdace47",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "1cf9055236b6e481",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f0bef231541e46db",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": false
+              }
+            }
+          },
+          {
+            "id": "d272e7c6cb3cc110",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "273111edad8f7189",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              }
+            }
+          },
+          {
+            "id": "1505efa42bece8f7",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
+    }
+  },
+  "active": "aa813d0297a14838",
+  "lastOpenFiles": [
+    "post/2015-07-29-פוסט-ראשון-פוסט-של-זעם.md",
+    "post/2015-10-10-אז-איפה-המכונה-קיבינימט.md",
+    "post/2020-10-04-אורי-סיפור.md",
+    "post/2018-05-05-אורה-השבורה-סיפור.md",
+    "_index.md",
+    "post/_index.md",
+    "post/2016-09-18-צער-גידול-הרצאות.md",
+    "post/2024-03-26-רסיסים.md",
+    "post/2016-10-31-צער-גידול-נבלים-הרצאה.md",
+    "post/2024-08-21.md",
+    "Untitled.canvas",
+    "post/2016-09-22-התעוררות-סיפור.md",
+    "post/2021-09-16-בודפשט-סיפור.md",
+    "post/2015-12-02-בן-כלאיים-סיפור.md",
+    "post/2015-09-07-משותקת-סיפור.md",
+    "post/[.md",
+    "post/2024-03-31-רסיסים.md",
+    "post/2024-02-29-הפרויקט-של-ארטמיס-סיפור.md",
+    "post/2024-03-25-האיש-שיכול-הכל.md",
+    "post/2023-11-30-נובמברונים-2023.md",
+    "post/2023-11-19-מרקדאון-בייבי.md",
+    "post/2023-11-07-גו-הוגו-גו.md",
+    "post/2020-02-02-הוא-והיא-55.md",
+    "post/Untitled.md",
+    "2020/02/02/הוא-והיא-55.md",
+    "2020/02/02",
+    "2020/02",
+    "סיפורים.md",
+    "post/2023-11-02-רסיסי-ברזל.md",
+    "2023/11/01",
+    "2023/11",
+    "2023",
+    "2020/08/15",
+    "2020/08",
+    "2020",
+    "images/2020/07",
+    "images/2020"
+  ]
+}

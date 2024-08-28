@@ -1,0 +1,13 @@
+{
+  "accentColor": "",
+  "theme": "obsidian",
+  "cssTheme": "Typora-Vue",
+  "enabledCssSnippets": [
+    "clean-embeds",
+    "snippet"
+  ],
+  "nativeMenus": true,
+  "textFontFamily": "Alef",
+  "baseFontSize": 23,
+  "monospaceFontFamily": "Miriam Mono CLM"
+}

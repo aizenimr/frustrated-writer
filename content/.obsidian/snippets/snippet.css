@@ -1,0 +1,11 @@
+div .HyperMD-header {
+    text-indent: unset;
+}
+
+.cm-s-obsidian .cm-line.HyperMD-header {
+    padding-bottom: 0.6em;
+}
+
+.cm-s-obsidian .cm-line.HyperMD-header {
+    padding-top: 1.2em;
+}

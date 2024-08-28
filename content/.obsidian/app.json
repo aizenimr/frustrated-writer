@@ -1,0 +1,13 @@
+{
+  "rightToLeft": true,
+  "showFrontmatter": true,
+  "strictLineBreaks": false,
+  "readableLineLength": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "post",
+  "newLinkFormat": "relative",
+  "attachmentFolderPath": "/",
+  "propertiesInDocument": "visible",
+  "promptDelete": false,
+  "useMarkdownLinks": true
+}
