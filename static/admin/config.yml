@@ -1,6 +1,6 @@
 backend:
   repo: aizenimr/frustrated-writer
-  name: github
+  name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
   api_root: https://api.github.com
   # site_domain: aizenimr.com
