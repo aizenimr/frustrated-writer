@@ -3,7 +3,7 @@ backend:
   name: github
   branch: main # Branch to update (optional; defaults to master)
   api_root: https://api.github.com
-  site_domain: location.hostname 
+  site_domain: aizenimr.com
   base_url: https://api.netlify.com
 media_folder: "/static/images/{{year}}/"
 public_folder: /public
