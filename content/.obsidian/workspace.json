@@ -11,8 +11,12 @@
             "id": "aa813d0297a14838",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "post/2024-09-01-הכל-בגללו.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "post/2024-09-01-הכל-בגללו.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "post/2024-09-01-הכל-בגללו.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "post/2024-09-01-הכל-בגללו.md"
+              }
             }
           },
           {
@@ -161,11 +169,14 @@
   },
   "active": "aa813d0297a14838",
   "lastOpenFiles": [
+    "post/2024-03-31-רסיסים.md",
+    "post/2024-08-24-המטריקס-של-גלית.md",
+    "post/2024-09-01-הכל-בגללו.md",
+    "_index.md",
     "post/2015-07-29-פוסט-ראשון-פוסט-של-זעם.md",
     "post/2015-10-10-אז-איפה-המכונה-קיבינימט.md",
     "post/2020-10-04-אורי-סיפור.md",
     "post/2018-05-05-אורה-השבורה-סיפור.md",
-    "_index.md",
     "post/_index.md",
     "post/2016-09-18-צער-גידול-הרצאות.md",
     "post/2024-03-26-רסיסים.md",
@@ -177,7 +188,6 @@
     "post/2015-12-02-בן-כלאיים-סיפור.md",
     "post/2015-09-07-משותקת-סיפור.md",
     "post/[.md",
-    "post/2024-03-31-רסיסים.md",
     "post/2024-02-29-הפרויקט-של-ארטמיס-סיפור.md",
     "post/2024-03-25-האיש-שיכול-הכל.md",
     "post/2023-11-30-נובמברונים-2023.md",
@@ -188,8 +198,6 @@
     "2020/02/02/הוא-והיא-55.md",
     "2020/02/02",
     "2020/02",
-    "סיפורים.md",
-    "post/2023-11-02-רסיסי-ברזל.md",
     "2023/11/01",
     "2023/11",
     "2023",
