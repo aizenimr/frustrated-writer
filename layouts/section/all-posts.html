@@ -1,0 +1,43 @@
+{{- define "main" }} {{- $s := .Site.Params }} {{- $p := .Params }} {{- $scratch
+:= newScratch }}
+<div class="{{ if ne $p.singleColumn true }}grid-inverse {{ end }}wrap content">
+  <article class="post_content">
+    {{- $t := .Title }}
+    <h1 class="post_title">
+      <a href="{{ .Permalink }}">{{ $t | markdownify }}</a>
+    </h1>
+    <ul class="all-posts">
+      {{range .Site.RegularPages }} {{ if eq .Type "post" }}
+      <li>
+        <span><a href="{{.Permalink}}">{{.Title}}</a></span>
+          {{- with .Params.category -}}
+          <span style="margin-left: 0.5rem; margin-right: 0.5rem;">
+            {{- range . }} {{- $category := urlize . -}}
+              <strong style="font-size: initial;"
+                ><a
+                  href='{{ absLangURL (printf "category/%s/" $category) }}'
+                  style="font-size: large;"
+                  class="all-posts-list-item post_tag button button_translucent"
+                  >{{ . }}
+                </a></strong>
+            {{- end }}
+          </span>
+        {{- end }}
+        {{- with .Params.tags -}}
+          <span>
+            {{- range . }} {{- $tag := urlize . -}}
+              <a
+                  href='{{ absLangURL (printf "tag/%s/" $tag) }}'
+                  class="all-posts-list-item post_tag button button_translucent"
+                  >{{ . }}
+              </a>
+            {{- end }}
+          </span>
+        {{- end }}
+      </li>
+      {{ end }} {{end}}
+    </ul>
+  </article>
+  {{- if ( ne $p.sidebar false ) }} {{- partial "sidebar" . }} {{ end }}
+</div>
+{{- end }}

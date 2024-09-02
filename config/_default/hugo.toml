@@ -37,6 +37,10 @@ languageCode = 'he-IL'
       name = "אודות"
       url = "about/"
       weight = -100
+    [[menu.main]]
+      name = "כל הפוסטים"
+      url = "all-posts/"
+      weight = -99
 
     [[menu.social]]
       name = "mail"
