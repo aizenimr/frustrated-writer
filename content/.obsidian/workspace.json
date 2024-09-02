@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "d423a614a84e1f10",
+        "id": "fcf32d84d9dc6293",
         "type": "tabs",
         "children": [
           {
-            "id": "aa813d0297a14838",
+            "id": "3bb6576e3ad2139a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "post/2024-09-01-הכל-בגללו.md",
+                "file": "post/2015-07-30-אז-מה-הולך-פה.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "post/2024-09-01-הכל-בגללו.md",
+                "file": "post/2015-07-30-אז-מה-הולך-פה.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "post/2024-09-01-הכל-בגללו.md",
+                "file": "post/2015-07-30-אז-מה-הולך-פה.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "post/2024-09-01-הכל-בגללו.md"
+                "file": "post/2015-07-30-אז-מה-הולך-פה.md"
               }
             }
           },
@@ -167,13 +167,14 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "aa813d0297a14838",
+  "active": "3bb6576e3ad2139a",
   "lastOpenFiles": [
+    "post/2015-07-29-פוסט-ראשון-פוסט-של-זעם.md",
+    "post/2021-01-09-זומבילנד.md",
+    "post/2024-09-01-הכל-בגללו.md",
     "post/2024-03-31-רסיסים.md",
     "post/2024-08-24-המטריקס-של-גלית.md",
-    "post/2024-09-01-הכל-בגללו.md",
     "_index.md",
-    "post/2015-07-29-פוסט-ראשון-פוסט-של-זעם.md",
     "post/2015-10-10-אז-איפה-המכונה-קיבינימט.md",
     "post/2020-10-04-אורי-סיפור.md",
     "post/2018-05-05-אורה-השבורה-סיפור.md",
@@ -195,7 +196,6 @@
     "post/2023-11-07-גו-הוגו-גו.md",
     "post/2020-02-02-הוא-והיא-55.md",
     "post/Untitled.md",
-    "2020/02/02/הוא-והיא-55.md",
     "2020/02/02",
     "2020/02",
     "2023/11/01",
