@@ -225,7 +225,7 @@
     & + .content
       padding-top: 0
   &_item
-    // box-shadow: 0  2.25rem 1.25rem -1.25rem var(--shadow)
+    box-shadow: 0 0 10px 10px rgba(50,50,50,0.1)
     margin-bottom: 3rem
     border-radius: 0.5rem
     background: var(--post-bg)
@@ -279,6 +279,8 @@
     display: block
     margin: 1rem auto
   &_content
+    background: var(--post-bg)
+    border-radius: 0.5rem
     a:not(.button)
       color: $theme
     ul, ol
@@ -288,6 +290,9 @@
         padding-top: 0.25rem
     ol
       list-style: decimal
+
+.widget
+  background: var(--post-bg)
 
 .scrollable
   display: grid
