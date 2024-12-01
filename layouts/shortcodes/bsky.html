@@ -1,0 +1,4 @@
+{{ $post := .Get 0 }}
+{{ $embedLink := (print "https://embed.bsky.app/oembed?url=" $post) }}
+{{ $json := getJSON $embedLink }}
+{{ print $json.html | safeHTML }}
