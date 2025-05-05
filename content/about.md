@@ -3,6 +3,7 @@ title: אודות
 author: נמרוד איזנברג
 type: page
 date: 2015-07-27T06:07:06+00:00
+showdate: false
 guid: http://aizenimr.wordpress.com/?page_id=1
 classic-editor-remember:
   - classic-editor
