@@ -10,6 +10,7 @@
       {{range .Site.RegularPages }} {{ if eq .Type "post" }}
       <li>
         <span><a href="{{.Permalink}}">{{.Title}}</a></span>
+        <span style="margin: 0 0.2em 0 0.2em; font-size: small; color: #8f8e8e;">{{.Date.Format (default "Jan 2, 2006" $.Site.Params.dateFormat)}}</span>
           {{- with .Params.category -}}
           <span style="margin-left: 0.5rem; margin-right: 0.5rem;">
             {{- range . }} {{- $category := urlize . -}}
