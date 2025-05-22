@@ -108,6 +108,8 @@
     padding-bottom: 0.75rem
     transition: background 0.3s ease-out
     margin: 0
+    &:hover
+      color: var(--text-hover)
 
   &_brand
     img
@@ -682,7 +684,8 @@ figcaption
     border-color: var(--notice-tip-border-color)
     background: var(--notice-tip-background)
   .highlight_wrap
-    background: var(--notice-code-bg) !important
+    &, .panel_box
+      background: var(--notice-code-bg) !important
 
 
 // search
