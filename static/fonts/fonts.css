@@ -359,5 +359,7 @@
   font-family: "Dana Yad";
   font-weight: 400; /*(regular)*/
   font-style: normal;
+  font-display: swap;
   src: url("DanaYadAlefAlefAlef-Normal.woff") format("woff");
+  unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
 }
