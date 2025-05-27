@@ -43,12 +43,12 @@ function initializeSearch(index) {
       if(passive) {
         resultsTitle.innerText = searchResultsLabel;
       }
-/*       if(!searchPageElement) {
+      if(!searchPageElement) {
         results = results.slice(0,8);
       } else {
         resultsFragment.appendChild(goBackButton);
         results = results.slice(0,12);
-      } */
+      }
       resultsFragment.appendChild(resultsTitle);
 
       results.forEach(function(result){
@@ -118,7 +118,7 @@ function initializeSearch(index) {
         search(searchTerm, searchScope);
       });
 
-      if(!searchPageElement) {
+      // if(!searchPageElement) {
         searchField.addEventListener('search', function(){
           const searchTerm = searchField.value.trim().toLowerCase();
           if(searchTerm.length)  {
@@ -126,7 +126,7 @@ function initializeSearch(index) {
             window.location.href = new URL(baseURL + `search/?query=${searchTerm}${ scopeParameter }`).href;
           }
         });
-      }
+      // }
     }
   }
 
