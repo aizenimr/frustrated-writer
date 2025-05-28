@@ -1,7 +1,7 @@
 {{- $t := site.Title -}}
 <a href='{{ absLangURL "" }}' class="nav_brand nav_item{{ with .class }} {{ . }}{{ end }}" title="{{ $t }}">
   <div class="blog_title">
-    <h1>{{- $t -}}</h1>
+    <div class="title">{{- $t -}}</div>
     {{ partial "subtitle" . }}
   </div>  
   {{- if ne (strings.HasSuffix .class "center") true }}
