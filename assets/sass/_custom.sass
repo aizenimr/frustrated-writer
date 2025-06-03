@@ -1,4 +1,6 @@
 @media screen and (max-width: $mobile-menu-breakpoint)
+    main
+        padding-top: unset !important
     .sidebar
         width: 100%
         float: none !important
@@ -32,6 +34,8 @@
         overflow-y: scroll
         max-height: 20em
         top: 5%
+    .nav_header
+        position: unset
 
 body
     direction: rtl
@@ -70,11 +74,11 @@ div.blog_subtitle
 img.author_header
     margin: auto
 
-.nav_header
-    position: unset
-
 .nav_parent
     align-items: baseline
+
+main
+    padding-top: 8em
 
 .content
     padding-top: 1rem
@@ -323,6 +327,7 @@ article.post_content div.nextprev div.prevpost a
 
 article.post_content h1.post_title a
     text-decoration: unset
+    font-size: larger
 
 .relatedContainer
     display: flex
