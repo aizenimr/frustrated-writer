@@ -70,7 +70,7 @@ other = "Posts in this series"
 [no_matches]
   other = "אין תוצאות"
 [search_field_placeholder]
-  other = "Search the knowledge base"
+  other = "חיפוש"
 [blog_search_field_placeholder]
   other = "חיפוש..."
 [search_results_label]
