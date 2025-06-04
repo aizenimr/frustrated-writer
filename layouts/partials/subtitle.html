@@ -1,7 +1,8 @@
 <div id="blog_status" class="blog_subtitle">
   <script type="text/javascript">
     async function getRandomStatus() {
-      let response = await fetch("/status_list.json");
+      let noCache = Date.now().toString(16);
+      let response = await fetch(`/status_list.json?noCache=${noCache}`);
       let obj = await response.json();
       let index = Math.floor(Math.random() * obj.statuses.length);
       let result = obj.statuses[index];
