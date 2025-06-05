@@ -61,6 +61,14 @@ defaultContentLanguageInSubdir = false
       type = "social"
       weight = 2
       url = "https://bsky.app/profile/aizenimr.com"
+    [[menu.social]]
+      name = "signal"
+      weight = 7
+      url = "https://signal.me/#eu/hFcdYV9-FLGEj33EDHz2jhgXNxxl-Hnrqcnu8TDRZCs1_Ynls9hMpq5I1qYZWIlx"
+    [[menu.social]]
+      name = "linkedin"
+      weight = 8
+      url = "https://www.linkedin.com/in/aizenimr/"
 
 [taxonomies]
   category = "category"
