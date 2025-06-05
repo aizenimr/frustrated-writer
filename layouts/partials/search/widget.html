@@ -10,15 +10,13 @@
   {{ end }}
   <div class="search">
     <form action="/search">
-      <input type="search" class="search_field form_field" name="query" placeholder='{{ $placeholder }}' id="find" autocomplete="off" data-scope='{{ .Section }}'>
+      <input type="search" class="search_field form_field" name="query" placeholder='{{ $placeholder }}' id="find" autocomplete="off">
       <label for="find" class="search_label">
         {{- partial "sprite" (dict "icon" "search" "style" "float:left;margin-top:50%;margin-left:70%;") }}
       </label>
       {{ if $simple }}
       {{ end }}
     </form>
-    {{- if ne .Params.searchPage true }}
-      <div class="search_results results"></div>
-    {{- end }}
+    <div class="search_results results"></div>
   </div>
 {{- end }}
