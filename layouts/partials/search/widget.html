@@ -12,7 +12,7 @@
     <form action="/search">
       <input type="search" class="search_field form_field" name="query" placeholder='{{ $placeholder }}' id="find" autocomplete="off" data-scope='{{ .Section }}'>
       <label for="find" class="search_label">
-        {{- partial "sprite" (dict "icon" "search") }}
+        {{- partial "sprite" (dict "icon" "search" "style" "float:left;margin-top:50%;margin-left:70%;") }}
       </label>
       {{ if $simple }}
       {{ end }}
