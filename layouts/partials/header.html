@@ -16,7 +16,12 @@
         {{- else }}
           {{ partial "nav" (dict "context" . "menu" .Site.Menus.main) }}
           {{- end }}
+          <div>
           {{ partial "search/widget" . }}
+            <div>
+              {{ partial "follow" . }}
+            </div>
+          </div>
       </div>
     </div>
   </nav>
