@@ -203,7 +203,7 @@ p
     // background: unset
 
 .search_field
-    height: fit-content;
+    height: fit-content
 
 .search_results
     overflow: unset
@@ -379,3 +379,37 @@ all-posts-list
 a.all-posts-list-item
     text-decoration: none !important
     margin-left: 0.7rem
+
+.archive-menu
+    padding-right: 1rem
+    
+.year-list
+    & li
+        list-style: disclosure-closed
+        &.opened
+            list-style: disclosure-open
+
+.year-toggle
+    background: none
+    border: none
+    width: 100%
+    cursor: pointer
+    font-size: 15px
+    text-align: right
+
+.month-list
+    padding-left: 20px
+    display: none
+    text-align: right
+
+    &.open
+        display: block
+
+    & li
+        padding: 4px 0
+        font-size: 14px
+        cursor: pointer
+        list-style: none
+
+    & li:hover
+        text-decoration: underline

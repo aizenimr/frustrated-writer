@@ -1,0 +1,51 @@
+{{ $monthNames := dict "01" "ינואר"
+"02" "פברואר"
+"03" "מרץ"
+"04" "אפריל"
+"05" "מאי"
+"06" "יוני"
+"07" "יולי"
+"08" "אוגוסט"
+"09" "ספטמבר"
+"10" "אוקטובר"
+"11" "נובמבר"
+"12" "דצמבר" }}
+<div class="archive-menu">
+    <ul class="year-list">
+        {{ $years := .Site.Taxonomies.year }}
+        {{ $months := .Site.Taxonomies.month }}
+        {{ range $years }}
+          {{ $year := .Page.Title }}
+          <li>
+            <button class="year-toggle">{{ $year }}</button>
+            <ul class="month-list">
+                {{ range $months }}
+                  {{ if in .Page.Title $year }}
+                    {{ $month := index (split .Page.Title "/") 1 }}
+                    <li>
+                      <a href="/{{$year}}/{{$month}}">{{ index $monthNames $month }}</a>
+                    </li>
+                  {{ end }}
+                {{ end }}
+            </ul>
+          </li>
+        {{ end }}
+      </li>
+    </ul>
+</div>
+
+<script lang="javascript">
+  document.querySelectorAll('.year-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      // Close other open month lists
+      document.querySelectorAll('.month-list').forEach(function(list) {
+        if (list !== btn.nextElementSibling) {
+          list.classList.remove('open');
+        }
+      });
+      // Toggle the clicked year
+      btn.nextElementSibling.classList.toggle('open');
+      btn.parentElement.classList.toggle('opened');
+    });
+  });
+</script>
