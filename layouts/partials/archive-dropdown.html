@@ -1,15 +1,3 @@
-{{ $monthNames := dict "01" "ינואר"
-"02" "פברואר"
-"03" "מרץ"
-"04" "אפריל"
-"05" "מאי"
-"06" "יוני"
-"07" "יולי"
-"08" "אוגוסט"
-"09" "ספטמבר"
-"10" "אוקטובר"
-"11" "נובמבר"
-"12" "דצמבר" }}
 <div class="archive-menu">
     <ul class="year-list">
         {{ $years := .Site.Taxonomies.year }}
@@ -23,7 +11,18 @@
                   {{ if in .Page.Title $year }}
                     {{ $month := index (split .Page.Title "/") 1 }}
                     <li>
-                      <a href="/{{$year}}/{{$month}}">{{ index $monthNames $month }}</a>
+                      {{ $monthNames := dict }}
+                      {{ $name := "" }}
+                      {{ $path := "months.json" }}
+                      {{ with resources.Get $path }}
+                        {{ with . | transform.Unmarshal }}
+                          {{ $monthNames = . }}
+                        {{ end }}
+                      {{ end }}
+                      {{ range where $monthNames "month" $month }}
+                        {{ $name = .name }}
+                      {{ end }}
+                      <a href="/{{$year}}/{{$month}}">{{ $name }}</a>
                     </li>
                   {{ end }}
                 {{ end }}
