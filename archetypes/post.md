@@ -5,6 +5,8 @@ description: "תיאור הפוסט למנועי חיפוש"
 author: נמרוד איזנברג
 type: post
 url: {{ $t := time.AsTime .Date }}/{{ $t.Year }}/{{ $t.Month | int }}/{{ $t.Day }}/{{ .Name }}/
+year: {{ now.Format "2006" }}
+month: {{ now.Format "2006/01" }}
 featureImage: /images/{{ $t.Year }}/{{ $t.Month | int }}/XXXXX.png
 featureImageAlt: תיאור של התמונה
 category:

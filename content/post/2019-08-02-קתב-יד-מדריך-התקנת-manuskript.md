@@ -4,6 +4,8 @@ author: נמרוד איזנברג
 type: post
 date: 2019-08-02T06:49:51+00:00
 guid: https://aizenimr.wordpress.com/?p=2368
+year: 2019
+month: 2019/08
 url: /2019/08/02/קתב-יד-מדריך-התקנת-manuskript/
 featureImage: /images/2018/01/logo_manuskript1-1.png
 timeline_notification:

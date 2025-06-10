@@ -73,10 +73,14 @@ defaultContentLanguageInSubdir = false
 [taxonomies]
   category = "category"
   tag = "tags"
+  year = "year"
+  month = "month"
 
 [permalinks]
   categories = "/category/:slug/"
   tags = "/tag/:slug/"
+  year = "/:year/"
+  month = "/:year/:month/"
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
