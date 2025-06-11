@@ -1,13 +1,8 @@
 <div class="list-links">
     <div>
         <ul>
-            {{ $data := dict }}
             {{ $f := "links_list.json" }}
-            {{ with resources.Get $f }}
-                {{ with . | transform.Unmarshal }}
-                    {{ $data = . }}
-                {{ end }}
-            {{ end }}
+            {{ $data := resources.Get $f | transform.Unmarshal }}
             {{ range $data }}
                 <li><a href="{{ .link }}">{{ .title }}</a></li>
             {{ end }}

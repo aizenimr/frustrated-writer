@@ -11,14 +11,9 @@
                   {{ if in .Page.Title $year }}
                     {{ $month := index (split .Page.Title "/") 1 }}
                     <li>
-                      {{ $monthNames := dict }}
                       {{ $name := "" }}
                       {{ $path := "months.json" }}
-                      {{ with resources.Get $path }}
-                        {{ with . | transform.Unmarshal }}
-                          {{ $monthNames = . }}
-                        {{ end }}
-                      {{ end }}
+                      {{ $monthNames := resources.Get $path | transform.Unmarshal }}
                       {{ range where $monthNames "month" $month }}
                         {{ $name = .name }}
                       {{ end }}
