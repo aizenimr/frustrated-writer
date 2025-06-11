@@ -5,7 +5,7 @@
         {{ range $years }}
           {{ $year := .Page.Title }}
           <li>
-            <button class="year-toggle">{{ $year }}</button>
+            <button class="year-toggle">{{ $year }} ({{ len . }})</button>
             <ul class="month-list">
                 {{ range $months }}
                   {{ if in .Page.Title $year }}
@@ -22,7 +22,7 @@
                       {{ range where $monthNames "month" $month }}
                         {{ $name = .name }}
                       {{ end }}
-                      <a href="/{{$year}}/{{$month}}">{{ $name }}</a>
+                      <a href="/{{$year}}/{{$month}}">{{ $name }} ({{ len . }})</a>
                     </li>
                   {{ end }}
                 {{ end }}
