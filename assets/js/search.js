@@ -21,12 +21,6 @@ function initializeSearch(index) {
     return minimumQueryLength;
   }
 
-  function decodeHTML(html) {
-    var txt = document.createElement('textarea');
-    txt.innerHTML = html;
-    return txt.value;
-  };
-
   function searchResults(results=[], query="", passive = false) {
     let resultsFragment = new DocumentFragment();
     let showResults = elem('.search_results');
@@ -70,8 +64,7 @@ function initializeSearch(index) {
           let itemDescription = createEl('p');
           // position of first search term instance
           let queryInstance = result.body.indexOf(query);
-          let decodedText = decodeHTML(`${result.body.substring(queryInstance, queryInstance + 200)}`);
-          itemDescription.textContent = decodedText;
+          itemDescription.textContent = `${result.body.substring(queryInstance, queryInstance + 200)}`;
           item.appendChild(itemDescription);
         } else {
           item.textContent = result.title;
