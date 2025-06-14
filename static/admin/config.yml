@@ -2,6 +2,8 @@ backend:
   name: github
   repo: aizenimr/frustrated-writer
 
+api_root: https://api.github.com
+
 site_url: https://aizenimr.com
 locale: 'he'
 
