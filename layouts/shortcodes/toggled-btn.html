@@ -1,0 +1,27 @@
+<div>
+    <p><em>קוראים יקרים, במידה ואתם קצרים בזמן, תוכלו ללחוץ על כפתור "נא לקצר" על מנת לקבל גרסה קומפקטית של הנאמר.</em>
+        <script type="text/javascript">
+            function toggle(t) {
+                let textList = document.getElementsByClassName("toggled-text");
+                if (t.innerHTML == "נא לקצר") {
+                    t.innerHTML = "החזר בילשוט";
+                    for (const element of textList) {
+                        element.style.visibility = 'hidden';
+                        element.style.opacity = '0';
+                        element.style['font-size'] = '0';
+                        element.style.margin = '-0.2rem';
+                    }
+                } else {
+                    t.innerHTML = "נא לקצר";
+                    for (const element of textList) {
+                        element.style.visibility = 'visible';
+                        element.style.opacity = '1';
+                        element.style['font-size'] = 'unset';
+                        element.style.margin = 'unset'
+                    }
+                }
+            }
+        </script>
+        <button onclick="toggle(this)" class="button" style="box-shadow: 3px 4px 0px 0px #1564ad;">נא לקצר</button>
+    </p>
+</div>
