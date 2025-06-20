@@ -1,18 +1,21 @@
+{{- $title := .Get 0 -}}
+{{- $btnTextBefore := .Get 1 -}}
+{{- $btnTextAfter := .Get 2 -}}
 <div>
-    <p><em>{{ .Get 0 }}</em>
+    <p><em>{{ $title }}</em>
         <script type="text/javascript">
             function toggle(t) {
                 let textList = document.getElementsByClassName("toggled-text");
-                if (t.innerHTML == "נא לקצר") {
-                    t.innerHTML = "החזר בילשוט";
+                if (t.innerHTML == "{{ $btnTextBefore }}") {
+                    t.innerHTML = "{{ $btnTextAfter }}";
                     for (const element of textList) {
                         element.style.visibility = 'hidden';
                         element.style.opacity = '0';
                         element.style['font-size'] = '0';
-                        element.style.margin = '-0.2rem';
+                        element.style.margin = '-0.1rem';
                     }
                 } else {
-                    t.innerHTML = "נא לקצר";
+                    t.innerHTML = "{{ $btnTextBefore }}";
                     for (const element of textList) {
                         element.style.visibility = 'visible';
                         element.style.opacity = '1';
@@ -22,6 +25,6 @@
                 }
             }
         </script>
-        <button onclick="toggle(this)" class="button" style="box-shadow: 3px 4px 0px 0px #1564ad;">נא לקצר</button>
+        <button onclick="toggle(this)" class="button" style="box-shadow: 3px 4px 0px 0px #1564ad;">{{ $btnTextBefore }}</button>
     </p>
 </div>
