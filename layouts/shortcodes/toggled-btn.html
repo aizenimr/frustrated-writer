@@ -1,8 +1,8 @@
-{{- $title := .Get 0 -}}
-{{- $btnTextBefore := .Get 1 -}}
-{{- $btnTextAfter := .Get 2 -}}
+{{- $btnTextBefore := .Get 0 -}}
+{{- $btnTextAfter := .Get 1 -}}
 <div>
-    <p><em>{{ $title }}</em>
+        <button onclick="toggle(this)" class="button" style="box-shadow: 3px 4px 0px 0px #1564ad;">{{ $btnTextBefore
+            }}</button>
         <script type="text/javascript">
             function toggle(t) {
                 let textList = document.getElementsByClassName("toggled-text");
@@ -23,7 +23,5 @@
                 }
             }
         </script>
-        <button onclick="toggle(this)" class="button" style="box-shadow: 3px 4px 0px 0px #1564ad;">{{ $btnTextBefore
-            }}</button>
     </p>
 </div>
