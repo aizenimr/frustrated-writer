@@ -5,13 +5,14 @@
     <p><em>{{ $title }}</em>
         <script type="text/javascript">
             function toggle(t) {
-                var textList = document.getElementsByClassName("toggled-text");
+                let textList = document.getElementsByClassName("toggled-text");
                 if (t.innerHTML == "{{ $btnTextBefore }}") {
                     t.innerHTML = "{{ $btnTextAfter }}";
                     for (const element of textList) {
                         element.style.visibility = 'hidden';
                         element.style.opacity = '0';
-                        element.style['font-size'] = '0';                    }
+                        element.style['font-size'] = '0';
+                    }
                 } else {
                     t.innerHTML = "{{ $btnTextBefore }}";
                     for (const element of textList) {
@@ -22,6 +23,7 @@
                 }
             }
         </script>
-        <button onclick="toggle(this)" class="button" style="box-shadow: 3px 4px 0px 0px #1564ad;">{{ $btnTextBefore }}</button>
+        <button onclick="toggle(this)" class="button" style="box-shadow: 3px 4px 0px 0px #1564ad;">{{ $btnTextBefore
+            }}</button>
     </p>
 </div>
