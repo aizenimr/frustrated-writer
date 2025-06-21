@@ -5,7 +5,7 @@
     <p><em>{{ $title }}</em>
         <script type="text/javascript">
             function toggle(t) {
-                let textList = document.getElementsByClassName("toggled-text");
+                var textList = document.getElementsByClassName("toggled-text");
                 if (t.innerHTML == "{{ $btnTextBefore }}") {
                     t.innerHTML = "{{ $btnTextAfter }}";
                     for (const element of textList) {
