@@ -11,16 +11,13 @@
                     for (const element of textList) {
                         element.style.visibility = 'hidden';
                         element.style.opacity = '0';
-                        element.style['font-size'] = '0';
-                        element.style.margin = '-0.1rem';
-                    }
+                        element.style['font-size'] = '0';                    }
                 } else {
                     t.innerHTML = "{{ $btnTextBefore }}";
                     for (const element of textList) {
                         element.style.visibility = 'visible';
                         element.style.opacity = '1';
                         element.style['font-size'] = 'unset';
-                        element.style.margin = 'unset'
                     }
                 }
             }
