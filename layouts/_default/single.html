@@ -30,23 +30,7 @@
       {{- .Content }}
     </div>
 
-    {{- $seriesName := print .Params.series -}}
-    {{- $url := .Params.url -}}
-    {{- with .Site.Taxonomies.series.Get $seriesName -}}
-      <div>
-        <hr/>
-        <h2 id="שאר-הפוסטים-הסדרה"><em>שאר הפוסטים בסדרה</em></h2>
-        <ul>
-          {{- range .Pages.ByDate -}}
-            {{- if eq .Params.url $url -}}
-              <li><em>{{ .LinkTitle }}</em></li>
-            {{- else -}}
-              <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
-            {{- end -}}
-          {{- end -}}
-        </ul>
-      </div>
-    {{- end -}}
+    {{- partial "series" . -}}
 
     {{ if eq .Params.type "post" }}
       {{ partial "nextprev" . }}
