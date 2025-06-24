@@ -38,7 +38,7 @@ other = "תגיות"
 other = "תגיות"
 
 [series]
-other = "סדרות"
+other = "פרויקטים מיוחדים"
 
 [all_categories]
 other = "כל הקטגוריות"
@@ -62,7 +62,7 @@ other = "תוכן"
 other = "זמן קריאה: {{ .ReadingTime }}"
 
 [series_posts]
-other = "Posts in this series"
+other = "פסטים בסדרה הזו"
 
 # search
 [quick_links]
