@@ -9,6 +9,10 @@ introURL = "about/" # set the url for the 'read more' button below the introDesc
 description = "סיפורים, גיקיאדה, ורסיסי כתיבה מאת נמרוד איזנברג" # Set your site's meta tag (SEO) description here. Alternatively set this description in your home page content file e.g. content/_index.md. Whatever is set in the latter will take precedence.
 keywords = ["מדע בדיוני", "פנטסיה", "כתיבה", "גיקיאדה", "אייקון", "הומור", "סאטירה"] # Set your site's meta tag (SEO) keywords here. Alternatively set these in your home page content file e.g. content/_index.md. Whatever is set in the latter will take precedence.
 
+# custom CSS and JS
+customCSS = ["fonts/fonts.css"]
+customPreloadFont = ["fonts/Alef-Regular.woff"]
+
 # Bluesky feed prefs
 bskyUser = "aizenimr.com"
 bskyLimit = 10

@@ -42,13 +42,17 @@
 {{ $bundle := partialCached "func/getJavascriptBundle" . }}
 <link rel="preload" href="{{ $bundle.Permalink }}" as="script" integrity=
 "{{ $bundle.Data.Integrity }}" crossorigin="anonymous">
+{{- with $params.customPreloadFont }}
+  {{ range . }}
+    <link rel="preload" href="{{ relURL . }}" as="font" type="font/woff" crossorigin>
+  {{ end }}
+{{- end }}
 
 <!-- link main css file -->
 <link rel="stylesheet" type="text/css" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous">
 <!-- load all custom css files -->
 {{- with $params.customCSS }}
   {{- range . -}}
-  <link rel="stylesheet" href="{{ relURL . }}">
+    <link rel="stylesheet" href="{{ relURL . }}">
   {{- end }}
 {{- end }}
-<link rel="stylesheet" id="fonts-css" href="/fonts/fonts.css" type="text/css" media="all">
