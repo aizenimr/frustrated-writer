@@ -4,12 +4,12 @@
 <div>
   <hr />
   <h2 id="שאר-הפוסטים-הסדרה"><em>שאר הפוסטים בסדרה</em></h2>
-  <ul>
+  <ol>
     {{- range .Pages.ByDate -}} {{- if eq .Params.url $url -}}
-    <li><em>{{ .LinkTitle }}</em></li>
+    <li><strong>{{ .LinkTitle }}</strong></li>
     {{- else -}}
     <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
     {{- end -}} {{- end -}}
-  </ul>
+  </ol>
 </div>
 {{- end -}}
