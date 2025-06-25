@@ -159,8 +159,29 @@ p
     line-height: 1.5em
     margin-bottom: 20px
 
-blockquote p
-    margin-bottom: unset
+blockquote
+    border-right: 0.2rem solid #0077b8
+    border-left: unset
+    padding: 1rem 4rem 1rem 4rem
+
+    p
+        margin-bottom: unset
+
+blockquote::before
+    content: "\201D"
+    color: #0077b8
+    font-size: 4em
+    position: absolute
+    top: -0.2em
+    right: 0rem
+
+blockquote::after
+    content: "\201C"
+    color: #0077b8
+    font-size: 4em
+    position: absolute
+    bottom: -0.7em
+    left: 0rem
 
 .posts
     width: 80%
