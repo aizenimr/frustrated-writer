@@ -7,7 +7,7 @@ guid: https://aizenimr.wordpress.com/?p=2368
 year: 2019
 month: 2019/08
 url: /2019/08/02/קתב-יד-מדריך-התקנת-manuskript/
-featureImage: /images/2018/01/logo_manuskript1-1.png
+featureImage: /images/2018/01/logo_manuskript1-1.webp
 timeline_notification:
   - 1564728592
 publicize_tumblr_url:
