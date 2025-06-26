@@ -1,7 +1,7 @@
 <script type="module" src="https://cdn.jsdelivr.net/npm/bsky-embed/dist/bsky-embed.es.js" async></script>
 <bsky-embed
   username="{{- site.Params.bskyUser -}}"
-  limit="5"
+  limit="{{- with site.Params.bskyLimit -}}{{- site.Params.bskyLimit -}}{{- else -}}{{- 5 -}}{{- end -}}"
   link-image="true"
   custom-styles=".flex { display: unset; } .w-full {font-size: initial;} span.font-bold {font-size: smaller;}"
 >
