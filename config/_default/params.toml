@@ -15,8 +15,6 @@ customPreloadFont = ["fonts/Alef-Regular.woff"]
 
 # Bluesky feed prefs
 bskyUser = "aizenimr.com"
-bskyLimit = 10
-bskyFilter = "posts_with_replies"
 
 # showShare = false # Uncomment to not show share buttons on each post. Also available in each post's front matter.
 
