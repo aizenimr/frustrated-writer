@@ -1,0 +1,7 @@
+{{- $summary := .Summary | plainify | truncate 320 }}
+{{- if .Params.description }}
+    {{- $summary = .Params.description }}
+{{- else if .Params.summary }}
+    {{ $summary = .Params.summary }}
+{{- end }}
+{{ $summary | markdownify }}
