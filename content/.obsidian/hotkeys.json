@@ -14,5 +14,14 @@
       ],
       "key": "X"
     }
+  ],
+  "obsidian-linter:lint-file": [
+    {
+      "modifiers": [
+        "Alt",
+        "Mod"
+      ],
+      "key": "L"
+    }
   ]
 }
