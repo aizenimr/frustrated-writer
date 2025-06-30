@@ -1,7 +1,7 @@
 {{- $t := site.Title -}}
 <a href='{{ absLangURL "" }}' class="nav_brand nav_item{{ with .class }} {{ . }}{{ end }}" title="{{ $t }}">
   <div class="blog_title">
-    {{ if eq .page.Kind "home" }}
+    {{ if eq .kind "home" }}
       <h1 class="title">{{- $t -}}</h1>
     {{ else }}
       <div class="title">{{- $t -}}</div>
