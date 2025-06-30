@@ -1,11 +1,11 @@
 {{- $params := .Site.Params }} {{- $centerLogo := $params.centerLogo }} {{ $logo
-:= $params.logo }}
+:= $params.logo }}{{ $page := .Page }}
 <header class="nav_header">
   <nav class="nav">
     {{- if $centerLogo }}
-    {{- partialCached "logo" (dict "logo" $logo "class" "nav_hide") }}
+    {{- partial "logo" (dict "logo" $logo "class" "nav_hide" "page" $page) }}
   {{- else }}
-    {{- partialCached "logo" (dict "logo" $logo) }}
+    {{- partial "logo" (dict "logo" $logo "page" $page) }}
   {{- end }}
     <div class="nav_parent">
       <div class='nav_body nav_body_{{ default "left" $params.mobileNavigation }}'>
