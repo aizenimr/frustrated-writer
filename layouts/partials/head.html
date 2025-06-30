@@ -46,6 +46,9 @@
   {{ range . }}
     <link rel="preload" href="{{ relURL . }}" as="font" type="font/woff" crossorigin>
   {{ end }}
+{{- end -}}
+{{- with $params.bskyUser -}}
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 {{- end }}
 
 <!-- link main css file -->
