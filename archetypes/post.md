@@ -16,7 +16,6 @@ category:
   - כללי
 tags:
   - כתיבה
-keywords: 
 draft: false
 toc: false
 comment: true

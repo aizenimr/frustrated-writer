@@ -67,20 +67,22 @@
 <meta property="og:title" content="{{ $ogTitle }}" />
 <meta property="og:description" content="{{ $summary }}" />
 <meta property="og:image" content="{{ $image }}" />
-{{- $keywords := "" }}
-{{- with $s.keywords }}
-  {{- $keywords = delimit $s.keywords "," }}
-{{- end }}
-{{ if eq $p.type "post" }}
-  {{ if isset $p "keywords" }}
-    {{ $keywords = delimit $p.keywords "," }}
-  {{ else }}
-    {{ $keywords = delimit $p.tags "," }}
+{{- with $s.enableKeywords -}}
+  {{- $keywords := "" }}
+  {{- with $s.keywords }}
+    {{- $keywords = delimit $s.keywords "," }}
+  {{- end }}
+  {{ if eq $p.type "post" }}
+    {{ if isset $p "keywords" }}
+      {{ $keywords = delimit $p.keywords "," }}
+    {{ else }}
+      {{ $keywords = delimit $p.tags "," }}
+    {{ end }}
   {{ end }}
-{{ end }}
-{{- with $keywords }}
-  <meta name="keywords" content="{{ $keywords }}" />
-{{- end }}
+  {{- with $keywords }}
+    <meta name="keywords" content="{{ $keywords }}" />
+  {{- end }}
+{{- end -}}
 {{- if eq .Section $s.blogDir -}}
   {{- $date := ( .Date.Format "2006-02-01") -}}
   {{- $date := (time .Date) }}
