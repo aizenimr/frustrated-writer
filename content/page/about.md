@@ -5,8 +5,7 @@ type: page
 date: 2015-07-27T06:07:06+00:00
 showdate: false
 guid: http://aizenimr.wordpress.com/?page_id=1
-classic-editor-remember:
-  - classic-editor
+url: /about
 
 ---
 אז ככה: שמי נמרוד איזנברג, מהנדס תוכנה בעברי ומנהל רכש בהווה. קורא ספרות ספקולטיבית מאז ומתמיד.
