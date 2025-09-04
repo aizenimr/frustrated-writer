@@ -3,6 +3,10 @@
   username="{{- site.Params.bskyUser -}}"
   limit="{{- with site.Params.bskyLimit -}}{{- site.Params.bskyLimit -}}{{- else -}}{{- 5 -}}{{- end -}}"
   link-image="true"
-  custom-styles=".flex { display: unset; } .w-full {font-size: initial;} span.font-bold {font-size: smaller;}"
+  custom-styles=".flex { display: unset; }
+        .w-full {font-size: initial;}
+        span.font-bold {font-size: smaller;}
+        a.mt-4.rounded-md.border.border-slate-300.block { width: fit-content; }
+        article.p-4.border-b.border-slate-300.dark:border-slate-800 { width: fit-content; }"
 >
 </bsky-embed>
