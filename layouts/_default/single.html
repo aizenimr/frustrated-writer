@@ -47,12 +47,12 @@
     
     {{- $showComments := true }}
     {{- if eq $s.comments false }}
-    {{- $showComments = false }}
+      {{- $showComments = false }}
     {{- else if eq $p.comments false }}
-    {{- $showComments = false }}
+      {{- $showComments = false }}
     {{- end }}
-    {{- if ne $showComments false }}
-    {{- partial "graph" . }}
+    {{- if and (eq hugo.IsDevelopment false) (eq $showComments true) }}
+      {{- partial "graph" . }}
     {{- end }}
     {{- partial "i18nlist" . }}
 
