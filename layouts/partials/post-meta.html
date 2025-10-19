@@ -17,7 +17,7 @@
   {{- if $showReadTime }}
     <span class="post_time"></span>
   {{- end }}
-  {{- with .Params.category -}}
+  {{- with .Params.categories -}}
   <span>
     {{- range . }}
       {{- $category := urlize . -}}

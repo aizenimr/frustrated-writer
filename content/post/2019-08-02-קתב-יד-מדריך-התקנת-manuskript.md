@@ -12,7 +12,7 @@ timeline_notification:
   - 1564728592
 publicize_tumblr_url:
   - http://.tumblr.com/post/186717616808
-category:
+categories:
   - כללי
 tags:
   - גיקיאדה

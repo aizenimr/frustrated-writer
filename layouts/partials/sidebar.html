@@ -43,7 +43,7 @@
     </div>
     {{- $tagsLimit := (default 100 $s.numberOfTagsShown) }}
     {{- range $key, $value := .Site.Taxonomies }}
-      {{- if and (gt $value 0) (or (eq $key "tags") (eq $key "category")) }}
+      {{- if and (gt $value 0) (or (eq $key "tags") (eq $key "categories")) }}
       <div class="widget">
         <h2 class="mt-4 taxonomy" id="{{ $key }}-section">{{ T $key }}</h2>
         <nav class="tags_nav">
@@ -51,10 +51,7 @@
           {{- $slicedTags := ($value.ByCount | first $tagsLimit) }}
           {{- range $slicedTags }}
           {{- $c := math.Max 15 (mul (math.Sqrt .Count) 5) }}
-          {{ $k := $key }}
-          {{ if eq $key "tags" }}
-          {{ $k = "tag" }}
-          {{ end }}
+          {{ $k := $key | singularize }}
           <a href='{{ absLangURL $k }}/{{ (replace .Name "#" "%23") | urlize }}/'
             class="post_tag button button_translucent" title="{{ .Name }}" style="font-size: {{$c}}px;">
             {{ upper .Name }}
@@ -69,10 +66,7 @@
               {{- range $value.Alphabetical }}
               {{ $tagsInfo.Add "tagsInfo" (slice .Name .Count)}}
               {{- $c := math.Max 15 (mul (math.Sqrt .Count) 5) }}
-              {{ $k := $key }}
-              {{ if eq $key "tags" }}
-              {{ $k = "tag" }}
-              {{ end }}
+              {{ $k := $key | singularize }}
               <a href='{{ absLangURL $k }}/{{ (replace .Name "#" "%23") | urlize }}/'
                 class=" post_tag button button_translucent" data-position={{ .Count }} title="{{ .Name }}"
                 style="font-size: {{$c}}px;">

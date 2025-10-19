@@ -70,7 +70,7 @@ defaultContentLanguageInSubdir = false
       url = "https://www.linkedin.com/in/aizenimr/"
 
 [taxonomies]
-  category = "category"
+  category = "categories"
   tag = "tags"
   year = "year"
   month = "month"

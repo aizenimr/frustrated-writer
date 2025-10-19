@@ -12,7 +12,7 @@ year: {{ now.Format "2006" }}
 month: {{ now.Format "2006/01" }}
 featureImage: /images/{{ now.Format "2006/01" }}/XXXXX.png
 featureImageAlt: תיאור של התמונה
-category:
+categories:
   - כללי
 tags:
   - כתיבה
