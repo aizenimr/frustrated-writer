@@ -1,0 +1,40 @@
+{{- $s := site.Params }}
+{{- $tax := .tax }}
+{{- $taxonomies := index .context.Site.Taxonomies $tax }}
+{{- $tagsLimit := (default 100 $s.numberOfTagsShown) }}
+<h2 class="mt-4 taxonomy" id="{{ $tax }}-section">{{ T $tax }}</h2>
+<nav class="tags_nav"></nav>
+    {{ range $taxonomies.ByCount | first $tagsLimit }}
+        {{- $c := math.Max 15 (mul (math.Sqrt .Count) 5) }}
+        {{ $k := $tax| singularize }}
+        <a href='{{ absLangURL $k }}/{{ (replace .Name "#" "%23") | urlize }}/'
+        class="post_tag button button_translucent" title="{{ .Name }}" style="font-size: {{$c}}px;">
+        {{ upper .Name }}
+        </a>
+    {{ end }}
+    {{ if gt (len $taxonomies.ByCount) $tagsLimit }}
+        <br>
+        <div class="post_tags_toggle button">{{ T (printf "all_%s" (lower $tax)) }}</div>
+        {{- $tagsInfo := newScratch }}
+        <div class="post_tags">
+            <div class="tags_list">
+                {{- range $taxonomies.Alphabetical }}
+                    {{ $tagsInfo.Add "tagsInfo" (slice .Name .Count)}}
+                    {{- $c := math.Max 15 (mul (math.Sqrt .Count) 5) }}
+                    {{ $k := $tax | singularize }}
+                    <a href='{{ absLangURL $k }}/{{ (replace .Name "#" "%23") | urlize }}/'
+                    class=" post_tag button button_translucent" data-position={{ .Count }} title="{{ .Name }}"
+                    style="font-size: {{$c}}px;">
+                    {{- upper .Name -}}
+                    </a>
+                {{ end }}
+                <div class="tags_sort"><span title="sort alphabetically">[A~Z]</span><span
+                    title="sort by count">[0~9]</span>
+                </div>
+                <span class="tags_hide"><svg class="icon">
+                    <use xlink:href="#closeme"></use>
+                </svg></span>
+            </div>
+        </div>
+    {{- end }}
+</nav>
