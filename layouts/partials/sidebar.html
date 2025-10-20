@@ -2,36 +2,7 @@
 <aside class="sidebar">
   <section class="sidebar_inner">
     <div class="widget">
-      {{- $introDescription := $s.introDescription }}
-      {{- with .Params.introDescription }}
-      {{- $introDescription = . }}
-      {{- end }}
-      {{- if $introDescription }}
-      {{- $author := $s.Author }}
-      {{- $showAuthorPhoto := false }}
-      {{- $fullAuthor := reflect.IsMap $author }}
-      {{- if $fullAuthor }}
-      {{- if $author.photo }}
-      {{- $showAuthorPhoto = true }}
-      {{- end }}
-      {{- end }}
-      {{- if $showAuthorPhoto }}
-      <h2>{{ "מי אני?" }}</h2>
-      <div class="author_header">
-        <img src="{{ $.Site.BaseURL }}{{ $author.photo }}" alt="{{ $author.name }} photo">
-      </div>
-      {{- else }}
-      <h2>{{ if $fullAuthor }}{{ $author.name }}{{ else }}{{ $author }}{{ end }}</h2>
-      {{- end }}
-      <div class="author_bio">
-        {{ markdownify $introDescription }}
-      </div>
-      {{- if ( ne $s.introURL false ) }}
-        {{- $r := T "read_more" }}
-          <a href='{{ absLangURL (default "about/" $s.introURL) }}' class="button mt-1" role="button" title='{{ $r }}'>{{ $r
-            }}</a>
-        {{- end }}
-      {{- end }}
+      {{ partial "about-me" . }}
     </div>
     <div class="widget">
       <h2>בלוסקיי</h2>
