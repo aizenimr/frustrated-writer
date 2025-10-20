@@ -14,7 +14,7 @@
     {{ end }}
     {{ if gt (len $taxonomies.ByCount) $tagsLimit }}
         <br>
-        <div class="post_tags_toggle button">{{ T (printf "all_%s" (lower $tax)) }}</div>
+        <div class="post_tags_toggle button">{{ T "read_more" }}</div>
         {{- $tagsInfo := newScratch }}
         <div class="post_tags">
             <div class="tags_list">
