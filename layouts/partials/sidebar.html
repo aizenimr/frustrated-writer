@@ -2,29 +2,29 @@
 <aside class="sidebar">
   <section class="sidebar_inner">
     <div class="widget">
-      {{ partial "about-me" . }}
+      {{ partialCached "about-me" . }}
     </div>
     <div class="widget">
       <h2>בלוסקיי</h2>
-      {{ partial "bsky" }}
+      {{ partialCached "bsky" . }}
     </div>
     <div class="widget">
       <h2>ארכיון</h2>
-      {{ partial "archive-dropdown" . }}
+      {{ partialCached "archive-dropdown" . }}
     </div>
     <div class="widget">
-      {{ partial "cloud" (dict "context" . "tax" "categories") }}
+      {{ partialCached "cloud" (dict "context" . "tax" "categories") "categories" }}
     </div>
     <div class="widget">
-      {{ partial "cloud" (dict "context" . "tax" "tags") }}
+      {{ partialCached "cloud" (dict "context" . "tax" "tags") "tags" }}
     </div>
     <div class="widget">
       <h2>קהילת "פרפרים"</h2>
-      {{ partial "parparim" }}
+      {{ partialCached "parparim" . }}
     </div>
     <div class="widget">
       <h2>אחרי מי אני עוקב</h2>
-      {{ partial "listOfLinks" . }}
+      {{ partialCached "listOfLinks" . }}
     </div>
   </section>
 </aside>

@@ -6,7 +6,7 @@
     {{ else }}
       <div class="title">{{- $t -}}</div>
     {{ end }}
-    {{ partial "subtitle" . }}
+    {{ partialCached "subtitle" . }}
   </div>  
   {{- if ne (strings.HasSuffix .class "center") true }}
   <div class="nav_close">

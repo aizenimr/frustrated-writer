@@ -58,7 +58,7 @@
 
   </article>
   {{- if ( ne $p.sidebar false ) }}
-  {{- partial "sidebar" . }}
+  {{- partialCached "sidebar" . }}
   {{ end }}
 </div>
 {{- end }}
