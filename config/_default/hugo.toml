@@ -107,7 +107,7 @@ defaultContentLanguageInSubdir = false
   [markup.goldmark]
     [markup.goldmark.renderHooks]
       [markup.goldmark.renderHooks.link]
-        enableDefault = true
+        useEmbedded = "fallback"
 
 [pagination]
   pagerSize = 15
