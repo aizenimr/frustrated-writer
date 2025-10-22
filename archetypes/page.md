@@ -10,7 +10,7 @@ url: /{{- .File.ContentBaseName }}
 guid: {{ absURL "" }}{{ $url | urlize }}
 draft: true
 toc: false
-comment: true
+comments: true
 showdate: false
 ---
 תוכן הפוסט

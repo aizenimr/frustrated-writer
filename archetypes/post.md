@@ -18,6 +18,6 @@ tags:
   - כתיבה
 draft: false
 toc: false
-comment: true
+comments: true
 ---
 תוכן הפוסט
