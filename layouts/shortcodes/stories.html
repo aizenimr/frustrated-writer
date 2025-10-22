@@ -1,0 +1,19 @@
+{{- $stories := where .Site.RegularPages "Params.categories" "intersect" (slice "סיפורים") -}}
+{{- $posts := slice -}}
+{{- range $stories -}}
+    {{- $post := dict "Title" (replace .Title " (סיפור)" "")  "Date" (time.AsTime .Date) "Link" .RelPermalink "Description" .Description -}}
+    {{- $posts = $posts | append $post -}}
+{{- end -}}
+
+{{- $f := "storiesEx.json" -}}
+{{- $data := resources.Get $f | transform.Unmarshal -}}
+{{- range $data -}}
+    {{- $post := dict "Title" .title  "Date" (time.AsTime .date) "Link" .link "Description" .description -}}
+    {{- $posts = $posts | append $post -}}
+{{- end -}}
+
+{{ range sort $posts "Date" "desc" }}
+    <p>
+        <strong><a href="{{ .Link }}">{{ .Title }}</a></strong> - {{ .Description }}.
+    </p>
+{{ end }}
