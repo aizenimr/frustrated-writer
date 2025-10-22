@@ -8,7 +8,7 @@ url: /all-posts
 guid: https://aizenimr.com/all-posts/
 draft: false
 toc: false
-comment: false
+comments: false
 showdate: false
 ---
 {{< all-posts >}}
