@@ -5,6 +5,7 @@
     "tags": "tags",
     "draft": "checkbox",
     "toc": "checkbox",
-    "keywords": "multitext"
+    "keywords": "multitext",
+    "storyPublishDate": "date"
   }
 }
