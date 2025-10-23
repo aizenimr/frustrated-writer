@@ -1,7 +1,11 @@
 {{- $stories := where .Site.RegularPages "Params.categories" "intersect" (slice "סיפורים") -}}
 {{- $posts := slice -}}
 {{- range $stories -}}
-    {{- $post := dict "Title" (replace .Title " (סיפור)" "")  "Date" (time.AsTime .Date) "Link" .RelPermalink "Description" .Description -}}
+    {{- $date := .Date -}}
+    {{- with .Params.storyPublishDate -}}
+        {{- $date = . -}}
+    {{- end -}}
+    {{- $post := dict "Title" (replace .Title " (סיפור)" "")  "Date" (time.AsTime $date) "Link" .RelPermalink "Description" .Description -}}
     {{- $posts = $posts | append $post -}}
 {{- end -}}
 
