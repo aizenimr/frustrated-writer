@@ -4,6 +4,9 @@ on:
     branches:
       - main
   workflow_dispatch:
+  # Daily publish at 10:00 to allow for scheduled posts
+  schedule:
+    - cron: '0 10 * * *'
 permissions:
   contents: read
   pages: write
