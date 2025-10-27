@@ -10,6 +10,7 @@ theme = "hugo-clarity"
 disqusShortname = ""
 enableRobotsTXT = true
 
+timeZone = "Asia/Jerusalem"
 defaultContentLanguage = "he"
 defaultContentLanguageInSubdir = false
 [languages]
