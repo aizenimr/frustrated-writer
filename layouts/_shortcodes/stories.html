@@ -16,8 +16,6 @@
     {{- $posts = $posts | append $post -}}
 {{- end -}}
 
-{{ range sort $posts "Date" "desc" }}
-    <p>
-        <strong><a href="{{ .Link }}">{{ .Title }}</a></strong> - {{ .Description | markdownify }}.
-    </p>
-{{ end }}
+{{- range sort $posts "Date" "desc" -}}
+    <p>{{- printf "**[%s](%s)** - %s." .Title .Link .Description | markdownify -}}</p>
+{{- end -}}
