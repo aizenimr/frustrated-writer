@@ -1,8 +1,8 @@
 {{- $terms := .Site.Taxonomies.series -}}
-{{- range $key, $posts := $terms -}}
-    {{- printf "## %s" $key | markdownify -}}
+{{- range $term, $posts := $terms -}}
+    {{- printf "## %s" $term | markdownify -}}
     {{- range $index, $post := $posts.Pages.ByDate -}}
-        {{- printf "%d. [%s](%s)" ($index | add 1) $post.Title $post.RelPermalink  | markdownify -}}
+        {{- printf "%d. **[%s](%s)** - %s" ($index | add 1) $post.Title $post.RelPermalink $post.Description | markdownify -}}
     {{- end -}}
     {{- printf "---" | markdownify -}}
 {{- end -}}
