@@ -1,0 +1,10 @@
+{{- $terms := .Site.Taxonomies.series -}}
+{{- range $key, $values := $terms -}}
+    {{ print "## " $key | markdownify -}}
+    <ol>
+      {{- range $values.Pages.ByDate -}}
+          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+      {{- end -}}
+    </ol>
+    <hr>
+{{- end }}
