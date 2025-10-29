@@ -1,11 +1,9 @@
 <div class="list-links">
     <div>
         <ul>
-            {{ $f := "links_list.json" }}
-            {{ $data := resources.Get $f | transform.Unmarshal }}
-            {{ range $data }}
+            {{- range .Site.Data.links_list -}}
                 <li><a href="{{ .link }}">{{ .title }}</a></li>
-            {{ end }}
+            {{- end -}}
         </ul>
     </div>
 </div>

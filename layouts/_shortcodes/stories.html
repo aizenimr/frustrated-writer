@@ -9,9 +9,7 @@
     {{- $posts = $posts | append $post -}}
 {{- end -}}
 
-{{- $f := "storiesEx.json" -}}
-{{- $data := resources.Get $f | transform.Unmarshal -}}
-{{- range $data -}}
+{{- range .Site.Data.storiesEx -}}
     {{- $post := dict "Title" .title  "Date" (time.AsTime .date) "Link" .link "Description" .description -}}
     {{- $posts = $posts | append $post -}}
 {{- end -}}
