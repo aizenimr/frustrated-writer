@@ -9,7 +9,7 @@
     {{- $posts = $posts | append $post -}}
 {{- end -}}
 
-{{- range .Site.Data.storiesEx -}}
+{{- range .Site.Data.StoriesEx -}}
     {{- $post := dict "Title" .title  "Date" (time.AsTime .date) "Link" .link "Description" .description -}}
     {{- $posts = $posts | append $post -}}
 {{- end -}}

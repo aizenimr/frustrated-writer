@@ -12,7 +12,7 @@
                     {{ $month := index (split .Page.Title "/") 1 }}
                     <li>
                       {{ $name := "" }}
-                      {{- range where $.Site.Data.months "month" $month -}}
+                      {{- range where $.Site.Data.Months "month" $month -}}
                         {{ $name = .name }}
                       {{ end }}
                       <a href="/{{$year}}/{{$month}}">{{ $name }} ({{ len . }})</a>

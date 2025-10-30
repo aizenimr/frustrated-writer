@@ -1,9 +1,7 @@
 <div class="list-links">
     <div>
-        <ul>
-            {{- range .Site.Data.links_list -}}
-                <li><a href="{{ .link }}">{{ .title }}</a></li>
-            {{- end -}}
-        </ul>
+        {{- range .Site.Data.LinksList -}}
+            {{ printf "- [%s](%s)" .title .link | markdownify }}
+        {{- end -}}
     </div>
 </div>
