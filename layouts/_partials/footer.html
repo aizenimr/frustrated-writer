@@ -13,6 +13,9 @@ if or .Params.enableMathNotation $s.enableMathNotation }} {{ partialCached
       {{ T "copyright" | markdownify }}{{ with $s.since }}&nbsp;{{ . }}-{{ end
       }}&nbsp;<span class="year"></span>&nbsp;{{ upper $c }}. {{ T "all_rights"
       | markdownify }}
+      {{ with $s.BuiltBy }}
+        <span style="margin-right: 3rem;">{{ $s.BuiltBy | markdownify }}</span>
+      {{ end }}
     </p>
     {{- partialCached "top" .}}
   </div>

@@ -4,6 +4,8 @@ enableSearch = true
 # use keywords in META tags
 enableKeywords = false
 
+builtBy = "*נבנה ע\"י [הוגו](https://gohugo.io/)*"
+
 # socials
 twitter = "@aizenimr"
 largeTwitterCard = false # set to true if you want to show a large twitter card image. The default is a small twitter card image
