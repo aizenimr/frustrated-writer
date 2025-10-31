@@ -83,6 +83,9 @@ defaultContentLanguageInSubdir = false
   year = "/:year/"
   month = "/:year/:month/"
   series = "/series/:slug/"
+  [permalinks.page]
+    post = '/:year/:month/:day/:slug/'
+    page = '/:slug/'
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]

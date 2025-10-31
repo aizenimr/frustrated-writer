@@ -6,7 +6,6 @@ date: {{ .Date }}
 description: "תיאור הפוסט למנועי חיפוש"
 author: נמרוד איזנברג
 type: page
-url: /{{- .File.ContentBaseName }}
 guid: {{ absURL "" }}{{ $url | urlize }}
 draft: true
 toc: false

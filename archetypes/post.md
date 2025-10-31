@@ -6,7 +6,6 @@ date: {{ .Date }}
 description: "תיאור הפוסט למנועי חיפוש"
 author: נמרוד איזנברג
 type: post
-url: /{{ $url }}
 guid: {{ absURL "" }}{{ $url | urlize }}
 year: {{ now.Format "2006" }}
 month: {{ now.Format "2006/01" }}
