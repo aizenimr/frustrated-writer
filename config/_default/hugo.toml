@@ -6,9 +6,12 @@ title = "הכותב המתוסכל"  # Edit directly from config/_default/langua
 copyright = "נמרוד איזנברג"
 canonifyurls = true
 relativeurls = true
-theme = "hugo-clarity"
 disqusShortname = ""
 enableRobotsTXT = true
+
+[module]
+  [[module.imports]]
+    path = "github.com/chipzoller/hugo-clarity"
 
 timeZone = "Asia/Jerusalem"
 defaultContentLanguage = "he"
