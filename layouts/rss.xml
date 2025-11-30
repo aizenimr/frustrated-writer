@@ -36,6 +36,8 @@
         {{ if ne site.Params.rss_summary false }}
           {{ if .Params.summary }}
             {{ .Params.summary | html }}
+          {{ else if .Params.description }}
+            {{ .Params.description | html }}
           {{ else if .Params.abstract }}
             {{ .Params.abstract | html }}
           {{ else if .Summary }}
