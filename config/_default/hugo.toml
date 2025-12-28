@@ -56,6 +56,11 @@ type = "social"
 url = "https://facebook.com/aizenimr"
 weight = 3
 [[menu.social]]
+name = "x"
+type = "social"
+url = "https://x.com/aizenimr"
+weight = 7
+[[menu.social]]
 name = "keyoxide"
 url = "https://keyoxide.org/B49D9BFC696AA469B8B0CB0BCD2D98CB1683A7B3"
 weight = 5
