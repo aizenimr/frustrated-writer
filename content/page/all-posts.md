@@ -10,5 +10,7 @@ draft: false
 toc: false
 comments: false
 showdate: false
+excludeFromSearch: true
 ---
+
 {{< all-posts >}}
