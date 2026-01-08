@@ -4,23 +4,31 @@ enableSearch = true
 # use keywords in META tags
 enableKeywords = false
 
-builtBy = "*נבנה ע\"י [הוגו](https://gohugo.io/)*"
+builtBy = "*נבנה ע\"י [הוגו](https://gohugo.io/), ערכת עיצוב: [Clarity](https://github.com/chipzoller/hugo-clarity)*"
 
 # socials
-twitter = "@aizenimr"
-largeTwitterCard = false # set to true if you want to show a large twitter card image. The default is a small twitter card image
-introDescription = "שמי נמרוד איזנברג, סופר ובלוגר, מהנדס תוכנה בעברי ומנהל רכש בהווה. קורא ספרות ספקולטיבית מאז ומתמיד."
-introURL = "about/" # set the url for the 'read more' button below the introDescription, or set to false to not show the button
 description = "סיפורים, גיקיאדה, ורסיסי כתיבה מאת נמרוד איזנברג" # Set your site's meta tag (SEO) description here. Alternatively set this description in your home page content file e.g. content/_index.md. Whatever is set in the latter will take precedence.
-keywords = ["מדע בדיוני", "פנטסיה", "כתיבה", "גיקיאדה", "אייקון", "הומור", "סאטירה"] # Set your site's meta tag (SEO) keywords here. Alternatively set these in your home page content file e.g. content/_index.md. Whatever is set in the latter will take precedence.
+introDescription = "שמי נמרוד איזנברג, סופר ובלוגר, מהנדס תוכנה בעברי ומנהל רכש בהווה. קורא ספרות ספקולטיבית מאז ומתמיד." 
+introURL = "about/" # set the url for the 'read more' button below the introDescription, or set to false to not show the button
+keywords = [
+  "מדע בדיוני",
+  "פנטסיה",
+  "כתיבה",
+  "גיקיאדה",
+  "אייקון",
+  "הומור",
+  "סאטירה",
+] # Set your site's meta tag (SEO) keywords here. Alternatively set these in your home page content file e.g. content/_index.md. Whatever is set in the latter will take precedence.    
+largeTwitterCard = false # set to true if you want to show a large twitter card image. The default is a small twitter card image
+twitter = "@aizenimr" 
 
 # custom CSS and JS
 customCSS = ["fonts/fonts.css"]
 customPreloadFont = ["fonts/Alef-Regular.woff"]
 
 # Bluesky feed prefs
-bskyUser = "aizenimr.com"
 bskyLimit = 5
+bskyUser = "aizenimr.com"
 
 # showShare = false # Uncomment to not show share buttons on each post. Also available in each post's front matter.
 
@@ -129,10 +137,10 @@ enforceLightMode = false
 # numberOfFeaturedPosts = 8
 
 # Pin featured posts in list.
-# pinFeatured = true
+pinFeatured = true
 
 # Maximum number of pinned featured posts. (default: 8)
-# numberOfPinnedPosts = 8
+numberOfPinnedPosts = 1
 
 # Date format. Checkout https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference for details.
 dateFormat = "02/01/2006" # Default to "Jan 2, 2006".
@@ -148,7 +156,7 @@ since = 2015
 
 # website author
 [author]
-name = "נמרוד איזנברג"
+name = "נמרוד איזנברג" 
 photo = "/images/author.jpg" #include this if you would like to show the author photo on the sidebar
 
 [plausible_analytics]
@@ -159,6 +167,6 @@ websiteDomain = "aizenimr.com" # domain name of your website, most cases same as
 
 [matomo_analytics]
 enable = false # To enable matomo analytics change to `true`.
-websiteDomain = "aizenimr.com" # Set the domain name of your website, in most cases same as your base URL this is required.
 matomoDomain = "matomo.example.com" # Set to Matomo domain
 matomoSiteID = "1" # Default is set to 1, change this to the siteid being tracked
+websiteDomain = "aizenimr.com" # Set the domain name of your website, in most cases same as your base URL this is required.
