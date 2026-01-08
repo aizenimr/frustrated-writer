@@ -6,6 +6,7 @@
     "draft": "checkbox",
     "toc": "checkbox",
     "keywords": "multitext",
-    "storyPublishDate": "date"
+    "storyPublishDate": "date",
+    "featured": "checkbox"
   }
 }
