@@ -25,6 +25,9 @@ other = "לא נמצאו תוצאות"
 [go_back]
 other = "חזרה"
 
+[pinned_post]
+other = "פוסט נעוץ"
+
 [translations]
 other = "תרגומים"
 
@@ -66,16 +69,16 @@ other = "פסטים בסדרה הזו"
 
 # search
 [quick_links]
-  other = "תוצאות"
+other = "תוצאות"
 [no_matches]
-  other = "אין תוצאות"
+other = "אין תוצאות"
 [search_field_placeholder]
-  other = "חיפוש"
+other = "חיפוש"
 [blog_search_field_placeholder]
-  other = "חיפוש..."
+other = "חיפוש..."
 [search_results_label]
-  other = "תוצאות חיפוש"
+other = "תוצאות חיפוש"
 [short_search_query]
-  other = "שאילתא קצרה מדי"
+other = "שאילתא קצרה מדי"
 [type_to_search]
-  other = "הקישו לחיפוש"
+other = "הקישו לחיפוש"

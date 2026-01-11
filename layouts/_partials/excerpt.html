@@ -1,6 +1,9 @@
 <li class="post_item">
   <div class="excerpt">
     <div class="excerpt_header">
+      {{- if .Params.featured -}}
+      <div class="pinned_post_title">{{- T "pinned_post" -}}</div>
+      {{- end -}}
       <h2 class="post_link">
         <a href="{{ .Permalink }}" title="{{ .Title }}">
           {{- if .Params.featured -}}{{- partial "pinned" -}}{{- end -}}{{
