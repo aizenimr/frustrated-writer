@@ -9,117 +9,111 @@ ignoreFiles = ["Templates/.*", ".obsidian/.*", "drafts/.*"]
 relativeurls = true 
 title = "הכותב המתוסכל" # Edit directly from config/_default/languages.toml # alternatively, uncomment this and remove `title` entry from the aforemention file.
 
-[module]
-[[module.imports]]
-path = "github.com/chipzoller/hugo-clarity"
+theme = ["github.com/chipzoller/hugo-clarity"]
 
 defaultContentLanguage = "he"
 defaultContentLanguageInSubdir = false
 timeZone = "Asia/Jerusalem"
 [languages]
-[languages.he]
-[languages.he.params]
-disabled = false
-languageCode = 'he-IL'
-languageDirection = 'rtl'
-languageName = 'Hebrew'
-title = 'הכותב המתוסכל'
-weight = 1
+    [languages.he]
+        [languages.he.params]
+            disabled = false
+            languageCode = 'he-IL'
+            languageDirection = 'rtl'
+            languageName = 'Hebrew'
+            title = 'הכותב המתוסכל'
+            weight = 1
 
 [menus]
 #config/_default/menus/*.toml
 # Submenus are done this way: parent -> identifier
-[[menu.main]]
-name = "סיפורים"
-url = "סיפורים/"
-weight = -100
-[[menu.main]]
-name = "אודות"
-url = "about/"
-weight = -101
-[[menu.main]]
-name = "כל הפוסטים"
-url = "all-posts/"
-weight = -99
-
-[[menu.social]]
-name = "mail"
-url = "mailto:aizenimr[at]gmail.com"
-weight = 1
-[[menu.social]]
-name = "rss"
-url = "/feed/"
-weight = 6
-[[menu.social]]
-name = "facebook"
-type = "social"
-url = "https://facebook.com/aizenimr"
-weight = 3
-[[menu.social]]
-name = "x"
-type = "social"
-url = "https://x.com/aizenimr"
-weight = 7
-[[menu.social]]
-name = "keyoxide"
-url = "https://keyoxide.org/B49D9BFC696AA469B8B0CB0BCD2D98CB1683A7B3"
-weight = 5
-[[menu.social]]
-name = "bluesky"
-type = "social"
-url = "https://bsky.app/profile/aizenimr.com"
-weight = 2
-[[menu.social]]
-name = "signal"
-url = "https://signal.me/#eu/hFcdYV9-FLGEj33EDHz2jhgXNxxl-Hnrqcnu8TDRZCs1_Ynls9hMpq5I1qYZWIlx"
-weight = 7
-[[menu.social]]
-name = "linkedin"
-url = "https://www.linkedin.com/in/aizenimr/"
-weight = 8
+    [[menu.main]]
+        name = "סיפורים"
+        url = "סיפורים/"
+        weight = -100
+    [[menu.main]]
+        name = "אודות"
+        url = "about/"
+        weight = -101
+    [[menu.main]]
+        name = "כל הפוסטים"
+        url = "all-posts/"
+        weight = -99
+    [[menu.social]]
+        name = "mail"
+        url = "mailto:aizenimr[at]gmail.com"
+        weight = 1
+    [[menu.social]]
+        name = "rss"
+        url = "/feed/"
+        weight = 6
+    [[menu.social]]
+        name = "facebook"
+        url = "https://facebook.com/aizenimr"
+        weight = 3
+    [[menu.social]]
+        name = "x"
+        url = "https://x.com/aizenimr"
+        weight = 7
+    [[menu.social]]
+        name = "keyoxide"
+        url = "https://keyoxide.org/B49D9BFC696AA469B8B0CB0BCD2D98CB1683A7B3"
+        weight = 5
+    [[menu.social]]
+        name = "bluesky"
+        url = "https://bsky.app/profile/aizenimr.com"
+        weight = 2
+    [[menu.social]]
+        name = "signal"
+        url = "https://signal.me/#eu/hFcdYV9-FLGEj33EDHz2jhgXNxxl-Hnrqcnu8TDRZCs1_Ynls9hMpq5I1qYZWIlx"
+        weight = 7
+    [[menu.social]]
+        name = "linkedin"
+        url = "https://www.linkedin.com/in/aizenimr/"
+        weight = 8
 
 [taxonomies]
-category = "categories"
-month = "month"
-series = "series"
-tag = "tags"
-year = "year"
+    category = "categories"
+    month = "month"
+    series = "series"
+    tag = "tags"
+    year = "year"
 
 [permalinks]
-categories = "/category/:slug/"
-month = "/:year/:month/"
-series = "/series/:slug/"
-tags = "/tag/:slug/"
-year = "/:year/"
-[permalinks.page]
-page = '/:slug/'
-post = '/:year/:month/:day/:slug/'
+    categories = "/category/:slug/"
+    month = "/:year/:month/"
+    series = "/series/:slug/"
+    tags = "/tag/:slug/"
+    year = "/:year/"
+    [permalinks.page]
+        page = '/:slug/'
+        post = '/:year/:month/:day/:slug/'
 
 [outputs]
-home = ["HTML", "RSS", "JSON"]
+    home = ["HTML", "RSS", "JSON"]
 
 [outputFormats.RSS]
-baseName = "rss"
-isHTML = false
-isPlainText = false
-mediaType = "application/rss+xml"
-noUgly = true
-rel = "alternate"
+    baseName = "rss"
+    isHTML = false
+    isPlainText = false
+    mediaType = "application/rss+xml"
+    noUgly = true
+    rel = "alternate"
 
 [services]
-[services.rss]
-limit = 20
+    [services.rss]
+        limit = 20
 
 [sitemap]
-changeFreq = ''
-filename = 'sitemap.xml'
-priority = -1
+    changeFreq = ''
+    filename = 'sitemap.xml'
+    priority = -1
 
 [markup]
-[markup.goldmark]
-[markup.goldmark.renderHooks]
-[markup.goldmark.renderHooks.link]
-useEmbedded = "fallback"
+    [markup.goldmark]
+        [markup.goldmark.renderHooks]
+            [markup.goldmark.renderHooks.link]
+                useEmbedded = "fallback"
 
 [pagination]
-pagerSize = 15
+    pagerSize = 15
