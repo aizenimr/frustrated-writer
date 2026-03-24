@@ -157,6 +157,7 @@ since = 2015
 # website author
 [author]
 name = "נמרוד איזנברג" 
+email = ""
 photo = "/images/author.jpg" #include this if you would like to show the author photo on the sidebar
 
 [plausible_analytics]

@@ -1,6 +1,6 @@
 <div class="list-links">
     <div>
-        {{- range .Site.Data.LinksList -}}
+        {{- range hugo.Data.LinksList -}}
             {{ printf "- [%s](%s)" .title .link | markdownify }}
         {{- end -}}
     </div>
