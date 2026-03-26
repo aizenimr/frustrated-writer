@@ -5,7 +5,7 @@
     {{- with .Params.storyPublishDate -}}
         {{- $date = . -}}
     {{- end -}}
-    {{- $post := dict "Title" (replace .Title " (סיפור)" "")  "Date" (time.AsTime $date) "Link" .RelPermalink "Description" .Description -}}
+    {{- $post := dict "Title" (replace .Title " (סיפור)" "")  "Date" (time.AsTime $date) "Link" .RelPermalink "Description" .Summary -}}
     {{- $posts = $posts | append $post -}}
 {{- end -}}
 

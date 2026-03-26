@@ -3,7 +3,7 @@
 {{ $url := printf "%s%s/" (now.Format "2006/01/02/") $name }}
 title: "{{ replace $name "-" " " | title }}" # Title of the blog post.
 date: {{ .Date }}
-description: "תיאור הפוסט למנועי חיפוש"
+summary: "תיאור הפוסט למנועי חיפוש"
 author: נמרוד איזנברג
 type: post
 guid: {{ absURL "" }}{{ $url | urlize }}

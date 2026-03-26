@@ -1,7 +1,7 @@
 ---
 title: "פרויקטים מיוחדים"
 date: 2025-10-28
-description: "סדרות פוסטים מיוחדות, בעיקר מדריכים"
+summary: "סדרות פוסטים מיוחדות, בעיקר מדריכים"
 author: נמרוד איזנברג
 type: page
 guid: https://aizenimr.wordpress.com/series
