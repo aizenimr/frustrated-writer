@@ -82,3 +82,15 @@ other = "תוצאות חיפוש"
 other = "שאילתא קצרה מדי"
 [type_to_search]
 other = "הקישו לחיפוש"
+
+# alerts
+[caution]
+other = "אזהרה"
+[important]
+other = "חשוב"
+[note]
+other = "הערה"
+[tip]
+other = "טיפ"
+[warning]
+other = "זהירות"

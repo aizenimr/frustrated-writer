@@ -157,12 +157,10 @@ p
 blockquote
     border-right: 0.2rem solid #0077b8
     padding: 1rem 4rem 1rem 4rem
-    border-radius: 1rem
-
     p
         margin-bottom: unset
 
-blockquote::before
+.quote::before
     content: "\201D"
     color: #0077b8
     font-size: 4em
@@ -170,13 +168,18 @@ blockquote::before
     top: -0.2em
     right: 0rem
 
-blockquote::after
+.quote::after
     content: "\201C"
     color: #0077b8
     font-size: 4em
     position: absolute
     bottom: -0.7em
     left: 0rem
+
+.alert-heading
+    font-weight: bold
+    position: relative
+    left: 2em
 
 .pinned
     color: #a6b1b8
