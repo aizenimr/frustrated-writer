@@ -15,7 +15,11 @@
         {{ partial "excerpt" . }}
       {{- end }}
       <li>
-        {{- template "_internal/pagination.html" . }}
+        <div class="pages" id="pages">
+          <a style="margin-left: 1em;" href="{{- (.Paginate $pages).First.URL -}}" aria-label="Begin" class="page-link" role="button"><<</a>
+          {{- template "_internal/pagination.html" . }}
+          <a style="margin-right: 1em;" href="{{- (.Paginate $pages).Last.URL -}}" aria-label="End" class="page-link" role="button">>></a>
+        </div>
       </li>
     </ul>
   </div>
