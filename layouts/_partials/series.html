@@ -1,15 +1,15 @@
 {{- $seriesName := print .Params.series -}}
 {{- $url := .Params.url -}}
 {{- with .Site.Taxonomies.series.Get $seriesName -}}
-  <div>
-    {{- print "***" | markdownify -}}
-    {{- print "## *שאר הפוסטים בסדרה*" | markdownify -}}
-      {{- range $index, $page := .Pages.ByDate -}}
-        {{- if eq $page.Params.url $url -}}
-          {{- printf "%d. **%s**" ($index | add 1) $page.LinkTitle | markdownify -}}
-        {{- else -}}
-          {{- printf "%d. [%s](%s)" ($index | add 1) $page.LinkTitle $page.RelPermalink | markdownify -}}
-        {{- end -}}
-      {{- end -}}
-  </div>
+<div>
+  {{- print "***" | markdownify -}}
+  {{- printf "## *שאר הפוסטים בסדרת %s*" $seriesName | markdownify -}}
+  {{- range $index, $page := .Pages.ByDate -}}
+  {{- if eq $page.Params.url $url -}}
+  {{- printf "%d. **%s**" ($index | add 1) $page.LinkTitle | markdownify -}}
+  {{- else -}}
+  {{- printf "%d. [%s](%s)" ($index | add 1) $page.LinkTitle $page.RelPermalink | markdownify -}}
+  {{- end -}}
+  {{- end -}}
+</div>
 {{- end -}}
