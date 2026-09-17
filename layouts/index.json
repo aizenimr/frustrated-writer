@@ -1,8 +1,8 @@
 {{- $.Scratch.Add "index" slice -}}
 {{- range .Site.Pages -}}
   {{- if and (ne .Type "search") (not .Page.Params.excludeFromSearch) -}}
-    {{ $title :=  .Title | htmlUnescape  }}
-    {{ $body :=  .Plain | htmlUnescape  }}
+    {{- $title :=  .Title | htmlUnescape  -}}
+    {{- $body :=  .Plain | htmlUnescape  -}}
     {{- $.Scratch.Add "index" (dict "title" $title "body" $body "link" .Permalink "section" .Section "tags" .Params.tags) -}}
   {{- end -}}
 {{- end -}}
