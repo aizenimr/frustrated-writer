@@ -120,6 +120,3 @@ timeZone = "Asia/Jerusalem"
 
 [pagination]
     pagerSize = 15
-
-[minify]
-  disableJS = true
