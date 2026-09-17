@@ -11,6 +11,9 @@ title = "הכותב המתוסכל" # Edit directly from config/_default/languag
 
 theme = ["github.com/chipzoller/hugo-clarity"]
 
+[params]
+    defaultSiteLanguage = "he"
+
 defaultContentLanguage = "he"
 defaultContentLanguageInSubdir = false
 timeZone = "Asia/Jerusalem"
@@ -117,3 +120,6 @@ timeZone = "Asia/Jerusalem"
 
 [pagination]
     pagerSize = 15
+
+[minify]
+  disableJS = true
