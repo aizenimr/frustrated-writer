@@ -1,0 +1,1 @@
+const goBackTextButton = '{{ T "go_back" }}';
