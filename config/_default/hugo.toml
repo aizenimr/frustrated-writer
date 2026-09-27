@@ -42,6 +42,10 @@ timeZone = "Asia/Jerusalem"
         name = "כל הפוסטים"
         url = "all-posts/"
         weight = -99
+    [[menu.main]]
+        name = "כל הסטטוסים"
+        url = "סטטוסים/"
+        weight = -98
     [[menu.social]]
         name = "mail"
         url = "mailto:aizenimr[at]gmail.com"
@@ -120,3 +124,58 @@ timeZone = "Asia/Jerusalem"
 
 [pagination]
     pagerSize = 15
+
+[module]
+    [[module.mounts]]
+    disableWatch = false
+    source = 'content'
+    target = 'content'
+    [module.mounts.sites]
+      [module.mounts.sites.complements]
+      [module.mounts.sites.matrix]
+    [[module.mounts]]
+    disableWatch = false
+    source = 'data'
+    target = 'data'
+    [module.mounts.sites]
+      [module.mounts.sites.complements]
+      [module.mounts.sites.matrix]
+    [[module.mounts]]
+    disableWatch = false
+    source = 'layouts'
+    target = 'layouts'
+    [module.mounts.sites]
+      [module.mounts.sites.complements]
+      [module.mounts.sites.matrix]
+    [[module.mounts]]
+    disableWatch = false
+    source = 'i18n'
+    target = 'i18n'
+    [module.mounts.sites]
+      [module.mounts.sites.complements]
+      [module.mounts.sites.matrix]
+    [[module.mounts]]
+    disableWatch = false
+    source = 'archetypes'
+    target = 'archetypes'
+    [module.mounts.sites]
+      [module.mounts.sites.complements]
+      [module.mounts.sites.matrix]
+    [[module.mounts]]
+    disableWatch = false
+    source = 'assets'
+    target = 'assets'
+    [module.mounts.sites]
+      [module.mounts.sites.complements]
+      [module.mounts.sites.matrix]
+    [[module.mounts]]
+    disableWatch = false
+    source = 'static'
+    target = 'static'
+    [module.mounts.sites]
+      [module.mounts.sites.complements]
+      [module.mounts.sites.matrix]
+    [[module.mounts]]
+        source = "static/data"
+        target = "assets/static/data"
+    
