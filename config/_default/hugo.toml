@@ -11,6 +11,10 @@ title = "הכותב המתוסכל" # Edit directly from config/_default/languag
 
 theme = ["github.com/chipzoller/hugo-clarity"]
 
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
 [params]
     defaultSiteLanguage = "he"
 
