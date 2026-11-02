@@ -1,0 +1,21 @@
+$baseURL: '{{ .Site.BaseURL }}'
+$fonts-path-for-config: '{{ printf "../%s" (default "fonts/" .Site.Params.fontsDir) }}'
+$images-path-for-config: '{{ printf "../%s" (default "images/" .Site.Params.imagesDir) }}'
+$icons-path-for-config: '{{ printf "../%s" (default "icons/" .Site.Params.iconsDir) }}'
+@use "variables" as * with (
+  $imagesPath: $images-path-for-config,
+  $iconsPath: $icons-path-for-config
+)
+@use "override" as *
+// include static fonts only when they're not overridden
+{{- if ne .Site.Params.customFonts true }}
+@use "fonts" as * with (
+  $fontsPath: $fonts-path-for-config
+)
+{{- end }}
+@use "base" as *
+@use "components" as *
+@use "utils" as *
+@use "mobile" as *
+@use "syntax" as *
+@use "custom" as *

@@ -1,4 +1,6 @@
-@media screen and (max-width: $mobile-menu-breakpoint)
+@use "variables" as vars
+
+@media screen and (max-width: vars.$mobile-menu-breakpoint)
     main
         padding-top: unset !important
     .sidebar
