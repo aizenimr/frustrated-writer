@@ -1,5 +1,5 @@
 module frustrated-writer
 
-go 1.21.1
+go 1.27.0
 
-require github.com/chipzoller/hugo-clarity v0.0.0-20260902113519-970be88b969b // indirect
+require github.com/adityatelange/hugo-PaperMod v0.0.0-20261025062351-118119693d8b // indirect

@@ -1,1 +1,6 @@
-<img src="{{ .Destination | safeURL }}" alt="{{ .Text | safeHTML }}" {{ with .Title }} title="{{ . }}" {{ end }} />
+{{- $caption := .PlainText -}}
+<figure>
+    <img src="{{ .Destination | safeURL }}" alt="{{- $caption -}}" />
+    <figcaption>{{- $caption -}}</figcaption>
+</figure>
+{{- /* chomp trailing newline */ -}}

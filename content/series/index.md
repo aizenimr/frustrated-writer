@@ -6,9 +6,9 @@ author: נמרוד איזנברג
 type: page
 guid: https://aizenimr.wordpress.com/series
 draft: false
-toc: false
+showtoc: false
 comments: false
-showdate: false
+hidemeta: true
 ---
 רשימת פרויקטים וסקירות מיוחדות שפורסמו בבלוג.
 {{< all-series >}}

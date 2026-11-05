@@ -1,45 +1,34 @@
-{{- $s := site.Params }}
-{{- $p := .Params }}
-{{- $codeBlockConfig := partial "func/getCodeBlockSettings" . }}
+{{- if lt hugo.Version "0.158.0" }}
+{{- errorf "=> hugo v0.158.0 or greater is required for hugo-PaperMod to build " }}
+{{- end -}}
+
 <!DOCTYPE html>
-<html
-  lang="{{ .Lang }}"
-  data-figures="{{ $p.figurePositionShow }}"
-  {{ if .IsPage }}
-    class="page"
-  {{ else if .IsHome }}
-    class="home"
-  {{ end }}
-  {{ with $s.enforceLightMode }}
-    data-mode="lit"
-  {{ end }}
-  {{ with $s.enforceDarkMode }}
-    data-mode="dim"
-  {{ end -}}
->
-  <head>
-    {{- partial "head" . }}
-    {{- partial "hooks/head-end" . }}
-  </head>
-  <body
-    data-code="{{ $codeBlockConfig.max }}"
-    data-lines="{{ $codeBlockConfig.lines }}"
-    id="documentTop"
-    data-lang="{{ .Lang }}"
-  >
-    {{- partialCached "scripts/google/tag-manager" (dict "noscript" true) }}
-    {{- partial "header" . }}
-    <main>
-      <div class="grid-inverse wrap content">
-        {{- block "main" . }}{{ end }}
-        {{- if ( ne $p.sidebar false ) }}
-          {{- partialCached "sidebar" . }}
-        {{ end }}
-      </div>
+{{- $theme := site.Params.defaultTheme | default "auto" }}
+{{- if eq $theme "dark" }}
+<html lang="{{ site.Language }}" dir="{{ .Language.Direction | default "auto" }}" data-theme="dark">
+{{- else if eq $theme "light" }}
+<html lang="{{ site.Language }}" dir="{{ .Language.Direction | default "auto" }}" data-theme="light">
+{{- else }}
+<html lang="{{ site.Language }}" dir="{{ .Language.Direction | default "auto" }}" data-theme="auto">
+{{- end }}
+
+<head>
+    {{- partial "head.html" . }}
+</head>
+
+{{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) }}
+<body class="list" id="top">
+{{- else }}
+<body id="top">
+{{- end }}
+    {{ partialCached "header.html" . .Page -}}
+    <main class="main grid-main">
+        <div>
+            {{- block "main" . }}{{ end }}
+        </div>
+        {{- partialCached "sidebar" . }}
     </main>
-    {{- partialCached "icons" . }}
-    {{- partialCached "footer" . }}
-    {{- partialCached "scripts/index" . }}
-    {{- partialCached "hooks/body-end" . }}
-  </body>
+    {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
+</body>
+
 </html>

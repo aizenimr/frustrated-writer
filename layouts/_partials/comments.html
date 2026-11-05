@@ -1,0 +1,60 @@
+{{- /* Comments area start */ -}}
+{{ $guid :=  .Permalink }}
+{{ if isset .Params "guid" }}
+  {{ $guid = .Params.guid }}
+{{ end }}
+
+{{- if hugo.IsProduction -}}
+<div id="graphcomment"></div>
+<script type="text/javascript">
+  (function () {
+    var __semio__token;
+    var __semio__callback;
+
+    var __semio__params = {
+      graphcommentId: "{{- .Site.Params.graphCommentsID -}}",
+      
+      wordpress: {
+        guid: "{{ $guid }}",
+      },
+    };
+
+    var lib = "gc_graphlogin";
+
+    function __semio__onload() {
+      window["__semio__" + lib](__semio__params);
+    }
+
+    (function () {
+      var gc = document.createElement("script");
+      gc.type = "text/javascript";
+      gc.async = true;
+      gc.onload = __semio__onload;
+      gc.defer = true;
+      gc.src = "https://integration.graphcomment.com/" + lib + ".js";
+      (
+        document.getElementsByTagName("head")[0] ||
+        document.getElementsByTagName("body")[0]
+      ).appendChild(gc);
+    })();
+
+    function __semio__onload__counter() {
+      __semio__helpers_counter("{{- .Site.Params.graphCommentsID -}}");
+    }
+
+    (function () {
+      var gc = document.createElement("script");
+      gc.type = "text/javascript";
+      gc.async = true;
+      gc.onload = __semio__onload__counter;
+      gc.defer = true;
+      gc.src = "https://integration.graphcomment.com/helpers_counter.js";
+      (
+        document.getElementsByTagName("head")[0] ||
+        document.getElementsByTagName("body")[0]
+      ).appendChild(gc);
+    })();
+  })();
+</script>
+{{- end -}}
+{{- /* Comments area end */ -}}

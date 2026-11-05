@@ -3,10 +3,10 @@ title: אודות
 author: נמרוד איזנברג
 type: page
 date: 2015-07-27T06:07:06+00:00
-showdate: false
+hidemeta: true
 guid: http://aizenimr.wordpress.com/?page_id=1
 url: /about
-
+hiddenInRss: true
 ---
 אז ככה: שמי נמרוד איזנברג, מהנדס תוכנה בעברי ומנהל רכש בהווה. קורא ספרות ספקולטיבית מאז ומתמיד.
 

@@ -1,5 +1,5 @@
-+++
-title = "חיפוש"
-searchPage = true
-type = "search"
-+++
+---
+title: "חיפוש"
+placeholder: חיפוש...
+layout: "search"
+---

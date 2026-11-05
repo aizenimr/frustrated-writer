@@ -9,14 +9,15 @@ type: post
 guid: {{ absURL "" }}{{ $url | urlize }}
 year: {{ now.Format "2006" }}
 month: {{ now.Format "2006/01" }}
-featureImage: /images/{{ now.Format "2006/01" }}/XXXXX.png
-featureImageAlt: תיאור של התמונה
+cover:
+  image: /images/{{ now.Format "2006/01" }}/XXXXX.png
+  alt: תיאור של התמונה
 categories:
   - כללי
 tags:
   - כתיבה
 draft: false
-toc: false
+showtoc: false
 comments: true
 ---
 תוכן הפוסט

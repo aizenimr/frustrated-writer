@@ -1,58 +1,73 @@
 {{- define "main" }}
-{{- $s := .Site.Params }}
-{{- $p := .Params }}
-{{- $scratch := newScratch }}
-{{- if isset $p "image" }}
-{{- $scratch.Set "image" $p.image }}
-{{- else }}
-{{ $scratch.Set "image" $s.fallBackOgImage }}
-{{- end }}
-{{- $image := $scratch.Get "image" }}
-{{- $bg := absLangURL (path.Join "images" $image) }}
-  <article class="post_content">
-    {{- $t := .Title }}
-    <h1 class="post_title"><a href="{{ .Permalink }}">{{ $t | markdownify }}</a></h1>
-    {{- partial "post-meta" . }}
-    {{- with .Params.featureImage -}}
-    <div class="post_featured">
-      {{- partial "image" (dict "file" $p.featureImage "alt" $p.featureImageAlt "cap" $p.featureImageCap "type"
-      "featured" "Page" $.Page) }}
-    </div>
-    {{- end -}}
-    {{ if $p.toc }}
-    <div class="post_toc">
-      <h2>{{ T "overview" }}</h2>
-      {{ .TableOfContents }}
-    </div>
-    {{ end }}
-    <div class="post_body">
-      {{- .Content }}
-    </div>
 
-    {{- partial "series" . -}}
+<article class="post-single">
+  <header class="post-header">
+    {{ partial "breadcrumbs.html" . }}
+    <h1 class="post-title entry-hint-parent">
+      {{ .Title }}
+      {{- if .Draft }}
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+      {{- end }}
+    </h1>
+    {{- if .Description }}
+    <div class="post-description">
+      {{ .Description }}
+    </div>
+    {{- end }}
+    {{- if not (.Param "hideMeta") }}
+    <div class="post-meta">
+      {{- partial "post_meta.html" . -}}
+      {{- partial "translation_list.html" . -}}
+      {{- partial "edit_post.html" . -}}
+      {{- partial "post_canonical.html" . -}}
+    </div>
+    {{- end }}
+  </header>
+  {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
+  {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
+  {{- if (.Param "ShowToc") }}
+  {{- partial "toc.html" . }}
+  {{- end }}
 
-    {{ if eq .Params.type "post" }}
-      {{ partial "nextprev" . }}
-      {{- $showRelatedInArticle := true }}
-      {{- if eq $s.showRelatedInArticle false }}
-      {{- $showRelatedInArticle = false }}
-      {{- else if eq $p.showRelatedInArticle false }}
-      {{- $showRelatedInArticle = false }}
+  {{- if .Content }}
+  <div class="post-content md-content">
+    {{- if not (.Param "disableAnchoredHeadings") }}
+    {{- partial "anchored_headings.html" .Content -}}
+    {{- else }}{{ .Content }}{{ end }}
+  </div>
+  {{- end }}
+
+  {{- partial "extend_post_content.html" . }}
+
+  <footer class="post-footer">
+    {{- $categories := .Language.Params.Taxonomies.category | default "categories" }}
+    <ul class="post-categories">
+      {{- range ($.GetTerms $categories) }}
+      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
       {{- end }}
-      {{- if ne $showRelatedInArticle false }}
-      {{- partial "related" . }}
+    </ul>
+    {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
+    <ul class="post-tags">
+      {{- range ($.GetTerms $tags) }}
+      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
       {{- end }}
-    {{ end }}
-    
-    {{- $showComments := true }}
-    {{- if eq $s.comments false }}
-      {{- $showComments = false }}
-    {{- else if eq $p.comments false }}
-      {{- $showComments = false }}
+    </ul>
+    {{- if (.Param "ShowPostNavLinks") }}
+    {{- partial "post_nav_links.html" . }}
     {{- end }}
-    {{- if and (eq hugo.IsDevelopment false) (eq $showComments true) }}
-      {{- partial "graph" . }}
+    {{- if (and site.Params.ShowShareButtons (ne .Params.disableShare true)) }}
+    {{- partial "share_icons.html" . -}}
     {{- end }}
-    {{- partial "i18nlist" . }}
-  </article>
-{{- end }}
+  </footer>
+
+  {{- if (.Param "comments") }}
+  {{- partial "comments.html" . }}
+  {{- end }}
+</article>
+
+{{- end }}{{/* end main */}}

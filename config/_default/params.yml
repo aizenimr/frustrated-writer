@@ -1,0 +1,107 @@
+env: production # to enable google analytics, opengraph, twitter-cards and schema.
+description: "סיפורים, גיקיאדה, ורסיסי כתיבה מאת נמרוד איזנברג"
+author: נמרוד איזנברג
+# author: ["Me", "You"] # multiple authors
+
+defaultTheme: auto
+# disableThemeToggle: true
+ShowShareButtons: false
+ShowReadingTime: false
+disableSpecial1stPost: true
+displayFullLangName: false
+ShowPostNavLinks: true
+ShowBreadCrumbs: false
+ShowCodeCopyButtons: true
+ShowRssButtonInSectionTermList: true
+ShowAllPagesInArchive: false
+ShowPageNums: true
+ShowToc: false
+# comments: false
+images: ["icons/gender.png"]
+
+graphCommentsID: "Frustrated-Writer"
+
+profileMode:
+  enabled: false
+  title: נמרוד איזנברג
+  imageUrl: "images/author.jpg"
+  imageTitle: נמרוד איזנברג
+  # imageWidth: 120
+  # imageHeight: 120
+  buttons:
+    - name: Archives
+      url: archives
+    - name: Tags
+      url: tags
+
+homeInfoParams:
+  Title: "מי אני?"
+  Content: |
+    שמי נמרוד איזנברג, סופר ובלוגר, מהנדס תוכנה בעברי ומנהל רכש בהווה. קורא ספרות ספקולטיבית מאז ומתמיד.  [המשך](/about/)
+
+socialIcons:
+  - name: email
+    title: דואר אלקטרוני
+    url: "mailto:aizenimr [at] gmail.com"
+  - name: bluesky
+    title: בלוסקיי
+    url: "https://bsky.app/profile/aizenimr.com"
+  - name: facebook
+    title: פייסבוק
+    url: "https://facebook.com/aizenimr"
+  - name: rss
+    title: RSS
+    url: "https://aizenimr.com/feed/"
+  - name: github
+    title: גיטהאב
+    url: "https://github.com/aizenimr"
+  - name: X
+    title: טוויטר
+    url: "https://x.com/aizenimr"
+  - name: linkedin
+    title: לינקדאין
+    url: "https://linkedin.com/in/aizenimr"
+  - name: other
+    title: "Keyoxide"
+    url: "https://keyoxide.org/B49D9BFC696AA469B8B0CB0BCD2D98CB1683A7B3"
+  - name: other
+    title: "סיגנל"
+    url: "https://signal.me/#eu/hFcdYV9-FLGEj33EDHz2jhgXNxxl-Hnrqcnu8TDRZCs1_Ynls9hMpq5I1qYZWIlx"
+
+# label:
+# iconSVG: '<svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" fill="currentColor"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>'
+# text: "Home"
+# icon: icon.png
+# iconHeight: 35
+
+analytics:
+  google:
+    SiteVerificationTag: "G-YZF0GDK8SQ"
+
+# Bluesky feed prefs
+bluesky:
+  bskyLimit: 5
+  bskyUser: "aizenimr.com"
+
+assets:
+  disableHLJS: true
+  favicon: "icons/favicon-16x16.png"
+  favicon16x16: "icons/favicon-16x16.png"
+#     favicon32x32: "<link / abs url>"
+  apple_touch_icon: "icons/apple-touch-icon.png"
+#     safari_pinned_tab: "<link / abs url>"
+
+cover:
+  responsiveImages: true
+#     hidden: true # hide everywhere but not in structured data
+#     hiddenInList: true # hide on list pages and home
+#     hiddenInSingle: true # hide on single page
+
+fuseOpts:
+  isCaseSensitive: false
+  shouldSort: true
+  location: 0
+  distance: 1000
+  threshold: 0.0
+  minMatchCharLength: 0
+  keys: ["title", "permalink", "summary", "content"]

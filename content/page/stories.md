@@ -1,0 +1,21 @@
+---
+title: "סיפורים"
+url: /stories
+date: 2017-12-02T12:18:28+00:00
+summary: "סיפורים שפירסמתי"
+author: נמרוד איזנברג
+type: page
+guid: https://aizenimr.wordpress.com/?page_id=2229
+draft: false
+showtoc: false
+comments: true
+hidemeta: true
+hiddenInRss: true
+---
+רשימת סיפורים פרי עטי שפורסמו עד כה. כמעט כולם פורסמו ב["היה יהיה"](http://annual.sf-f.org.il) (שנתון האגודה הישראלית למדע בדיוני ופנטסיה) או במסגרת פרויקט הסיפורים של כנס המדע הבדיוני ["מאורות"](https://meorot.sf-f.org.il) המתקיים מדי שנה בירושלים.
+
+לחלק מהסיפורים טרחתי לכתוב הקדמה המסבירה על תהליך כתיבתם.
+
+הסיפורים מופיעים על פי סדר פרסומם מהחדש לישן.
+
+{{< stories >}}

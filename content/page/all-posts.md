@@ -7,10 +7,12 @@ type: page
 url: /all-posts
 guid: https://aizenimr.com/all-posts/
 draft: false
-toc: false
+showtoc: false
 comments: false
-showdate: false
+hidemeta: true
 excludeFromSearch: true
+hiddenInRss: true
+searchHidden: true
 ---
 
 {{< all-posts >}}

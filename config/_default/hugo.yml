@@ -1,0 +1,154 @@
+# If your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would
+# contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
+baseURL: https://aizenimr.com/
+locale: he-il
+title: הכותב המתוסכל
+copyright: "© נמרוד איזנברג"
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+pygmentsUseClasses: true
+mainsections: ["post"]
+
+minify:
+  disableXML: true
+  # minifyOutput: true
+
+pagination:
+  disableAliases: false
+  pagerSize: 10
+
+languages:
+  he:
+    label: "Hebrew"
+    direction: "rtl"
+    weight: 1
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series
+      month: month
+      year: year
+    permalinks:
+      categories: "/category/:slug/"
+      month: "/:year/:month/"
+      series: "/series/:slug/"
+      tags: "/tag/:slug/"
+      year: "/:year/"
+      page:
+        page: "/:slug/"
+        posts: "/:year/:month/:day/:slug/"
+    menu:
+      main:
+        - name: אודות
+          url: about
+          weight: 1
+        - name: סיפורים
+          url: stories/
+          weight: 2
+        - name: סטטוסים
+          url: סטטוסים/
+          weight: 3
+        - name: חיפוש
+          url: search/
+          weight: 4
+        - name: ארכיון
+          url: archives
+          weight: 5
+        - name: קטגוריות
+          url: categories/
+          weight: 6
+        - name: תגיות
+          url: tags/
+          weight: 7
+
+outputFormats:
+  llms:
+    mediaType: "text/plain"
+    baseName: "llms"
+    isPlainText: true
+    notAlternative: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+    - llms
+
+# privacy:
+#   vimeo:
+#     disabled: false
+#     simple: true
+
+#   twitter:
+#     disabled: false
+#     enableDNT: true
+#     simple: true
+
+#   instagram:
+#     disabled: false
+#     simple: true
+
+#   youtube:
+#     disabled: false
+#     privacyEnhanced: true
+
+services:
+  instagram:
+    disableInlineCSS: true
+  x:
+    disableInlineCSS: true
+
+module:
+  imports:
+  - path: github.com/adityatelange/hugo-PaperMod
+  mounts:
+    - disableWatch: false
+      source: content
+      target: content
+      sites:
+        complements: {}
+        matrix: {}
+    - disableWatch: false
+      source: data
+      target: data
+      sites:
+        complements: {}
+        matrix: {}
+    - disableWatch: false
+      source: layouts
+      target: layouts
+      sites:
+        complements: {}
+        matrix: {}
+    - disableWatch: false
+      source: i18n
+      target: i18n
+      sites:
+        complements: {}
+        matrix: {}
+    - disableWatch: false
+      source: archetypes
+      target: archetypes
+      sites:
+        complements: {}
+        matrix: {}
+    - disableWatch: false
+      source: assets
+      target: assets
+      sites:
+        complements: {}
+        matrix: {}
+    - disableWatch: false
+      source: static
+      target: static
+      sites:
+        complements: {}
+        matrix: {}
+    - source: static/data
+      target: assets/static/data

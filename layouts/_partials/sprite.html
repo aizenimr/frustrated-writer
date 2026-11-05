@@ -1,9 +1,0 @@
-{{ $st := .style }}
-<svg class="icon"
-{{ if (.style) }}
-  style="{{ $st | safeCSS }}"
-{{ end }}
->
-  <title>{{ .icon }}</title>
-  <use xlink:href="#{{ .icon }}"></use>
-</svg>

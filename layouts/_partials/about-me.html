@@ -1,21 +1,13 @@
 {{ $s := site.Params }}
-{{- $introDescription := $s.introDescription }}
-{{- with .Params.introDescription }}
-    {{- $introDescription = . }}
-{{- end }}
+{{- $introDescription := $s.homeInfoParams.Content }}
 {{- if $introDescription }}
     {{- $author := $s.Author }}
-    {{- $showAuthorPhoto := false }}
+    {{- $showAuthorPhoto := true }}
     {{- $fullAuthor := reflect.IsMap $author }}
-    {{- if $fullAuthor }}
-        {{- if $author.photo }}
-            {{- $showAuthorPhoto = true }}
-        {{- end }}
-    {{- end }}
     {{- if $showAuthorPhoto }}
         <h2>{{ "מי אני?" }}</h2>
         <div class="author_header">
-            <img src="{{ $.Site.BaseURL }}{{ $author.photo }}" alt="{{ $author.name }} photo">
+            <img src="{{ $.Site.BaseURL }}{{ $s.profileMode.imageURL }}" alt="{{ $author }} photo">
         </div>
     {{- else }}
         <h2>{{ if $fullAuthor }}{{ $author.name }}{{ else }}{{ $author }}{{ end }}</h2>
@@ -23,9 +15,4 @@
     <div class="author_bio">
         {{ markdownify $introDescription }}
     </div>
-    {{- if ( ne $s.introURL false ) }}
-        {{- $r := T "read_more" }}
-            <a href='{{ absLangURL (default "about/" $s.introURL) }}' class="button mt-1" role="button" title='{{ $r }}'>{{ $r
-            }}</a>
-    {{- end }}
 {{- end }}
