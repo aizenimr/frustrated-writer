@@ -72,20 +72,7 @@ outputFormats:
     baseName: "llms"
     isPlainText: true
     notAlternative: true
-  rss:
-    baseName: 'index'
-    isHTML: false
-    isPlainText: false
-    mediaType: application/rss+xml
-    noUgly: true
-    notAlternative: false
-    path: ''
-    permalinkable: false
-    protocol: ''
-    rel: alternate
-    root: false
-    ugly: false
-    weight: 0
+
 outputs:
   home:
     - HTML
