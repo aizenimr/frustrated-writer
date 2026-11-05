@@ -16,7 +16,7 @@ ShowRssButtonInSectionTermList: true
 ShowAllPagesInArchive: false
 ShowPageNums: true
 ShowToc: false
-# comments: false
+comments: true
 images: ["icons/gender.png"]
 
 graphCommentsID: "Frustrated-Writer"
