@@ -45,6 +45,7 @@
   {{- partial "extend_post_content.html" . }}
 
   <footer class="post-footer">
+    {{- partial "series.html" . -}}
     {{- $categories := .Language.Params.Taxonomies.category | default "categories" }}
     <ul class="post-categories">
       {{- range ($.GetTerms $categories) }}

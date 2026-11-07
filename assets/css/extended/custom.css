@@ -340,3 +340,17 @@ blockquote.alert {
     margin-bottom: 1rem;
     margin-right: 2rem;
 }
+
+.series-posts {
+    margin-bottom: var(--gap);
+    border-bottom: 1px solid var(--border);
+    h3 {
+        margin-bottom: 0.5rem;
+    }
+}
+
+.series-posts-list ul {
+    list-style: decimal;
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+}
