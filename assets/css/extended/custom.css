@@ -325,3 +325,18 @@ blockquote.alert {
     font-weight: bold;
     margin-left: 1rem;
 }
+
+.related-posts {
+    margin: var(--gap) 0;
+    border-top: 1px solid var(--border);
+    h3 {
+        padding-top: var(--gap);
+    }
+}
+
+.related-posts-list ul {
+    list-style: disclosure-closed;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+}

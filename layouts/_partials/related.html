@@ -1,0 +1,14 @@
+{{ with site.RegularPages.Related . | first 5 }}
+<div class="related-posts">
+    <h3>פוסטים קשורים:</h3>
+    <div class="related-posts-list">
+    <ul>
+    {{ range . }}
+        <li>
+            <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        </li>
+        {{ end }}
+    </ul>
+    </div>
+</div>
+{{ end }}
