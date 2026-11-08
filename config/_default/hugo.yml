@@ -65,6 +65,9 @@ languages:
         - name: תגיות
           url: tags/
           weight: 7
+        - name: סדרות
+          url: series/
+          weight: 8
 
 outputFormats:
   llms:
