@@ -343,7 +343,11 @@ blockquote.alert {
 
 .series-posts {
     margin-bottom: var(--gap);
-    border-bottom: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    max-width: fit-content;
+    padding: 1rem;
     h3 {
         margin-bottom: 0.5rem;
     }
