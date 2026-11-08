@@ -225,6 +225,7 @@ aside li {
   height: 150px;
   width: 150px;
   border-radius: 1rem;
+  margin: auto;
 }
 
 .tag-entry .entry-cover {
