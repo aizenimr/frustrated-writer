@@ -116,9 +116,10 @@ aside h3 {
 }
 aside ul {
 	list-style: none;
+	margin-top: .3rem;
 }
 aside li {
-	padding: 0.25rem 0;
+	margin-top: .3rem;
 }
 .sidebar_inner {
 	padding: 3.994%;

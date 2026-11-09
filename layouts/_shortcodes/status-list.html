@@ -1,4 +1,6 @@
 {{- $s := resources.Get "static/data/status_list.json" | transform.Unmarshal -}}
+{{- $list := "" -}}
 {{- range $index, $status := $s.statuses -}}
-    {{- printf "%d. %s" ($index | add 1) . | markdownify -}}
+    {{- $list = printf "%s%d. %s\n" $list ($index | add 1) . -}}
 {{- end -}}
+{{- print $list | markdownify -}}
