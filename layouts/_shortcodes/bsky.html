@@ -1,6 +1,0 @@
-{{ $post := .Get 0 }}
-{{ $embedLink := (print "https://embed.bsky.app/oembed?url=" $post) }}
-
-{{ $remoteData := resources.GetRemote $embedLink }}
-{{ $json := $remoteData | transform.Unmarshal }}
-{{ print $json.html | safeHTML }}
