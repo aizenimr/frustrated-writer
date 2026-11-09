@@ -1,18 +1,18 @@
 {{- $seriesName := print .Params.series -}}
-{{- $url := .Params.url -}}
+{{- $url := .RelPermalink -}}
 {{- with .Site.Taxonomies.series.Get $seriesName -}}
 <div class="series-posts">
-    <h3>פוסטים נוספים בסדרה:</h3>
+    <h3>פוסטים נוספים בסדרת <em><a href="{{- .Page.RelPermalink -}}">{{- $seriesName -}}</a></em></h3>
     <div class="series-posts-list">
-        <ul>
+        <ol>
         {{- range $index, $page := .Pages.ByDate -}}
-            {{- if eq $page.Params.url $url -}}<strong><i>{{- end -}}
+            {{- if eq $page.RelPermalink $url -}}<strong><i>{{- end -}}
             <li>
                 <a href="{{- .RelPermalink -}}">{{- .Title -}}</a>
             </li>
-            {{- if eq $page.Params.url $url -}}</i></strong>{{- end -}}
+            {{- if eq $page.RelPermalink $url -}}</i></strong>{{- end -}}
         {{- end -}}
-        </ul>
+        </ol>
     </div>
 </div>
 {{ end }}
