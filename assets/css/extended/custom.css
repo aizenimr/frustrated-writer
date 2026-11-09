@@ -99,9 +99,16 @@ body {
 	text-decoration: unset;
 }
 .grid-main {
-	display: grid;
-	grid-template-columns: 2fr 1fr;
-	grid-column-gap: 4rem;
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 0 4rem;
+}
+.grid-main > * {
+  min-width: 0;
+}
+.grid-main .highlight {
+  max-width: 100%;
+  overflow-x: auto;
 }
 aside h3 {
 	position: relative;
@@ -226,36 +233,21 @@ aside li {
 	background: var(--border);
 }
 blockquote {
-	border-left: unset;
-	padding: 1rem 4rem 0rem 2rem;
+  border-left: unset;
+  padding: 1rem;
 }
+
 blockquote p {
-	margin-bottom: unset;
+  margin-bottom: unset;
 }
-blockquote.quote::before {
-	content: "\201D";
-	color: #0077b8;
-	display: block;
-	font-size: 2.5rem;
-	line-height: 1;
-}
-blockquote.quote::after {
-	content: "\201C";
-	color: #0077b8;
-	display: block;
-	font-size: 2.5rem;
-	line-height: 1;
-	text-align: end;
-}
-blockquote.quote {
-	border-inline-start: unset;
-	background: var(--code-bg);
-}
+
+blockquote.quote,
 blockquote.alert {
-	border-inline-start: unset;
-	background: var(--code-bg);
-	padding: 1rem 2rem;
+  border-inline-start: unset;
+  background: var(--code-bg);
+  padding: 1rem 2rem;
 }
+
 .alert {
 	display: flex;
 }
@@ -263,6 +255,7 @@ blockquote.alert {
 	font-weight: bold;
 	margin-left: 1rem;
 }
+
 .related-posts {
 	margin: var(--gap) 0;
 	border-top: 1px solid var(--border);
