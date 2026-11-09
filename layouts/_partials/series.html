@@ -4,15 +4,15 @@
 <div class="series-posts">
     <h3>פוסטים נוספים בסדרת <em><a href="{{- .Page.RelPermalink -}}">{{- $seriesName -}}</a></em></h3>
     <div class="series-posts-list">
-        <ol>
+        {{- $list := "" -}}
         {{- range $index, $page := .Pages.ByDate -}}
-            {{- if eq $page.RelPermalink $url -}}<strong><i>{{- end -}}
-            <li>
-                <a href="{{- .RelPermalink -}}">{{- .Title -}}</a>
-            </li>
-            {{- if eq $page.RelPermalink $url -}}</i></strong>{{- end -}}
+            {{- if eq $page.RelPermalink $url -}}
+                {{- $list = printf "%s%d. ***[%s](%s)***\n" $list (add $index 1) .Title $page.RelPermalink -}}
+            {{- else -}}
+                {{- $list = printf "%s%d. [%s](%s)\n" $list (add $index 1) .Title $page.RelPermalink -}}
+            {{- end -}}
         {{- end -}}
-        </ol>
+        {{ print $list | markdownify }}
     </div>
 </div>
 {{ end }}
