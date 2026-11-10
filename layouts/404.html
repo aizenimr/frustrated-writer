@@ -1,0 +1,70 @@
+{{- define "main" }}
+<script>
+(() => {
+  const start = () => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const paragraphs = [...document.querySelectorAll(".typewriter p")];
+    const splitText = (text) => {
+      if (typeof Intl.Segmenter === "function") {
+        return [...new Intl.Segmenter("he", { granularity: "grapheme" }).segment(text)]
+          .map(item => item.segment);
+      }
+      return Array.from(text);
+    };
+
+    const characters = paragraphs.map(p => splitText(p.textContent));
+    paragraphs.forEach(p => p.textContent = "");
+
+    let paragraphIndex = 0;
+    let characterIndex = 0;
+    const characterDelay = 100;
+    const paragraphDelay = 500;
+
+    function typeNext() {
+      if (paragraphIndex >= paragraphs.length) return;
+
+      if (characterIndex >= characters[paragraphIndex].length) {
+        paragraphIndex++;
+        characterIndex = 0;
+        setTimeout(typeNext, paragraphDelay); // pause between paragraphs
+        return;
+      }
+
+      paragraphs[paragraphIndex].append(characters[paragraphIndex][characterIndex++]);
+      setTimeout(typeNext, characterDelay); // delay per character; adjust to taste
+    }
+
+    typeNext();
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", start);
+  } else {
+    start();
+  }
+})();
+</script>
+<div>
+    <article class="post-single">
+        <header class="post-header">
+            <h1 class="post-title entry-hint-parent">
+            העמוד המבוקש לא נמצא
+            </h1>
+        </header> 
+        <div class="post-content md-content typewriter">
+            {{- print `איננו מצליחים לאתר את העמוד שחיפשת.
+
+העמוד, ככל הנראה, מת. הוא הלך לעולמו. מת כמו אבן. העמוד נפח את נשמתו. העמוד הזה כבר איננו.
+
+הוא חדל מלהתקיים.
+
+העמוד פג תוקפו, והלך לפגוש את בוראו. הוא גופה וירטואלית, חסרת חיים. העמוד נח על משכבו בשלום. תהליכיו המטבוליים הפכו להיסטוריה. הוא החזיר ציוד, והתיר עצמו מפקעת בת חלוף זו.
+
+המסך ירד על עמוד זה, והוא הצטרף למקהלה השמימית.
+
+עמוד זה הינו, עד להודעה חדשה, עמוד לשעבר.` | markdownify -}}
+        </div>
+    </article>
+</div>
+{{- end }}{{/* end main */ -}}
