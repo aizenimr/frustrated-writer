@@ -1,9 +1,9 @@
 <div class="list-links">
     <div>
-        {{- $list := "" -}}
+        {{- $list := slice -}}
         {{- range hugo.Data.LinksList -}}
-            {{- $list = printf "%s- [%s](%s)\n" $list .title .link -}}
+            {{- $list = $list | append (printf "- [%s](%s)" .title .link) -}}
         {{- end -}}
-        {{ print $list | markdownify }}
+        {{ delimit $list "\n" | markdownify }}
     </div>
 </div>

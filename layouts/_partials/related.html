@@ -2,13 +2,11 @@
 <div class="related-posts">
     <h3>פוסטים קשורים:</h3>
     <div class="related-posts-list">
-    <ul>
-    {{ range . }}
-        <li>
-            <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-        </li>
-        {{ end }}
-    </ul>
+    {{- $list := slice -}}
+    {{- range . -}}
+        {{- $list = $list | append (printf "- [%s](%s)" .LinkTitle .RelPermalink) -}}
+    {{- end -}}
+    {{- delimit $list "\n" | markdownify -}}
     </div>
 </div>
 {{ end }}
