@@ -6,17 +6,29 @@
   "warning" ":warning:"
 }}
 
-{{ if eq .Type "alert" }}
-  <blockquote class="alert">
-    <div class="alert-heading">
-      {{ transform.Emojify (index $emojis .AlertType) }}
-    </div>
-    <div>
-      {{ .Text }}
-    </div>
-  </blockquote>
-{{ else }}
-  <blockquote class="quote">
-    {{ .Text }}
-  </blockquote>
-{{ end }}
+<figure>
+  {{- if eq .Type "alert" -}}
+    <blockquote class="alert">
+      <div class="alert-heading">
+        {{- transform.Emojify (index $emojis .AlertType) -}}
+      </div>
+      <div>
+        {{- .Text -}}
+      </div>
+    </blockquote>
+  {{- else -}}
+    <blockquote class="quote">
+      {{- .Text -}}
+    </blockquote>
+    {{- $caption := .Attributes.caption -}}
+    {{- $cite := .Attributes.cite -}}
+    {{- with $caption -}}
+      <figcaption>
+          {{- with $cite -}}
+            <cite>{{- . -}}</cite>
+          {{- end -}}
+        {{- . | safeHTML -}}
+      </figcaption>
+    {{- end -}}
+  {{- end -}}
+</figure>
