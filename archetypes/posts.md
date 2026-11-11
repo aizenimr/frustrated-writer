@@ -12,7 +12,8 @@ year: {{ substr $date 0 4 }}
 month: {{ substr $date 0 7 }}
 cover:
   image: /images/{{- replace (substr $date 0 7) "-" "/" -}}/XXXXX.png
-  alt: תיאור של התמונה
+  alt: תיאור התמונה עבור מנועי חיפוש
+  caption: תיאור התמונה בפוסט
 categories:
   - כללי
 tags:
