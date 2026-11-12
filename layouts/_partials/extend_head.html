@@ -3,5 +3,5 @@
 {{- /*     Can be overwritten by partial with the same name in the global layouts. */ -}}
 {{- /* Head custom content area end */ -}}
 {{- if hugo.IsProduction | or (eq site.Params.env "production") -}}
-{{- partialCached "goatcounter" . -}}
+{{- partialCached "umami" . -}}
 {{- end -}}
