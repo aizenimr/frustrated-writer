@@ -74,6 +74,9 @@ socialIcons:
 # icon: icon.png
 # iconHeight: 35
 
+goatcounter:
+  domainCode: stuffedspotty7properly
+
 analytics:
   google:
     SiteVerificationTag: "G-YZF0GDK8SQ"

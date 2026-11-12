@@ -120,8 +120,8 @@ services:
     disableInlineCSS: true
   x:
     disableInlineCSS: true
-  googleAnalytics:
-    id: G-YZF0GDK8SQ
+  # googleAnalytics:
+  #   id: G-YZF0GDK8SQ
 
 module:
   imports:
