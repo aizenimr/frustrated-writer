@@ -24,10 +24,10 @@
     {{- $cite := .Attributes.cite -}}
     {{- with $caption -}}
       <figcaption>
+          {{- . | safeHTML -}}
           {{- with $cite -}}
-            <cite>{{- . -}}</cite>
+            , <cite>{{- . | markdownify -}}</cite>
           {{- end -}}
-        {{- . | safeHTML -}}
       </figcaption>
     {{- end -}}
   {{- end -}}
