@@ -9,7 +9,7 @@ author: נמרוד איזנברג
 type: post
 guid: {{ absURL "" }}{{ $url | urlize }}
 year: {{ substr $date 0 4 }}
-month: {{ substr $date 0 7 }}
+month: {{ replace (substr $date 0 7) "-" "/" }}
 cover:
   image: /images/{{- replace (substr $date 0 7) "-" "/" -}}/XXXXX.png
   alt: תיאור התמונה עבור מנועי חיפוש
