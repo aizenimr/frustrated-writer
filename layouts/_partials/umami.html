@@ -2,6 +2,6 @@
   defer
   src="{{- site.BaseURL -}}main.js"
   data-website-id="{{- site.Params.umami.id -}}"
-  data-host-url="{{- site.BaseURL -}}asset"
+  data-host-url="{{- trimSuffix "/" .Site.BaseURL -}}"
   data-domains="{{- replace (replace .Site.BaseURL "https://" "") "/" "" -}}">
 </script>
