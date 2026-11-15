@@ -1,0 +1,5 @@
+- id: load_more
+  translation: "עוד"
+
+- id: "loading"
+  translation: "טוען עוד..."

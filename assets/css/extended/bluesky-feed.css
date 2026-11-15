@@ -1,0 +1,167 @@
+  #bluesky-feed {
+      --bsky-border: var(--border);
+      --bsky-muted: var(--secondary);
+      --bsky-link: #087eec;
+      max-width: 640px;
+      margin: 0 auto;
+      color: var(--primary);
+      font: 16px/1.5 system-ui, sans-serif;
+  }
+
+  #bluesky-feed * {
+      box-sizing: border-box;
+  }
+
+  #bluesky-feed .bsky-post {
+      margin: 12px 0;
+      padding: 16px;
+      border: 1px solid var(--bsky-border);
+      border-radius: var(--radius);
+      background: var(--theme);
+  }
+
+  #bluesky-feed .bsky-identity {
+    display: block;
+  }
+  
+  #bluesky-feed .bsky-handle {
+    direction: ltr;
+  }
+
+  #bluesky-feed .bsky-handle-time {
+    display: flex;
+  }
+
+  #bluesky-feed .bsky-seperator {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+  }
+
+  #bluesky-feed .bsky-meta {
+      display: block;
+      align-items: center;
+      gap: 10px;
+      color: var(--bsky-muted);
+      font-size: 14px;
+  }
+
+  #bluesky-feed .bsky-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: var(--theme);
+  }
+
+  #bluesky-feed .bsky-name {
+      color: var(--primary);
+      font-weight: 650;
+      margin-right: 1px;
+  }
+
+  #bluesky-feed .bsky-handle,
+  #bluesky-feed .bsky-date,
+  #bluesky-feed .bsky-repost {
+      color: var(--bsky-muted);
+  }
+
+  #bluesky-feed .bsky-post a {
+      color: var(--bsky-link);
+      text-decoration: none;
+  }
+
+  #bluesky-feed .bsky-post a:hover {
+      text-decoration: underline;
+  }
+
+  #bluesky-feed .bsky-text {
+      margin: 12px 0;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+  }
+
+  #bluesky-feed .bsky-repost {
+      margin-bottom: 8px;
+      font-size: 13px;
+  }
+
+  #bluesky-feed .bsky-images {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 12px;
+  }
+
+  #bluesky-feed .bsky-images img {
+      display: block;
+      width: 100%;
+      max-height: 320px;
+      border-radius: 10px;
+      object-fit: cover;
+  }
+
+  #bluesky-feed .bsky-actions {
+      display: flex;
+      gap: 16px;
+      margin-top: 12px;
+      color: var(--bsky-muted);
+      font-size: 13px;
+  }
+
+  #bluesky-feed .bsky-status {
+      margin: 12px 0;
+      color: var(--bsky-muted);
+      font-size: 14px;
+  }
+
+  #bluesky-feed button {
+      padding: 9px 14px;
+      border: 1px solid var(--bsky-border);
+      border-radius: 8px;
+      background: var(--theme);
+      color: inherit;
+      font: inherit;
+      cursor: pointer;
+  }
+
+  #bluesky-feed button:disabled {
+      cursor: wait;
+      opacity: 0.6;
+  }
+
+  #bluesky-feed .bsky-link-card {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+  overflow: hidden;
+  border: 1px solid var(--bsky-border);
+  border-radius: 10px;
+  color: inherit;
+}
+
+#bluesky-feed .bsky-link-card:hover {
+  text-decoration: none;
+}
+
+#bluesky-feed .bsky-link-thumb {
+  display: block;
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+}
+
+#bluesky-feed .bsky-link-details {
+  padding: 10px 12px;
+}
+
+#bluesky-feed .bsky-link-title {
+  color: #172033;
+  font-weight: 650;
+}
+
+#bluesky-feed .bsky-link-description,
+#bluesky-feed .bsky-link-domain {
+  margin-top: 4px;
+  color: var(--bsky-muted);
+  font-size: 14px;
+}
