@@ -1,16 +1,5 @@
-<div id="blog_status" class="blog_subtitle">
-  <script type="text/javascript">
-    async function getRandomStatus() {
-      let response = await fetch("/data/status_list.json", {
-        method: "GET",
-        cache: "no-cache"
-      });
-      let obj = await response.json();
-      let index = Math.floor(Math.random() * obj.statuses.length);
-      let result = obj.statuses[index];
-      return result;
-    }
-    let subtitle = document.getElementById("blog_status");
-    getRandomStatus().then((result) => (subtitle.innerHTML = result));
-  </script>
-</div>
+{{- $statuses := resources.Get "data/status_list.json" | fingerprint -}}
+{{- $jsOptions := dict "params" (dict "statusesURL" $statuses.RelPermalink) -}}
+{{- $js := resources.Get "js/subtitle.js" | js.Build $jsOptions | minify | fingerprint -}}
+<script type="module" src="{{ $js.RelPermalink }}"></script>
+<div id="blog_status" class="blog_subtitle"></div>
