@@ -1,13 +1,8 @@
-import * as params from "@params";
+import statusList from 'data/status_list.json'
 
 async function getRandomStatus() {
-    let response = await fetch(params.statusesURL, {
-        method: "GET",
-        cache: "no-cache"
-    });
-    let obj = await response.json();
-    let index = Math.floor(Math.random() * obj.statuses.length);
-    let result = obj.statuses[index];
+    let index = Math.floor(Math.random() * statusList.statuses.length);
+    let result = statusList.statuses[index];
     return result;
 }
 let subtitle = document.getElementById("blog_status");

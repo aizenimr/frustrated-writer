@@ -1,5 +1,3 @@
-{{- $statuses := resources.Get "data/status_list.json" | fingerprint -}}
-{{- $jsOptions := dict "params" (dict "statusesURL" $statuses.RelPermalink) -}}
-{{- $js := resources.Get "js/subtitle.js" | js.Build $jsOptions | minify | fingerprint -}}
+{{- $js := resources.Get "js/subtitle.js" | js.Build | minify | fingerprint -}}
 <script type="module" src="{{ $js.RelPermalink }}"></script>
 <div id="blog_status" class="blog_subtitle"></div>
