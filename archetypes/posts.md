@@ -18,7 +18,7 @@ categories:
   - כללי
 tags:
   - כתיבה
-draft: false
+draft: true
 showtoc: false
 comments: true
 ---

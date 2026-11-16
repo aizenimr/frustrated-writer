@@ -7,7 +7,7 @@ summary: "תיאור הפוסט למנועי חיפוש"
 author: נמרוד איזנברג
 type: page
 guid: {{ absURL "" }}{{ $url | urlize }}
-draft: false
+draft: true
 showtoc: false
 comments: true
 hidemeta: true
