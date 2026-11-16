@@ -1,7 +1,19 @@
 {{- with site.Params.bluesky -}}
   {{- $css := resources.Get "css/extended/bluesky-feed.css" | minify | fingerprint -}}
-  {{- $jsOptions := dict "params" (dict "handle" .bskyUser "limit" .bskyLimit "cssURL" $css.RelPermalink "loadMore" (T "load_more") "loading" (T "loading")) -}}
-  {{- $js := resources.Get "js/bluesky-feed.js" | js.Build $jsOptions | minify | fingerprint -}}
+  {{- $loadMore := T "load_more" -}}
+  {{- $loading := T "loading" -}}
+  {{- $postsWithReplies := false -}}
+  {{- with .postsWithReplies -}}
+    {{- $postsWithReplies = . -}}
+  {{- end -}}
+  {{- $js := resources.Get "js/bluesky-feed.js" | js.Build | minify | fingerprint -}}
 <script type="module" src="{{- $js.RelPermalink -}}"></script>
-<div id="bluesky-feed"></div>
+<bsky-feed
+  handle="{{- .bskyUser -}}"
+  limit="{{- .bskyLimit -}}"
+  cssURL="{{- $css.RelPermalink -}}"
+  loadMore="{{- $loadMore -}}"
+  loading="{{- $loading -}}"
+  postsWithReplies="{{- $postsWithReplies -}}">
+</bsky-feed>
 {{- end -}}

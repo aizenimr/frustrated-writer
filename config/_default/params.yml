@@ -88,6 +88,7 @@ analytics:
 bluesky:
   bskyLimit: 5
   bskyUser: "aizenimr.com"
+  postsWithReplies: true
 
 assets:
   disableHLJS: true

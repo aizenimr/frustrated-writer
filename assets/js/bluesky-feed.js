@@ -1,20 +1,23 @@
-import * as params from "@params";
-
-const handle = String(params.handle || "").replace(/^@/, "");
-const root = document.getElementById("bluesky-feed");
+const root = document.getElementsByTagName("bsky-feed")[0];
+const handle = root.getAttribute("handle");
+const cssURL = root.getAttribute("cssURL");
+const limit = root.getAttribute("limit");
+const loadMore = root.getAttribute("loadMore");
+const loadingText = root.getAttribute("loading");
+const postsWithReplies = root.getAttribute("postsWithReplies") === "true" ? true : false;
 
 if (root && handle) {
   // Load the Hugo-built stylesheet.
-  if (params.cssURL && !document.querySelector('link[data-bluesky-feed-css]')) {
+  if (cssURL && !document.querySelector('link[data-bluesky-feed-css]')) {
     const stylesheet = document.createElement("link");
     stylesheet.rel = "stylesheet";
-    stylesheet.href = params.cssURL;
+    stylesheet.href = cssURL;
     stylesheet.dataset.blueskyFeedCss = "";
     document.head.append(stylesheet);
   }
 
   const api = "https://public.api.bsky.app/xrpc/";
-  const pageSize = Number(params.limit);
+  const pageSize = Number(limit);
   const postsContainer = document.createElement("div");
   const status = document.createElement("p");
   const loadButton = document.createElement("button");
@@ -27,13 +30,20 @@ if (root && handle) {
 
   loadButton.className = "bsky-load-more";
   loadButton.type = "button";
-  loadButton.textContent = String(params.loadMore);
+  loadButton.textContent = loadMore;
   loadButton.hidden = true;
 
   root.append(postsContainer, status, loadButton);
 
   let cursor = "";
   let loading = false;
+
+  function isLTR(text) {
+    if ((/[\u0590-\u05FF]/).test(text.textContent))
+      return false;
+    else
+      return true;
+  }
 
   function appendTextWithLinks(container, text) {
     const urlPattern = /https?:\/\/[^\s<]+/g;
@@ -154,6 +164,9 @@ if (root && handle) {
       const text = document.createElement("div");
       text.className = "bsky-text";
       appendTextWithLinks(text, record.text);
+      if (isLTR(text)) {
+        text.style = "direction: ltr";
+      }
       article.append(text);
     }
 
@@ -226,6 +239,9 @@ if (root && handle) {
         domain.textContent = url.hostname;
         details.append(domain);
 
+        if (isLTR(details)) {
+          details.style = "direction: ltr";
+        }
         card.append(details);
         article.append(card);
       }
@@ -262,12 +278,12 @@ if (root && handle) {
 
     loading = true;
     loadButton.disabled = true;
-    status.textContent = params.loading;
+    status.textContent = loadingText;
 
     try {
       const query = new URLSearchParams({
         actor: handle,
-        filter: "posts_with_replies",
+        filter: postsWithReplies ? "posts_with_replies" : "posts_no_replies",
         limit: String(pageSize)
       });
 
