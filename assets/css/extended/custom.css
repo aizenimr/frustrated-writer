@@ -247,6 +247,7 @@ blockquote.alert {
   border-inline-start: unset;
   background: var(--code-bg);
   padding: 1rem 2rem;
+  max-width: fit-content;
 }
 
 .alert {
