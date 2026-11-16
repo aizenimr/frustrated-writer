@@ -5,7 +5,7 @@
       max-width: 640px;
       margin: 0 auto;
       color: var(--primary);
-      font: 16px/1.5 system-ui, sans-serif;
+      font: 14px/1.5 system-ui, sans-serif;
   }
 
   bsky-feed * {
