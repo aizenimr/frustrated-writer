@@ -23,7 +23,7 @@ if (root && handle) {
   const loadButton = document.createElement("button");
 
   const svgRepost = '<svg viewBox="0 0 576 512" height="16" width="16" tabindex="-1" class="mr-1"><path fill="currentColor" d="M272 416c17.7 0 32-14.3 32-32s-14.3-32-32-32H160c-17.7 0-32-14.3-32-32V192h32c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-64-64c-12.5-12.5-32.8-12.5-45.3 0l-64 64c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8l32 0 0 128c0 53 43 96 96 96H272zM304 96c-17.7 0-32 14.3-32 32s14.3 32 32 32l112 0c17.7 0 32 14.3 32 32l0 128H416c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l64 64c12.5 12.5 32.8 12.5 45.3 0l64-64c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8l-32 0V192c0-53-43-96-96-96L304 96z"></path></svg>';
-  const svgReply = '<svg fill="none" width="22" viewBox="0 0 24 24" height="22" style="pointer-events: none;"><path fill="currentColor" stroke="none" stroke-width="0" stroke-linecap="butt" stroke-linejoin="miter" fill-rule="evenodd" clip-rule="evenodd" d="M20.002 7a2 2 0 0 0-2-2h-12a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2a1 1 0 0 1 1 1v1.918l3.375-2.7a1 1 0 0 1 .625-.218h5a2 2 0 0 0 2-2V7Zm2 8a4 4 0 0 1-4 4h-4.648l-4.727 3.781A1.001 1.001 0 0 1 7.002 22v-3h-1a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v8Z"></path></svg>';
+  const svgReply = '<svg fill="none" viewBox="0 0 24 24" width="12" height="12"><path fill="currentColor" stroke="none" stroke-width="0" stroke-linecap="butt" stroke-linejoin="miter" fill-rule="evenodd" clip-rule="evenodd" d="M15.793 10.293a1 1 0 0 1 1.338-.068l.076.068 3.293 3.293a2 2 0 0 1 .138 2.677l-.138.151-3.293 3.293a1 1 0 1 1-1.414-1.414L18.086 16H8a5 5 0 0 1-5-5V5a1 1 0 0 1 2 0v6a3 3 0 0 0 3 3h10.086l-2.293-2.293-.068-.076a1 1 0 0 1 .068-1.338Z"></path></svg>';
 
   status.className = "bsky-status";
   status.setAttribute("aria-live", "polite");
@@ -38,11 +38,81 @@ if (root && handle) {
   let cursor = "";
   let loading = false;
 
+  function renderQuotedPost(embed) {
+    // A quote can be attached by itself or alongside media.
+    const recordEmbed =
+      embed?.$type === "app.bsky.embed.recordWithMedia#view"
+        ? embed.record
+        : embed;
+
+    if (recordEmbed?.$type !== "app.bsky.embed.record#view") {
+      return null;
+    }
+
+    const quoted = recordEmbed.record;
+
+    // Only render when the embedded record is an available post.
+    if (quoted?.$type !== "app.bsky.embed.record#viewRecord") {
+      return null;
+    }
+
+    const handle = quoted.author?.handle ?? "unknown";
+    const displayName = quoted.author?.displayName || handle;
+    const text = quoted.value?.text ?? "";
+    const rkey = quoted.uri?.split("/").pop();
+
+    const card = document.createElement("a");
+    card.className = "quoted-post-card";
+    card.href = rkey
+      ? `https://bsky.app/profile/${encodeURIComponent(handle)}/post/${encodeURIComponent(rkey)}`
+      : "#";
+    card.target = "_blank";
+    card.rel = "noopener noreferrer";
+
+    const author = document.createElement("div");
+    author.className = "quoted-post-author";
+    author.textContent = `${displayName} · @${handle}`;
+
+    const body = document.createElement("div");
+    body.className = "quoted-post-text";
+    body.textContent = text;
+
+    card.append(author, body);
+    return card;
+  }
+
+
+  function isQuotePost(post) {
+    const embed = post.embed;
+    if (!embed) return false;
+
+    // For recordWithMedia, the quoted-record reference is nested one level deeper.
+    const ref = embed.record?.record ?? embed.record;
+    return ref?.uri?.includes("/app.bsky.feed.post/") ?? false;
+  }
+
   function isLTR(text) {
     if ((/[\u0590-\u05FF]/).test(text.textContent))
       return false;
     else
       return true;
+  }
+
+  function getParentAuthor(uri) {
+    const params = new URLSearchParams({
+      uri,
+      parentHeight: "1",
+      depth: "0",
+    });
+
+    const data = fetch(
+      `${api}app.bsky.feed.getPostThread?${params}`).then(response => response.json())
+      .then(data => {
+        const author = data.thread?.parent?.post.author;
+        return author;
+      })
+      .catch(error => console.error(error));
+    return data;
   }
 
   function appendTextWithLinks(container, text) {
@@ -70,6 +140,7 @@ if (root && handle) {
     const post = item.post;
     const record = post.record || {};
     const author = post.author || {};
+    const postUri = post.uri;
     const postKey = post.uri.split("/").pop();
     const postUrl =
       `https://bsky.app/profile/${encodeURIComponent(author.handle || handle)}` +
@@ -79,18 +150,13 @@ if (root && handle) {
     article.className = "bsky-post";
 
     let itemLabel = "";
-    if (item.reason?.$type === "app.bsky.feed.defs#reasonRepost") {
+    if (item.reason?.$type === "app.bsky.feed.defs#reasonRepost" || isQuotePost(post)) {
       itemLabel = svgRepost;
+      item['kind'] = "repost";
     }
     else if (record.reply) {
       itemLabel = svgReply;
-    }
-
-    if (itemLabel.length > 0) {
-      const label = document.createElement("div");
-      label.className = "bsky-repost";
-      label.innerHTML = itemLabel;
-      article.append(label);
+      item['kind'] = "reply";
     }
 
     const meta = document.createElement("div");
@@ -158,6 +224,30 @@ if (root && handle) {
     seperator.innerHTML = "·";
     userAndTime.append(date, seperator, userHandle);
     meta.append(userAndTime);
+
+    if (item.kind === "reply") {
+      const labelParent = document.createElement("div");
+      const label = document.createElement("span")
+      label.className = "bsky-repost";
+      label.innerHTML = itemLabel;
+      getParentAuthor(postUri)
+        .then(au => au?.displayName)
+        .then(parentAuthorName => {
+          const parentAuthorSpan = document.createElement("span");
+          parentAuthorSpan.innerHTML = parentAuthorName;
+          labelParent.append(parentAuthorSpan);
+          labelParent.append(label);
+          meta.append(labelParent);
+        });
+    }
+
+    if (item.kind === "repost") {
+      const label = document.createElement("div")
+      label.className = "bsky-repost";
+      label.innerHTML = itemLabel;
+      meta.append(label);
+    }
+
     article.append(meta);
 
     if (record.text) {
@@ -247,13 +337,12 @@ if (root && handle) {
       }
     }
 
-    const actions = document.createElement("div");
-
-    const parsed = new DOMParser().parseFromString(svgReply, "image/svg+xml");
-    if (parsed.querySelector("parsererror") || parsed.documentElement.localName !== "svg") {
-      throw new Error("Invalid SVG");
+    const quoteCard = renderQuotedPost(embed);
+    if (quoteCard) {
+      article.append(quoteCard);
     }
-    const svgElement = document.importNode(parsed.documentElement, true);
+
+    const actions = document.createElement("div");
 
     actions.className = "bsky-actions";
     actions.append(
