@@ -1,9 +1,6 @@
 goldmark:
   renderer:
     unsafe: true
-  renderHooks:
-    link:
-      useEmbedded: always
   parser:
     attribute:
       block: true

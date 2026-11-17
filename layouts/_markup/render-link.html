@@ -1,7 +1,21 @@
 {{- $u := urls.Parse .Destination -}}
-<a href="{{ .Destination | safeURL }}"
+{{- $href := .Destination -}}
+
+{{- if and (not $u.IsAbs) $u.Path -}}
+  {{- with $.Page.GetPage $u.Path -}}
+    {{- $href = .RelPermalink -}}
+    {{- with $u.RawQuery -}}
+      {{- $href = printf "%s?%s" $href . -}}
+    {{- end -}}
+    {{- with $u.Fragment -}}
+      {{- $href = printf "%s#%s" $href . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+<a href="{{ $href | safeURL }}"
   {{- with .Title }} title="{{ . }}"{{ end -}}
   {{- if $u.IsAbs }} rel="external" target="_blank"{{ end -}}
 >
-  {{- with .Text }}{{ . }}{{ end -}}
+  {{- .Text -}}
 </a>
