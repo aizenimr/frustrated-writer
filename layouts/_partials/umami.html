@@ -1,7 +1,6 @@
-{{- $js := resources.Get "js/main.js" | js.Build | minify | fingerprint -}}
 <script
   defer
-  src="{{- $js.RelPermalink -}}"
+  src="{{- site.BaseURL -}}main.js"
   data-website-id="{{- site.Params.umami.id -}}"
   data-host-url="{{- strings.TrimSuffix "/" .Site.BaseURL -}}"
   data-domains="{{- replace (replace .Site.BaseURL "https://" "") "/" "" -}}">
