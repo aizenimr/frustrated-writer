@@ -1,10 +1,14 @@
+{{- with site.Params.bluesky -}}
 <script type="module" src="https://cdn.jsdelivr.net/npm/bsky-embed/dist/bsky-embed.es.js" async></script>
 <bsky-embed
-  username="{{- site.Params.bluesky.bskyUser -}}"
-  limit="{{- with site.Params.bluesky.bskyLimit -}}{{- site.Params.bluesky.bskyLimit -}}{{- else -}}{{- 5 -}}{{- end -}}"
+  username="{{- .bskyUser -}}"
+  limit="{{- with .bskyLimit -}}{{- . -}}{{- else -}}{{- 5 -}}{{- end -}}"
   link-image="true"
   custom-styles=".flex { display: unset; }
-        .w-full {font-size: initial; max-width :unset;}
+        .w-full {font-size: 15px; max-width :unset;}
         .whitespace-nowrap {white-space: normal;}"
+  {{- with .loadmore -}}load-more="{{- . -}}"{{- end -}}
+  {{- with .filter -}}filter="{{- . -}}"{{- end -}}
 >
 </bsky-embed>
+{{- end -}}
