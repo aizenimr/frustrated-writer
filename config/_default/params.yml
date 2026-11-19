@@ -51,7 +51,7 @@ socialIcons:
     url: "https://facebook.com/aizenimr"
   - name: rss
     title: RSS
-    url: "https://aizenimr.com/feed/"
+    url: "/rss.xml"
   - name: github
     title: גיטהאב
     url: "https://github.com/aizenimr"
