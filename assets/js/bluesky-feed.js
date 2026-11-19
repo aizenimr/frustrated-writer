@@ -234,6 +234,7 @@ if (root && handle) {
         .then(au => au?.displayName)
         .then(parentAuthorName => {
           const parentAuthorSpan = document.createElement("span");
+          parentAuthorSpan.className = "bsky-reply-to";
           parentAuthorSpan.innerHTML = parentAuthorName;
           labelParent.append(parentAuthorSpan);
           labelParent.append(label);

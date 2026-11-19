@@ -166,6 +166,10 @@ bsky-feed .bsky-link-domain {
   font-size: 14px;
 }
 
+bsky-feed .bsky-reply-to {
+  font-weight: bold;
+}
+
 .quoted-post-card {
   display: block;
   margin-top: 10px;
@@ -185,4 +189,3 @@ bsky-feed .bsky-link-domain {
   white-space: pre-wrap;
   overflow-wrap: anywhere;
 }
-
