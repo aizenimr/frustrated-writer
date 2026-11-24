@@ -282,3 +282,8 @@ blockquote.alert {
 		margin-bottom: 0.5rem;
 	}
 }
+
+.subscribe-message {
+	display:none;
+	margin-top: 10px;
+}
